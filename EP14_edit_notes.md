@@ -1,8 +1,8 @@
 # EP 14 — Brock Valentine: edit notes
 
 **File:** `EP14_Brock_Valentine_cut.mp4` (1920×1080, 30 fps, H.264 + AAC), ready to drop into CapCut.
-Delivered in **3 parts** (the app's upload limit is 500 MB): part 1 = 0:00–18:11,
-part 2 = 18:11–40:08, part 3 = 40:08–57:23. They're split losslessly at pauses: put them back to back
+Delivered in **4 files** (the app's upload limit is 400 MB): part 1 = 0:00–18:11,
+part 2a = 18:11–28:45, part 2b = 28:45–40:08, part 3 = 40:08–57:23 (order 1 → 2a → 2b → 3). They're split losslessly at pauses: put them back to back
 on one CapCut track and the episode plays straight through.
 **Length:** 63:54 raw → **57:23** cut (about 6.5 minutes removed).
 

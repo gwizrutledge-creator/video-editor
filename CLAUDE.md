@@ -21,6 +21,6 @@ Layout: raw/ (raw clip), transcript/ (words.json, cuts.json), scripts/, vendor/ 
   two-up: host Gregory Rutledge + guest Brock Valentine). Saved as raw/EP14_Brock_Valentine.mp4. User wants the whole
   episode cut. Download: curl -L "https://drive.usercontent.google.com/download?id=<id>&export=download&confirm=t".
   Subfolders "BV Opus Reels" / "BV Streamyard Reels" hold reels already made from it.
-- Delivery: SendUserFile caps uploads at 500 MiB, so split long renders losslessly at keyframes inside pauses
+- Delivery: SendUserFile caps uploads at 400 MiB (one call said 500; 421 MiB was refused), so split long renders losslessly at keyframes inside pauses
   (ffmpeg -c copy -f segment -segment_frames N,...; keyframe index = pts*fps - 1 here) and verify frame totals.
 - EP 13 (Mark Drake) is already edited by the user on their PC; dropped.
