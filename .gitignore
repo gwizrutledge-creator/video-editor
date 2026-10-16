@@ -5,3 +5,4 @@ raw/*
 !raw/.gitkeep
 cut.mp4
 transcript/asr.json
+__pycache__/

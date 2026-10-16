@@ -1,0 +1,47 @@
+# EP 14 cut list. One cut per line: <index of the first word> | <exact words to remove>
+# Matching ignores case and punctuation; scripts/apply_edits.py refuses any line whose words
+# don't sit at that index, so every cut is checked against transcript/words.json.
+
+# 00:00-17:00
+164 | I was
+274 | And if I had not been
+373 | it's it's
+857 | So what was the first step you took in? Or let me ask it this way.
+1309 | They always affirm me a lot.
+1427 | the
+1533 | Um, because you know, at the, at the,
+1593 | so what's the biggest or how to how to word this
+1613 | on this journey
+1650 | well i'm
+2175 | And so failing your way to the top, when you learn this and it... it started to make sense to you that you're going to have to fail a lot more. How was that? Whoa. Okay.
+2212 | I'm going to,
+2261 | Um,
+2577 | Did I answer your question? I don't recall answering your question. I believe so.
+
+# 17:00-34:00
+3253 | Tomorrow's Thanksgiving, so I'll just, you know, but
+3780 | I wear,
+3858 | So we...
+3898 | know
+4502 | And once you're dead,
+4676 | Because you're going to get,
+4966 | deploy
+# Behind-the-scenes talk about the show format / making it a two-parter.
+5014-5184 | And this is honestly ... interesting people to talk to.
+5444 | He is a blessed... We like to say that...
+
+# 34:00-48:40
+5766 | i'm really not it's
+5902 | if you got
+6056 | not even
+6290 | It's on you, brother.
+7359 | You're wild.
+7745 | if you just applied that one thing because i'm about to
+
+# 48:40-end
+8027 | That's not a question.
+9412 | and obviously he had this he had this
+10074 | we'll stay on a little longer after this but
+# Deliberate, rhythmic delivery: leave these pauses alone.
+keep 9536-9549
+keep 9593-9596

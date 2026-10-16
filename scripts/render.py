@@ -58,7 +58,9 @@ def main() -> None:
     for i, (a, b) in enumerate(frames):
         # Seek half a frame early so frame `a` is the first one kept, robust to rounding.
         ss = max(Fraction(0), (a - Fraction(1, 2)) / fps)
-        args += ["-ss", f"{float(ss):.6f}", "-i", str(raw)]
+        # One decoder thread per input: pieces decode one at a time, and hundreds of
+        # multi-threaded 1080p decoders would exhaust memory.
+        args += ["-threads", "1", "-ss", f"{float(ss):.6f}", "-i", str(raw)]
         n = b - a
         aoff = a / fps - ss
         graph.append(f"[{i}:v:0]trim=end_frame={n},setpts=PTS-STARTPTS[v{i}];"
