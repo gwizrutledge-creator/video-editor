@@ -6,3 +6,4 @@ raw/*
 cut.mp4
 transcript/asr.json
 __pycache__/
+*_cut.mp4

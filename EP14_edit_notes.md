@@ -1,9 +1,9 @@
 # EP 14 — Brock Valentine: edit notes
 
-**File:** `cut.mp4` (1920×1080, 30 fps, H.264 + AAC), ready to drop into CapCut.
+**File:** `EP14_Brock_Valentine_cut.mp4` (1920×1080, 30 fps, H.264 + AAC), ready to drop into CapCut.
 **Length:** 63:54 raw → **57:23** cut (about 6.5 minutes removed).
 
-Timestamps marked **cut** are positions in `cut.mp4`, so they match your CapCut timeline.
+Timestamps marked **cut** are positions in the cut file, so they match your CapCut timeline.
 Timestamps marked **raw** are positions in the original StreamYard recording.
 
 ## What was taken out
