@@ -7,12 +7,15 @@ Layout: raw/ (raw clip), transcript/ (words.json, cuts.json), scripts/, vendor/ 
   The container cannot see or drive desktop apps (Premiere, Resolve), so only file outputs (FCPXML, MP4) can be produced here.
 - Tools present in the container: ffmpeg/ffprobe 6.1.1, uv 0.11, git 2.43, Python 3.11 (uv sees /usr/bin/python3.11), Node 22.22.
 - No NVIDIA GPU: WhisperX runs CPU int8.
-- Network policy blocks huggingface.co (+ *.hf.co CDN) and download.pytorch.org, which WhisperX needs for large-v3 and
-  the alignment model. pypi.org works (whisperx installs fine). Allow those hosts in the environment's Network access.
+- Network (fresh session, 2026-10-16): huggingface.co, download.pytorch.org model files, pypi.org and
+  drive.usercontent.google.com all reachable. WhisperX installs with `uv pip install whisperx` (torch 2.8 CPU path).
 - WhisperX venv: ~/.cache/video-editor/whisperx-venv (container-local; gone when the container is reclaimed).
 - scripts/render.py verified on a 1080x1920 29.97 fps test clip: frame-exact pieces, frame count matches.
-- Footage: Google Drive "EP 13 Mark Drake.mp4" (2.14 GB, podcast episode with a guest; user wants the WHOLE episode cut), file id
-  1mL78jgcUMP5fiYDYZ4QG1sa_MX84bvVO (identical-size copy 1c8RUEB6OJtTiHOCsHacm26zDurYwxC7r in subfolder "EP. 13 Mark Drake").
-  The Drive connector returns files as base64 in the chat, which can't carry 2 GB; download it with curl from
-  drive.usercontent.google.com instead (needs the file shared "anyone with the link" and that host allowed).
-- Allowing hosts in Network access did not reach the already-running container; the new policy applies to a fresh session.
+- User edits in **CapCut** (no Premiere; may install DaVinci Resolve later). CapCut can't import timelines, so the
+  deliverable is cut.mp4; scripts/export_fcpxml.py writes cut.fcpxml for Resolve if they get it.
+- Current footage: Drive folder "EP 14 Broderick Valentine" (id 1TCPdmMONgC7zwQ7tuQroJnYXraEBdmw5), file
+  "EP 14 Brock Valentine.mp4" id 1B8NWVid7RBkkpWGTjkUnTrg0Wqc_v6Uu (2.23 GB, 64 min, 1920x1080 30 fps, StreamYard
+  two-up: host Gregory Rutledge + guest Brock Valentine). Saved as raw/EP14_Brock_Valentine.mp4. User wants the whole
+  episode cut. Download: curl -L "https://drive.usercontent.google.com/download?id=<id>&export=download&confirm=t".
+  Subfolders "BV Opus Reels" / "BV Streamyard Reels" hold reels already made from it.
+- EP 13 (Mark Drake) is already edited by the user on their PC; dropped.
