@@ -11,7 +11,7 @@ Layout: raw/ (raw clip), transcript/ (words.json, cuts.json), scripts/, vendor/ 
   the alignment model. pypi.org works (whisperx installs fine). Allow those hosts in the environment's Network access.
 - WhisperX venv: ~/.cache/video-editor/whisperx-venv (container-local; gone when the container is reclaimed).
 - scripts/render.py verified on a 1080x1920 29.97 fps test clip: frame-exact pieces, frame count matches.
-- Footage: Google Drive "EP 13 Mark Drake.mp4" (2.14 GB, podcast episode with a guest), file id
+- Footage: Google Drive "EP 13 Mark Drake.mp4" (2.14 GB, podcast episode with a guest; user wants the WHOLE episode cut), file id
   1mL78jgcUMP5fiYDYZ4QG1sa_MX84bvVO (identical-size copy 1c8RUEB6OJtTiHOCsHacm26zDurYwxC7r in subfolder "EP. 13 Mark Drake").
   The Drive connector returns files as base64 in the chat, which can't carry 2 GB; download it with curl from
   drive.usercontent.google.com instead (needs the file shared "anyone with the link" and that host allowed).
