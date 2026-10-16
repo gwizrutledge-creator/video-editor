@@ -9,6 +9,9 @@ Layout: raw/ (raw clip), transcript/ (words.json, cuts.json), scripts/, vendor/ 
 - No NVIDIA GPU: WhisperX runs CPU int8.
 - Network (fresh session, 2026-10-16): huggingface.co, download.pytorch.org model files, pypi.org and
   drive.usercontent.google.com all reachable. WhisperX installs with `uv pip install whisperx` (torch 2.8 CPU path).
+- WhisperX alignment needs NLTK `punkt_tab`; nltk.download() refuses the agent proxy (SSRF guard), so fetch
+  https://raw.githubusercontent.com/nltk/nltk_data/gh-pages/packages/tokenizers/punkt_tab.zip with curl and unzip
+  into ~/nltk_data/tokenizers/. Large-v3 CPU int8 ASR on 4 cores: ~27 min for the 64-min EP 14.
 - WhisperX venv: ~/.cache/video-editor/whisperx-venv (container-local; gone when the container is reclaimed).
 - scripts/render.py verified on a 1080x1920 29.97 fps test clip: frame-exact pieces, frame count matches.
 - User edits in **CapCut** (no Premiere; may install DaVinci Resolve later). CapCut can't import timelines, so the

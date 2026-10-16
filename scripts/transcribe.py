@@ -1,7 +1,8 @@
 """Transcribe the raw clip with WhisperX (large-v3, word-level alignment).
 
 Usage: ~/.cache/video-editor/whisperx-venv/bin/python scripts/transcribe.py raw/<clip>
-Writes transcript/audio.wav (16 kHz mono) and transcript/words.json.
+Writes transcript/audio.wav (16 kHz mono), transcript/asr.json (ASR checkpoint) and
+transcript/words.json. Alignment needs NLTK punkt_tab in ~/nltk_data (see CLAUDE.md).
 Skips the work if words.json already exists for the same footage.
 """
 import hashlib
@@ -49,16 +50,23 @@ def main() -> None:
 
     device, compute = ("cuda", "float16") if torch.cuda.is_available() else ("cpu", "int8")
     audio = whisperx.load_audio(str(wav))
-    try:
-        model = whisperx.load_model("large-v3", device, compute_type=compute)
-        result = model.transcribe(audio, batch_size=8 if device == "cpu" else 16)
-    except RuntimeError as e:
-        if device != "cuda":
-            raise
-        print(f"CUDA failed ({e}); falling back to CPU int8.")
-        device, compute = "cpu", "int8"
-        model = whisperx.load_model("large-v3", device, compute_type=compute)
-        result = model.transcribe(audio, batch_size=8)
+    # Checkpoint the (slow) ASR pass so a failure in alignment doesn't cost a re-run.
+    asr_path = OUT / "asr.json"
+    if asr_path.exists() and json.loads(asr_path.read_text()).get("fingerprint") == fp:
+        result = json.loads(asr_path.read_text())["result"]
+        print(f"Reusing ASR result from {asr_path}.")
+    else:
+        try:
+            model = whisperx.load_model("large-v3", device, compute_type=compute)
+            result = model.transcribe(audio, batch_size=8 if device == "cpu" else 16)
+        except RuntimeError as e:
+            if device != "cuda":
+                raise
+            print(f"CUDA failed ({e}); falling back to CPU int8.")
+            device, compute = "cpu", "int8"
+            model = whisperx.load_model("large-v3", device, compute_type=compute)
+            result = model.transcribe(audio, batch_size=8)
+        asr_path.write_text(json.dumps({"fingerprint": fp, "result": result}, ensure_ascii=False))
 
     lang = result["language"]
     align_model, meta = whisperx.load_align_model(language_code=lang, device=device)
