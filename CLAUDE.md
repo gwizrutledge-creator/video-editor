@@ -16,3 +16,4 @@ Layout: raw/ (raw clip), transcript/ (words.json, cuts.json), scripts/, vendor/ 
   The Drive connector returns files as base64 in the chat, which can't carry 2 GB; download it with curl from
   drive.usercontent.google.com instead (needs the file shared "anyone with the link" and that host allowed).
 - Allowing hosts in Network access did not reach the already-running container; the new policy applies to a fresh session.
+- WhisperX install from PyPI works here: whisperx 3.8.6 + torch 2.8.0 (takes several minutes; redo it in each new container).
