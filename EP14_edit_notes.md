@@ -57,12 +57,10 @@ on camera, a 0.1 s cut makes both faces jump.
 - **cut 26:29** — "Behold, believe, become" is a good spot for a text callout too.
 - Speaker name bars are already in the StreamYard layout.
 
-## Check before publishing
+## Dated references
 
-- **cut 55:31** — "the book should be in my IG to pre-order by the end of November" and
-  **cut 56:17** — "in the next three to nine days I should be even more findable". These were
-  true when you recorded; if you publish later, consider trimming them or adding an on-screen
-  update.
+The "pre-order by the end of November" (cut 55:31) and "next three to nine days" (cut 56:17)
+remarks stay in: the episode comes out about a year later at the same time of year, so they still fit.
 
 ## Reels
 
