@@ -32,7 +32,7 @@ Timestamps marked **raw** are positions in the original StreamYard recording.
 | 23:04 | "So we…" false start |
 | 27:32 | "And once you're dead," slip (he meant "done") |
 | 28:37 | "Because you're going to get," false start |
-| **30:58** | **52 s of behind-the-scenes talk about the show format** — "this conversation is a little mild compared to the phone… stale questions… we can turn it into a two-parter… trying to keep these 30 to 45 minutes". It now goes from "The nuggets just flow." straight to "So I do the vetting before someone ever comes on the show." **This is the biggest judgment call; say if you want it back.** |
+| **30:58** | **52 s of behind-the-scenes talk about the show format** — "this conversation is a little mild compared to the phone… stale questions… we can turn it into a two-parter… trying to keep these 30 to 45 minutes". It now goes from "The nuggets just flow." straight to "So I do the vetting before someone ever comes on the show." (Confirmed by Gregory: stays out.) |
 | 33:35 | "He is a blessed… We like to say that…" false start |
 | 39:27 | repeated "It's on you, brother." |
 | 46:21 | repeated "You're wild." |
