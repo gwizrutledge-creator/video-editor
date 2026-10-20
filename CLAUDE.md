@@ -24,3 +24,10 @@ Layout: raw/ (raw clip), transcript/ (words.json, cuts.json), scripts/, vendor/ 
 - Delivery: SendUserFile caps uploads at 400 MiB (one call said 500; 421 MiB was refused), so split long renders losslessly at keyframes inside pauses
   (ffmpeg -c copy -f segment -segment_frames N,...; keyframe index = pts*fps - 1 here) and verify frame totals.
 - EP 13 (Mark Drake) is already edited by the user on their PC; dropped.
+- EP 12 (Jason McKenzie, Drive file 1Jlc2XP-vkmMVLnJ3X7Fn2jXzAkfbGoH3, link-shared by the user on request) is
+  delivered: projects/ep12/ holds episode.json (cold open, punch-ins, chapters), short1-3.json, views and texts;
+  transcript/ holds the EP 12 words.json + edits.txt. Pipeline: transcribe.py -> apply_edits.py ->
+  build_episode.py / build_short.py -> render_timeline.py. EP 14 working files are archived in projects/ep14/.
+- StreamYard layout (EP 12): Gregory panel 902x507 at (38,286), guest panel at (979,286); the two-shot is
+  recomposed on charcoal; close-ups are ~2.1x panel crops above the name bars. Thumbnail cutouts use rembg
+  (~/.cache/video-editor/rembg-venv, model in ~/.u2net).
