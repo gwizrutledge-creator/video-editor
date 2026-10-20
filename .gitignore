@@ -8,3 +8,4 @@ transcript/asr.json
 __pycache__/
 *_cut.mp4
 *_cut_part*.mp4
+projects/*/asr.json
