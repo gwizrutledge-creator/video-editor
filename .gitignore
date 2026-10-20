@@ -9,3 +9,5 @@ __pycache__/
 *_cut.mp4
 *_cut_part*.mp4
 projects/*/asr.json
+projects/*/*.mp4
+TGJ_*.mp4

@@ -1,0 +1,54 @@
+{
+ "source": "raw/EP12_Jason_McKenzie.mp4",
+ "out": "projects/ep12/test.mp4",
+ "canvas": [
+  1920,
+  1080
+ ],
+ "views": {
+  "two": "[in]eq=contrast=1.03:saturation=1.04,colorbalance=rm=0.025:bm=-0.025,split=2[p][q];[p]crop=902:507:38:286,pad=941:507:0:0:color=0x0B0B0B[g];[q]crop=902:507:979:286[j];[g][j]hstack=2,pad=1920:1080:38:286:color=0x0B0B0B,drawtext=fontfile=/usr/share/fonts/opentype/inter/InterDisplay-Bold.otf:text='THE GREATER JOURNEY':fontsize=30:fontcolor=0xF2B13C:x=60:y=118[out]",
+  "jason": "eq=contrast=1.03:saturation=1.04,colorbalance=rm=0.025:bm=-0.025,crop=798:449:1040:286,scale=1920:1080:flags=lanczos,unsharp=5:5:0.5",
+  "greg": "eq=contrast=1.03:saturation=1.04,colorbalance=rm=0.025:bm=-0.025,crop=722:406:128:290,scale=1920:1080:flags=lanczos,unsharp=5:5:0.5"
+ },
+ "items": [
+  {
+   "clip": [
+    446,
+    449
+   ],
+   "view": "two"
+  },
+  {
+   "clip": [
+    449,
+    452
+   ],
+   "view": "jason"
+  },
+  {
+   "card": "projects/ep12/title_card.png",
+   "dur": 1.0
+  },
+  {
+   "clip": [
+    20,
+    22.5
+   ],
+   "view": "greg"
+  }
+ ],
+ "texts": [
+  {
+   "textfile": "projects/ep12/t_test.txt",
+   "start": 3.5,
+   "end": 5.8,
+   "font": "/usr/share/fonts/opentype/inter/InterDisplay-Bold.otf",
+   "size": 44,
+   "color": "0xF2B13C",
+   "x": "(w-text_w)/2",
+   "y": "h-150",
+   "fade": 0.4,
+   "box": 1
+  }
+ ]
+}

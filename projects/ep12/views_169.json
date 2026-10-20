@@ -1,0 +1,5 @@
+{
+ "two": "[in]eq=contrast=1.03:saturation=1.04,colorbalance=rm=0.025:bm=-0.025,split=2[p][q];[p]crop=902:507:38:286,pad=941:507:0:0:color=0x0B0B0B[g];[q]crop=902:507:979:286[j];[g][j]hstack=2,pad=1920:1080:38:286:color=0x0B0B0B,drawtext=fontfile=/usr/share/fonts/opentype/inter/InterDisplay-Bold.otf:text='THE GREATER JOURNEY':fontsize=30:fontcolor=0xF2B13C:x=60:y=118[out]",
+ "jason": "eq=contrast=1.03:saturation=1.04,colorbalance=rm=0.025:bm=-0.025,crop=798:449:1040:286,scale=1920:1080:flags=lanczos,unsharp=5:5:0.5",
+ "greg": "eq=contrast=1.03:saturation=1.04,colorbalance=rm=0.025:bm=-0.025,crop=722:406:128:290,scale=1920:1080:flags=lanczos,unsharp=5:5:0.5"
+}
