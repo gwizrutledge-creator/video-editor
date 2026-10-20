@@ -1,0 +1,33 @@
+{
+ "source": "raw/EP12_Jason_McKenzie.mp4",
+ "views": "projects/ep12/views_916.json",
+ "workdir": "projects/ep12",
+ "question_dur": 4.0,
+ "out": "TGJ_Jason_Short_02_Everyone_Is_Not_Your_Customer.mp4",
+ "ranges": [
+  [
+   1058.913,
+   1062.014
+  ],
+  [
+   1067.896,
+   1069.367
+  ],
+  [
+   1070.605,
+   1109.168
+  ],
+  [
+   1135.146,
+   1145.789
+  ]
+ ],
+ "title": [
+  "IF YOUR CUSTOMER IS EVERYONE,",
+  "YOU HAVE A PROBLEM"
+ ],
+ "question": [
+  "WHO IS YOUR BUSINESS",
+  "ACTUALLY BUILT TO SERVE?"
+ ]
+}

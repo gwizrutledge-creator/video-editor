@@ -1,0 +1,164 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 2
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Cap,Inter Display Black,72,&H00FFFFFF,&H00FFFFFF,&H00000000,&H64000000,0,0,0,0,100,100,0,0,1,6,2,5,40,40,0,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.27,0:00:00.49,Cap,,0,0,0,,{\pos(540,955)}{\c&H003CB1F2&}when{\c&H00FFFFFF&} I go
+Dialogue: 0,0:00:00.49,0:00:00.61,Cap,,0,0,0,,{\pos(540,955)}when {\c&H003CB1F2&}I{\c&H00FFFFFF&} go
+Dialogue: 0,0:00:00.61,0:00:00.83,Cap,,0,0,0,,{\pos(540,955)}when I {\c&H003CB1F2&}go{\c&H00FFFFFF&}
+Dialogue: 0,0:00:00.83,0:00:00.99,Cap,,0,0,0,,{\pos(540,955)}{\c&H003CB1F2&}out{\c&H00FFFFFF&} and I
+Dialogue: 0,0:00:00.99,0:00:01.11,Cap,,0,0,0,,{\pos(540,955)}out {\c&H003CB1F2&}and{\c&H00FFFFFF&} I
+Dialogue: 0,0:00:01.11,0:00:01.21,Cap,,0,0,0,,{\pos(540,955)}out and {\c&H003CB1F2&}I{\c&H00FFFFFF&}
+Dialogue: 0,0:00:01.21,0:00:01.55,Cap,,0,0,0,,{\pos(540,955)}{\c&H003CB1F2&}start{\c&H00FFFFFF&} working with
+Dialogue: 0,0:00:01.55,0:00:01.91,Cap,,0,0,0,,{\pos(540,955)}start {\c&H003CB1F2&}working{\c&H00FFFFFF&} with
+Dialogue: 0,0:00:01.91,0:00:02.07,Cap,,0,0,0,,{\pos(540,955)}start working {\c&H003CB1F2&}with{\c&H00FFFFFF&}
+Dialogue: 0,0:00:02.07,0:00:02.29,Cap,,0,0,0,,{\pos(540,955)}{\c&H003CB1F2&}small{\c&H00FFFFFF&} business
+Dialogue: 0,0:00:02.29,0:00:02.67,Cap,,0,0,0,,{\pos(540,955)}small {\c&H003CB1F2&}business{\c&H00FFFFFF&}
+Dialogue: 0,0:00:02.67,0:00:03.12,Cap,,0,0,0,,{\pos(540,955)}{\c&H003CB1F2&}owners{\c&H00FFFFFF&} they have
+Dialogue: 0,0:00:03.12,0:00:03.28,Cap,,0,0,0,,{\pos(540,955)}owners {\c&H003CB1F2&}they{\c&H00FFFFFF&} have
+Dialogue: 0,0:00:03.28,0:00:03.44,Cap,,0,0,0,,{\pos(540,955)}owners they {\c&H003CB1F2&}have{\c&H00FFFFFF&}
+Dialogue: 0,0:00:03.44,0:00:03.56,Cap,,0,0,0,,{\pos(540,955)}{\c&H003CB1F2&}the{\c&H00FFFFFF&} same issue
+Dialogue: 0,0:00:03.56,0:00:03.82,Cap,,0,0,0,,{\pos(540,955)}the {\c&H003CB1F2&}same{\c&H00FFFFFF&} issue
+Dialogue: 0,0:00:03.82,0:00:04.53,Cap,,0,0,0,,{\pos(540,955)}the same {\c&H003CB1F2&}issue{\c&H00FFFFFF&}
+Dialogue: 0,0:00:05.06,0:00:05.24,Cap,,0,0,0,,{\pos(540,955)}{\c&H003CB1F2&}who{\c&H00FFFFFF&} do you
+Dialogue: 0,0:00:05.24,0:00:05.34,Cap,,0,0,0,,{\pos(540,955)}who {\c&H003CB1F2&}do{\c&H00FFFFFF&} you
+Dialogue: 0,0:00:05.34,0:00:05.50,Cap,,0,0,0,,{\pos(540,955)}who do {\c&H003CB1F2&}you{\c&H00FFFFFF&}
+Dialogue: 0,0:00:05.50,0:00:05.64,Cap,,0,0,0,,{\pos(540,955)}{\c&H003CB1F2&}want{\c&H00FFFFFF&} to work
+Dialogue: 0,0:00:05.64,0:00:05.72,Cap,,0,0,0,,{\pos(540,955)}want {\c&H003CB1F2&}to{\c&H00FFFFFF&} work
+Dialogue: 0,0:00:05.72,0:00:05.96,Cap,,0,0,0,,{\pos(540,955)}want to {\c&H003CB1F2&}work{\c&H00FFFFFF&}
+Dialogue: 0,0:00:05.96,0:00:06.53,Cap,,0,0,0,,{\pos(540,955)}{\c&H003CB1F2&}with?{\c&H00FFFFFF&}
+Dialogue: 0,0:00:06.78,0:00:06.92,Cap,,0,0,0,,{\pos(540,955)}{\c&H003CB1F2&}And{\c&H00FFFFFF&} if it's
+Dialogue: 0,0:00:06.92,0:00:07.08,Cap,,0,0,0,,{\pos(540,955)}And {\c&H003CB1F2&}if{\c&H00FFFFFF&} it's
+Dialogue: 0,0:00:07.08,0:00:07.24,Cap,,0,0,0,,{\pos(540,955)}And if {\c&H003CB1F2&}it's{\c&H00FFFFFF&}
+Dialogue: 0,0:00:07.24,0:00:07.60,Cap,,0,0,0,,{\pos(540,955)}{\c&H003CB1F2&}somebody{\c&H00FFFFFF&} that
+Dialogue: 0,0:00:07.60,0:00:07.76,Cap,,0,0,0,,{\pos(540,955)}somebody {\c&H003CB1F2&}that{\c&H00FFFFFF&}
+Dialogue: 0,0:00:07.76,0:00:08.12,Cap,,0,0,0,,{\pos(540,955)}{\c&H003CB1F2&}provides{\c&H00FFFFFF&} home
+Dialogue: 0,0:00:08.12,0:00:08.32,Cap,,0,0,0,,{\pos(540,955)}provides {\c&H003CB1F2&}home{\c&H00FFFFFF&}
+Dialogue: 0,0:00:08.32,0:00:09.18,Cap,,0,0,0,,{\pos(540,955)}{\c&H003CB1F2&}services{\c&H00FFFFFF&}
+Dialogue: 0,0:00:09.18,0:00:09.34,Cap,,0,0,0,,{\pos(540,955)}{\c&H003CB1F2&}oh{\c&H00FFFFFF&}
+Dialogue: 0,0:00:09.34,0:00:09.62,Cap,,0,0,0,,{\pos(540,955)}{\c&H003CB1F2&}anyone{\c&H00FFFFFF&} with a
+Dialogue: 0,0:00:09.62,0:00:09.78,Cap,,0,0,0,,{\pos(540,955)}anyone {\c&H003CB1F2&}with{\c&H00FFFFFF&} a
+Dialogue: 0,0:00:09.78,0:00:09.86,Cap,,0,0,0,,{\pos(540,955)}anyone with {\c&H003CB1F2&}a{\c&H00FFFFFF&}
+Dialogue: 0,0:00:09.86,0:00:10.45,Cap,,0,0,0,,{\pos(540,955)}{\c&H003CB1F2&}home{\c&H00FFFFFF&}
+Dialogue: 0,0:00:12.10,0:00:12.40,Cap,,0,0,0,,{\pos(540,955)}{\c&H003CB1F2&}And{\c&H00FFFFFF&} then if
+Dialogue: 0,0:00:12.40,0:00:12.62,Cap,,0,0,0,,{\pos(540,955)}And {\c&H003CB1F2&}then{\c&H00FFFFFF&} if
+Dialogue: 0,0:00:12.62,0:00:12.76,Cap,,0,0,0,,{\pos(540,955)}And then {\c&H003CB1F2&}if{\c&H00FFFFFF&}
+Dialogue: 0,0:00:12.76,0:00:12.94,Cap,,0,0,0,,{\pos(540,955)}{\c&H003CB1F2&}it's{\c&H00FFFFFF&} somebody
+Dialogue: 0,0:00:12.94,0:00:13.46,Cap,,0,0,0,,{\pos(540,955)}it's {\c&H003CB1F2&}somebody{\c&H00FFFFFF&}
+Dialogue: 0,0:00:13.46,0:00:14.14,Cap,,0,0,0,,{\pos(540,955)}{\c&H003CB1F2&}like{\c&H00FFFFFF&} I met
+Dialogue: 0,0:00:14.14,0:00:14.24,Cap,,0,0,0,,{\pos(540,955)}like {\c&H003CB1F2&}I{\c&H00FFFFFF&} met
+Dialogue: 0,0:00:14.24,0:00:14.44,Cap,,0,0,0,,{\pos(540,955)}like I {\c&H003CB1F2&}met{\c&H00FFFFFF&}
+Dialogue: 0,0:00:14.44,0:00:14.80,Cap,,0,0,0,,{\pos(540,955)}{\c&H003CB1F2&}someone{\c&H00FFFFFF&} once that
+Dialogue: 0,0:00:14.80,0:00:14.98,Cap,,0,0,0,,{\pos(540,955)}someone {\c&H003CB1F2&}once{\c&H00FFFFFF&} that
+Dialogue: 0,0:00:14.98,0:00:15.16,Cap,,0,0,0,,{\pos(540,955)}someone once {\c&H003CB1F2&}that{\c&H00FFFFFF&}
+Dialogue: 0,0:00:15.16,0:00:15.40,Cap,,0,0,0,,{\pos(540,955)}{\c&H003CB1F2&}did{\c&H00FFFFFF&} water
+Dialogue: 0,0:00:15.40,0:00:15.76,Cap,,0,0,0,,{\pos(540,955)}did {\c&H003CB1F2&}water{\c&H00FFFFFF&}
+Dialogue: 0,0:00:15.76,0:00:16.83,Cap,,0,0,0,,{\pos(540,955)}{\c&H003CB1F2&}purification{\c&H00FFFFFF&}
+Dialogue: 0,0:00:17.20,0:00:17.44,Cap,,0,0,0,,{\pos(540,955)}{\c&H003CB1F2&}And{\c&H00FFFFFF&} I was
+Dialogue: 0,0:00:17.44,0:00:17.54,Cap,,0,0,0,,{\pos(540,955)}And {\c&H003CB1F2&}I{\c&H00FFFFFF&} was
+Dialogue: 0,0:00:17.54,0:00:17.98,Cap,,0,0,0,,{\pos(540,955)}And I {\c&H003CB1F2&}was{\c&H00FFFFFF&}
+Dialogue: 0,0:00:17.98,0:00:18.16,Cap,,0,0,0,,{\pos(540,955)}{\c&H003CB1F2&}like{\c&H00FFFFFF&}
+Dialogue: 0,0:00:18.16,0:00:18.36,Cap,,0,0,0,,{\pos(540,955)}{\c&H003CB1F2&}well{\c&H00FFFFFF&}
+Dialogue: 0,0:00:18.36,0:00:18.44,Cap,,0,0,0,,{\pos(540,955)}{\c&H003CB1F2&}who{\c&H00FFFFFF&} do you
+Dialogue: 0,0:00:18.44,0:00:18.50,Cap,,0,0,0,,{\pos(540,955)}who {\c&H003CB1F2&}do{\c&H00FFFFFF&} you
+Dialogue: 0,0:00:18.50,0:00:18.58,Cap,,0,0,0,,{\pos(540,955)}who do {\c&H003CB1F2&}you{\c&H00FFFFFF&}
+Dialogue: 0,0:00:18.58,0:00:18.68,Cap,,0,0,0,,{\pos(540,955)}{\c&H003CB1F2&}want{\c&H00FFFFFF&} to work
+Dialogue: 0,0:00:18.68,0:00:18.74,Cap,,0,0,0,,{\pos(540,955)}want {\c&H003CB1F2&}to{\c&H00FFFFFF&} work
+Dialogue: 0,0:00:18.74,0:00:18.86,Cap,,0,0,0,,{\pos(540,955)}want to {\c&H003CB1F2&}work{\c&H00FFFFFF&}
+Dialogue: 0,0:00:18.86,0:00:19.22,Cap,,0,0,0,,{\pos(540,955)}{\c&H003CB1F2&}with?{\c&H00FFFFFF&}
+Dialogue: 0,0:00:19.22,0:00:19.52,Cap,,0,0,0,,{\pos(540,955)}{\c&H003CB1F2&}Anyone{\c&H00FFFFFF&} that drinks
+Dialogue: 0,0:00:19.52,0:00:19.62,Cap,,0,0,0,,{\pos(540,955)}Anyone {\c&H003CB1F2&}that{\c&H00FFFFFF&} drinks
+Dialogue: 0,0:00:19.62,0:00:19.88,Cap,,0,0,0,,{\pos(540,955)}Anyone that {\c&H003CB1F2&}drinks{\c&H00FFFFFF&}
+Dialogue: 0,0:00:19.88,0:00:20.51,Cap,,0,0,0,,{\pos(540,955)}{\c&H003CB1F2&}water{\c&H00FFFFFF&}
+Dialogue: 0,0:00:22.92,0:00:23.06,Cap,,0,0,0,,{\pos(540,955)}{\c&H003CB1F2&}And{\c&H00FFFFFF&} for me
+Dialogue: 0,0:00:23.06,0:00:23.26,Cap,,0,0,0,,{\pos(540,955)}And {\c&H003CB1F2&}for{\c&H00FFFFFF&} me
+Dialogue: 0,0:00:23.26,0:00:23.85,Cap,,0,0,0,,{\pos(540,955)}And for {\c&H003CB1F2&}me{\c&H00FFFFFF&}
+Dialogue: 0,0:00:24.62,0:00:24.80,Cap,,0,0,0,,{\pos(540,955)}{\c&H003CB1F2&}I{\c&H00FFFFFF&} cringed the
+Dialogue: 0,0:00:24.80,0:00:25.18,Cap,,0,0,0,,{\pos(540,955)}I {\c&H003CB1F2&}cringed{\c&H00FFFFFF&} the
+Dialogue: 0,0:00:25.18,0:00:25.30,Cap,,0,0,0,,{\pos(540,955)}I cringed {\c&H003CB1F2&}the{\c&H00FFFFFF&}
+Dialogue: 0,0:00:25.30,0:00:25.68,Cap,,0,0,0,,{\pos(540,955)}{\c&H003CB1F2&}most{\c&H00FFFFFF&} because I
+Dialogue: 0,0:00:25.68,0:00:26.06,Cap,,0,0,0,,{\pos(540,955)}most {\c&H003CB1F2&}because{\c&H00FFFFFF&} I
+Dialogue: 0,0:00:26.06,0:00:26.16,Cap,,0,0,0,,{\pos(540,955)}most because {\c&H003CB1F2&}I{\c&H00FFFFFF&}
+Dialogue: 0,0:00:26.16,0:00:26.32,Cap,,0,0,0,,{\pos(540,955)}{\c&H003CB1F2&}was{\c&H00FFFFFF&} guilty of
+Dialogue: 0,0:00:26.32,0:00:26.64,Cap,,0,0,0,,{\pos(540,955)}was {\c&H003CB1F2&}guilty{\c&H00FFFFFF&} of
+Dialogue: 0,0:00:26.64,0:00:26.72,Cap,,0,0,0,,{\pos(540,955)}was guilty {\c&H003CB1F2&}of{\c&H00FFFFFF&}
+Dialogue: 0,0:00:26.72,0:00:26.84,Cap,,0,0,0,,{\pos(540,955)}{\c&H003CB1F2&}the{\c&H00FFFFFF&} same thing
+Dialogue: 0,0:00:26.84,0:00:27.08,Cap,,0,0,0,,{\pos(540,955)}the {\c&H003CB1F2&}same{\c&H00FFFFFF&} thing
+Dialogue: 0,0:00:27.08,0:00:27.30,Cap,,0,0,0,,{\pos(540,955)}the same {\c&H003CB1F2&}thing{\c&H00FFFFFF&}
+Dialogue: 0,0:00:27.30,0:00:27.44,Cap,,0,0,0,,{\pos(540,955)}{\c&H003CB1F2&}for{\c&H00FFFFFF&} a long
+Dialogue: 0,0:00:27.44,0:00:27.50,Cap,,0,0,0,,{\pos(540,955)}for {\c&H003CB1F2&}a{\c&H00FFFFFF&} long
+Dialogue: 0,0:00:27.50,0:00:27.76,Cap,,0,0,0,,{\pos(540,955)}for a {\c&H003CB1F2&}long{\c&H00FFFFFF&}
+Dialogue: 0,0:00:27.76,0:00:28.04,Cap,,0,0,0,,{\pos(540,955)}{\c&H003CB1F2&}time{\c&H00FFFFFF&}
+Dialogue: 0,0:00:28.04,0:00:28.43,Cap,,0,0,0,,{\pos(540,955)}{\c&H003CB1F2&}I{\c&H00FFFFFF&}
+Dialogue: 0,0:00:28.78,0:00:28.92,Cap,,0,0,0,,{\pos(540,955)}{\c&H003CB1F2&}was{\c&H00FFFFFF&} like
+Dialogue: 0,0:00:28.92,0:00:29.10,Cap,,0,0,0,,{\pos(540,955)}was {\c&H003CB1F2&}like{\c&H00FFFFFF&}
+Dialogue: 0,0:00:29.10,0:00:29.32,Cap,,0,0,0,,{\pos(540,955)}{\c&H003CB1F2&}well{\c&H00FFFFFF&}
+Dialogue: 0,0:00:29.32,0:00:29.38,Cap,,0,0,0,,{\pos(540,955)}{\c&H003CB1F2&}I{\c&H00FFFFFF&} could work
+Dialogue: 0,0:00:29.38,0:00:29.56,Cap,,0,0,0,,{\pos(540,955)}I {\c&H003CB1F2&}could{\c&H00FFFFFF&} work
+Dialogue: 0,0:00:29.56,0:00:29.74,Cap,,0,0,0,,{\pos(540,955)}I could {\c&H003CB1F2&}work{\c&H00FFFFFF&}
+Dialogue: 0,0:00:29.74,0:00:29.96,Cap,,0,0,0,,{\pos(540,955)}{\c&H003CB1F2&}with{\c&H00FFFFFF&} any business
+Dialogue: 0,0:00:29.96,0:00:30.14,Cap,,0,0,0,,{\pos(540,955)}with {\c&H003CB1F2&}any{\c&H00FFFFFF&} business
+Dialogue: 0,0:00:30.14,0:00:30.93,Cap,,0,0,0,,{\pos(540,955)}with any {\c&H003CB1F2&}business{\c&H00FFFFFF&}
+Dialogue: 0,0:00:31.17,0:00:31.31,Cap,,0,0,0,,{\pos(540,955)}{\c&H003CB1F2&}And{\c&H00FFFFFF&} I thought
+Dialogue: 0,0:00:31.31,0:00:31.41,Cap,,0,0,0,,{\pos(540,955)}And {\c&H003CB1F2&}I{\c&H00FFFFFF&} thought
+Dialogue: 0,0:00:31.41,0:00:31.97,Cap,,0,0,0,,{\pos(540,955)}And I {\c&H003CB1F2&}thought{\c&H00FFFFFF&}
+Dialogue: 0,0:00:31.97,0:00:32.09,Cap,,0,0,0,,{\pos(540,955)}{\c&H003CB1F2&}you{\c&H00FFFFFF&} know
+Dialogue: 0,0:00:32.09,0:00:32.39,Cap,,0,0,0,,{\pos(540,955)}you {\c&H003CB1F2&}know{\c&H00FFFFFF&}
+Dialogue: 0,0:00:32.39,0:00:32.49,Cap,,0,0,0,,{\pos(540,955)}{\c&H003CB1F2&}I{\c&H00FFFFFF&} could
+Dialogue: 0,0:00:32.49,0:00:33.08,Cap,,0,0,0,,{\pos(540,955)}I {\c&H003CB1F2&}could{\c&H00FFFFFF&}
+Dialogue: 0,0:00:33.58,0:00:33.88,Cap,,0,0,0,,{\pos(540,955)}{\c&H003CB1F2&}Yes{\c&H00FFFFFF&}
+Dialogue: 0,0:00:33.88,0:00:34.00,Cap,,0,0,0,,{\pos(540,955)}{\c&H003CB1F2&}I{\c&H00FFFFFF&} could
+Dialogue: 0,0:00:34.00,0:00:34.28,Cap,,0,0,0,,{\pos(540,955)}I {\c&H003CB1F2&}could{\c&H00FFFFFF&}
+Dialogue: 0,0:00:34.28,0:00:34.67,Cap,,0,0,0,,{\pos(540,955)}{\c&H003CB1F2&}I{\c&H00FFFFFF&}
+Dialogue: 0,0:00:34.82,0:00:34.96,Cap,,0,0,0,,{\pos(540,955)}{\c&H003CB1F2&}am{\c&H00FFFFFF&} right
+Dialogue: 0,0:00:34.96,0:00:35.36,Cap,,0,0,0,,{\pos(540,955)}am {\c&H003CB1F2&}right{\c&H00FFFFFF&}
+Dialogue: 0,0:00:35.36,0:00:35.44,Cap,,0,0,0,,{\pos(540,955)}{\c&H003CB1F2&}I{\c&H00FFFFFF&} can do
+Dialogue: 0,0:00:35.44,0:00:35.60,Cap,,0,0,0,,{\pos(540,955)}I {\c&H003CB1F2&}can{\c&H00FFFFFF&} do
+Dialogue: 0,0:00:35.60,0:00:35.76,Cap,,0,0,0,,{\pos(540,955)}I can {\c&H003CB1F2&}do{\c&H00FFFFFF&}
+Dialogue: 0,0:00:35.76,0:00:36.24,Cap,,0,0,0,,{\pos(540,955)}{\c&H003CB1F2&}that{\c&H00FFFFFF&}
+Dialogue: 0,0:00:36.24,0:00:37.13,Cap,,0,0,0,,{\pos(540,955)}{\c&H003CB1F2&}However{\c&H00FFFFFF&}
+Dialogue: 0,0:00:37.38,0:00:38.01,Cap,,0,0,0,,{\pos(540,955)}{\c&H003CB1F2&}that{\c&H00FFFFFF&}
+Dialogue: 0,0:00:38.02,0:00:38.22,Cap,,0,0,0,,{\pos(540,955)}{\c&H003CB1F2&}is{\c&H00FFFFFF&} not necessarily
+Dialogue: 0,0:00:38.22,0:00:38.56,Cap,,0,0,0,,{\pos(540,955)}is {\c&H003CB1F2&}not{\c&H00FFFFFF&} necessarily
+Dialogue: 0,0:00:38.56,0:00:39.26,Cap,,0,0,0,,{\pos(540,955)}is not {\c&H003CB1F2&}necessarily{\c&H00FFFFFF&}
+Dialogue: 0,0:00:39.26,0:00:39.48,Cap,,0,0,0,,{\pos(540,955)}{\c&H003CB1F2&}the{\c&H00FFFFFF&} right people
+Dialogue: 0,0:00:39.48,0:00:39.80,Cap,,0,0,0,,{\pos(540,955)}the {\c&H003CB1F2&}right{\c&H00FFFFFF&} people
+Dialogue: 0,0:00:39.80,0:00:40.20,Cap,,0,0,0,,{\pos(540,955)}the right {\c&H003CB1F2&}people{\c&H00FFFFFF&}
+Dialogue: 0,0:00:40.20,0:00:40.40,Cap,,0,0,0,,{\pos(540,955)}{\c&H003CB1F2&}for{\c&H00FFFFFF&} me
+Dialogue: 0,0:00:40.40,0:00:40.95,Cap,,0,0,0,,{\pos(540,955)}for {\c&H003CB1F2&}me{\c&H00FFFFFF&}
+Dialogue: 0,0:00:41.68,0:00:41.84,Cap,,0,0,0,,{\pos(540,955)}{\c&H003CB1F2&}If{\c&H00FFFFFF&} you're one
+Dialogue: 0,0:00:41.84,0:00:42.16,Cap,,0,0,0,,{\pos(540,955)}If {\c&H003CB1F2&}you're{\c&H00FFFFFF&} one
+Dialogue: 0,0:00:42.16,0:00:42.28,Cap,,0,0,0,,{\pos(540,955)}If you're {\c&H003CB1F2&}one{\c&H00FFFFFF&}
+Dialogue: 0,0:00:42.28,0:00:42.36,Cap,,0,0,0,,{\pos(540,955)}{\c&H003CB1F2&}of{\c&H00FFFFFF&} the companies
+Dialogue: 0,0:00:42.36,0:00:42.48,Cap,,0,0,0,,{\pos(540,955)}of {\c&H003CB1F2&}the{\c&H00FFFFFF&} companies
+Dialogue: 0,0:00:42.48,0:00:42.94,Cap,,0,0,0,,{\pos(540,955)}of the {\c&H003CB1F2&}companies{\c&H00FFFFFF&}
+Dialogue: 0,0:00:42.94,0:00:43.16,Cap,,0,0,0,,{\pos(540,955)}{\c&H003CB1F2&}that{\c&H00FFFFFF&} says yes
+Dialogue: 0,0:00:43.16,0:00:43.46,Cap,,0,0,0,,{\pos(540,955)}that {\c&H003CB1F2&}says{\c&H00FFFFFF&} yes
+Dialogue: 0,0:00:43.46,0:00:43.76,Cap,,0,0,0,,{\pos(540,955)}that says {\c&H003CB1F2&}yes{\c&H00FFFFFF&}
+Dialogue: 0,0:00:43.76,0:00:44.04,Cap,,0,0,0,,{\pos(540,955)}{\c&H003CB1F2&}to{\c&H00FFFFFF&} everyone
+Dialogue: 0,0:00:44.04,0:00:44.89,Cap,,0,0,0,,{\pos(540,955)}to {\c&H003CB1F2&}everyone{\c&H00FFFFFF&}
+Dialogue: 0,0:00:45.18,0:00:45.34,Cap,,0,0,0,,{\pos(540,955)}{\c&H003CB1F2&}all{\c&H00FFFFFF&} the time
+Dialogue: 0,0:00:45.34,0:00:45.50,Cap,,0,0,0,,{\pos(540,955)}all {\c&H003CB1F2&}the{\c&H00FFFFFF&} time
+Dialogue: 0,0:00:45.50,0:00:46.14,Cap,,0,0,0,,{\pos(540,955)}all the {\c&H003CB1F2&}time{\c&H00FFFFFF&}
+Dialogue: 0,0:00:46.14,0:00:46.42,Cap,,0,0,0,,{\pos(540,955)}{\c&H003CB1F2&}for{\c&H00FFFFFF&} anything
+Dialogue: 0,0:00:46.42,0:00:47.29,Cap,,0,0,0,,{\pos(540,955)}for {\c&H003CB1F2&}anything{\c&H00FFFFFF&}
+Dialogue: 0,0:00:47.62,0:00:47.79,Cap,,0,0,0,,{\pos(540,955)}{\c&H003CB1F2&}then{\c&H00FFFFFF&} you're
+Dialogue: 0,0:00:47.79,0:00:48.36,Cap,,0,0,0,,{\pos(540,955)}then {\c&H003CB1F2&}you're{\c&H00FFFFFF&}
+Dialogue: 0,0:00:48.41,0:00:48.97,Cap,,0,0,0,,{\pos(540,955)}{\c&H003CB1F2&}absolutely{\c&H00FFFFFF&} nothing
+Dialogue: 0,0:00:48.97,0:00:49.35,Cap,,0,0,0,,{\pos(540,955)}absolutely {\c&H003CB1F2&}nothing{\c&H00FFFFFF&}
+Dialogue: 0,0:00:49.35,0:00:49.55,Cap,,0,0,0,,{\pos(540,955)}{\c&H003CB1F2&}to{\c&H00FFFFFF&} anyone
+Dialogue: 0,0:00:49.55,0:00:50.32,Cap,,0,0,0,,{\pos(540,955)}to {\c&H003CB1F2&}anyone{\c&H00FFFFFF&}
+Dialogue: 0,0:00:50.33,0:00:50.47,Cap,,0,0,0,,{\pos(540,955)}{\c&H003CB1F2&}and{\c&H00FFFFFF&} it's just
+Dialogue: 0,0:00:50.47,0:00:50.63,Cap,,0,0,0,,{\pos(540,955)}and {\c&H003CB1F2&}it's{\c&H00FFFFFF&} just
+Dialogue: 0,0:00:50.63,0:00:50.85,Cap,,0,0,0,,{\pos(540,955)}and it's {\c&H003CB1F2&}just{\c&H00FFFFFF&}
+Dialogue: 0,0:00:50.85,0:00:50.93,Cap,,0,0,0,,{\pos(540,955)}{\c&H003CB1F2&}a{\c&H00FFFFFF&} confusing mess
+Dialogue: 0,0:00:50.93,0:00:51.45,Cap,,0,0,0,,{\pos(540,955)}a {\c&H003CB1F2&}confusing{\c&H00FFFFFF&} mess
+Dialogue: 0,0:00:51.45,0:00:51.85,Cap,,0,0,0,,{\pos(540,955)}a confusing {\c&H003CB1F2&}mess{\c&H00FFFFFF&}

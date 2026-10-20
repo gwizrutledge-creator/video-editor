@@ -1,7 +1,9 @@
 """Build a vertical Short: stacked layout, title band, word captions, closing question.
 
 Usage: python3 scripts/build_short.py <short.json>
-short.json keys: source, out, workdir (default projects/ep12), views (9:16 views JSON), clips [[s, e], ...] in source time,
+short.json keys: source, out, workdir (default projects/ep12), views (9:16 views JSON),
+  ranges [[s, e], ...] in source time (intersected with transcript/cuts.json, so the Short
+  gets the episode's cuts and tightened pauses),
   title ["line", ...] (top band while the Short plays), question ["line", ...] (replaces the
   title for the last question_dur seconds), question_dur.
 Writes <out stem>_timeline.json and <out stem>.ass, ready for render_timeline.py.
@@ -25,6 +27,9 @@ CAPTION_Y = 955  # centre of the band between the two panels
 def main() -> None:
     sh = json.loads(Path(sys.argv[1]).read_text())
     fps = fps_of(ROOT / sh["source"])
+    cuts = json.loads((ROOT / "transcript/cuts.json").read_text())["segments"]
+    sh["clips"] = [[round(max(a, c["start"]), 3), round(min(b, c["end"]), 3)]
+                   for a, b in sh["ranges"] for c in cuts if c["start"] < b and c["end"] > a]
     work = sh.get("workdir", "projects/ep12")
     stem = f"{work}/{Path(sh['out']).stem}"
     total = sum(Fraction(round(Fraction(b) * fps) - round(Fraction(a) * fps)) / fps

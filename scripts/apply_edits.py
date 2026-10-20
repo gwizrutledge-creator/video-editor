@@ -4,7 +4,8 @@ Usage: python3 scripts/apply_edits.py
 edits.txt lines are `<first word index> | <words to remove>`, or for long cuts
 `<first>-<last> | <first words> ... <last words>`. Each is checked against words.json
 (ignoring case and punctuation) and the run refuses to write on any mismatch.
-`keep <first>-<last>` protects the pauses inside that word range from tightening.
+`keep <first>-<last>` protects the pauses inside that word range from tightening;
+`pause <word> <seconds>` shortens the silence after that word to the given length instead.
 transcript/cut_report.txt lists every removed run with its time and length.
 Every junction between kept words, whether made by a cut or by a pause longer than
 MAX_PAUSE, keeps up to HOLD s of the original silence on each side, never reaching into a
@@ -31,7 +32,7 @@ def norm(s: str) -> str:
 
 
 def load_edits(words):
-    removed, keep, errors = set(), set(), []
+    removed, keep, pauses, errors = set(), set(), {}, []
     for n, line in enumerate((ROOT / "transcript/edits.txt").read_text().splitlines(), 1):
         line = line.split("#", 1)[0].strip()
         if not line:
@@ -39,6 +40,10 @@ def load_edits(words):
         if line.startswith("keep "):
             a, b = map(int, line[5:].split("-"))
             keep.update(range(a, b))
+            continue
+        if line.startswith("pause "):
+            i, secs = line[6:].split()
+            pauses[int(i)] = float(secs)
             continue
         idx, phrase = (p.strip() for p in line.split("|", 1))
         if "-" in idx:  # a-b | first words ... last words
@@ -57,7 +62,7 @@ def load_edits(words):
         removed.update(range(i, j + 1))
     if errors:
         sys.exit("edits.txt does not match words.json:\n  " + "\n  ".join(errors))
-    return removed, keep
+    return removed, keep, pauses
 
 
 def loudness():
@@ -71,7 +76,7 @@ def loudness():
 
 def main() -> None:
     words = timed(json.loads((ROOT / "transcript/words.json").read_text())["words"])
-    removed, keep = load_edits(words)
+    removed, keep, pauses = load_edits(words)
     rms = loudness()
     speech = np.median(rms[[int(w["start"] / WIN) for w in words if w["end"] - w["start"] > 0.1]])
     loud = rms > speech * 0.1  # ~20 dB under typical speech
@@ -90,7 +95,11 @@ def main() -> None:
         gap = words[n]["start"] - words[p]["end"]
         if n == p + 1 and gap > MAX_PAUSE and has_sound(words[p]["end"], words[n]["start"]):
             kept_loud += 1
-        if n != p + 1 or (gap > MAX_PAUSE and p not in keep and not has_sound(words[p]["end"], words[n]["start"])):
+        if p in pauses:
+            split = gap > pauses[p]
+        else:
+            split = gap > MAX_PAUSE and p not in keep and not has_sound(words[p]["end"], words[n]["start"])
+        if n != p + 1 or split:
             pieces.append([n, n])
         else:
             pieces[-1][1] = n
@@ -100,7 +109,9 @@ def main() -> None:
         before = words[a]["start"] - (words[a - 1]["end"] if a > 0 else 0.0)
         after = (words[b + 1]["start"] if b + 1 < len(words) else words[b]["end"] + 1.0) - words[b]["end"]
         hold_after = HOLD if b + 1 < len(words) else 1.0  # let the last word ring out
-        segs.append({"start": round(words[a]["start"] - min(before, HOLD), 3),
+        hold_after = pauses[b] / 2 if b in pauses else hold_after
+        hold_before = pauses[a - 1] / 2 if a - 1 in pauses else HOLD
+        segs.append({"start": round(words[a]["start"] - min(before, hold_before), 3),
                      "end": round(words[b]["end"] + min(after, hold_after), 3),
                      "text": " ".join(w["word"] for w in words[a:b + 1])})
 

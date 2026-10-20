@@ -1,0 +1,33 @@
+{
+ "source": "raw/EP12_Jason_McKenzie.mp4",
+ "views": "projects/ep12/views_916.json",
+ "workdir": "projects/ep12",
+ "question_dur": 4.0,
+ "out": "TGJ_Jason_Short_01_Afraid_To_Bill.mp4",
+ "ranges": [
+  [
+   450.931,
+   471.535
+  ],
+  [
+   585.717,
+   606.396
+  ],
+  [
+   613.53,
+   621.054
+  ],
+  [
+   628.268,
+   631.39
+  ]
+ ],
+ "title": [
+  "WHY I WAS AFRAID TO",
+  "SEND CLIENTS AN INVOICE"
+ ],
+ "question": [
+  "EVER FELT GUILTY CHARGING",
+  "FOR WHAT YOU'RE GOOD AT?"
+ ]
+}

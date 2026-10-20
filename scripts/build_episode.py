@@ -3,7 +3,7 @@
 Usage: python3 scripts/build_episode.py <episode.json>
 episode.json keys:
   source, out, views (path to a views JSON), card, card_dur
-  cold_open  [{"clip": [s, e], "view": v, "text": {...}?}, ...]   source times
+  cold_open  [{"clip": [s, e], "view": v, "text": {...}?} or {"card_beat": secs}, ...]
   punch_ins  [{"range": [s, e], "view": v}, ...]   conversation stretches shown as close-ups
   texts      extra timed text in source time: [{"src": [s, e], ...drawtext keys}]
   chapters   [["mm:ss", "title"], ...] in source time
@@ -47,6 +47,10 @@ def main() -> None:
         t_out += Fraction(b - a) / fps
 
     for c in ep["cold_open"]:
+        if "card_beat" in c:  # short silent black beat between cold-open moments
+            items.append({"card": ep.get("beat_card", "projects/ep12/black.png"), "dur": c["card_beat"]})
+            t_out += Fraction(round(Fraction(c["card_beat"]) * fps)) / fps
+            continue
         add_clip(*c["clip"], c["view"], c.get("text"))
     cold_len = t_out
     items.append({"card": ep["card"], "dur": ep["card_dur"]})
@@ -78,7 +82,7 @@ def main() -> None:
     views = json.loads((ROOT / ep["views"]).read_text())
     tl = {"source": ep["source"], "out": ep["out"], "canvas": [1920, 1080], "views": views,
           "items": items, "texts": texts, "loudness": ep.get("loudness", -14)}
-    out_tl = ROOT / (str(Path(ep["out"]).with_suffix("")) + "_timeline.json")
+    out_tl = ROOT / ep.get("workdir", "projects/ep12") / f"{Path(ep['out']).stem}_timeline.json"
     out_tl.write_text(json.dumps(tl, indent=1))
 
     print(f"cold open {float(cold_len):.1f} s + card {ep['card_dur']} s; "

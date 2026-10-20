@@ -1,0 +1,97 @@
+{
+ "source": "raw/EP12_Jason_McKenzie.mp4",
+ "out": "TGJ_Jason_Short_03_Expensive_Job.mp4",
+ "canvas": [
+  1080,
+  1920
+ ],
+ "views": {
+  "stack": "[in]eq=contrast=1.03:saturation=1.04,colorbalance=rm=0.025:bm=-0.025,split=2[p][q];[p]crop=902:507:979:286,scale=1080:607:flags=lanczos,pad=1080:723:0:0:color=0x0B0B0B[j];[q]crop=902:507:38:286,scale=1080:607:flags=lanczos[g];[j][g]vstack=2,pad=1080:1920:0:290:color=0x0B0B0B[out]"
+ },
+ "items": [
+  {
+   "clip": [
+    1803.662,
+    1827.807
+   ],
+   "view": "stack"
+  },
+  {
+   "clip": [
+    1828.388,
+    1837.032
+   ],
+   "view": "stack"
+  },
+  {
+   "clip": [
+    1838.913,
+    1858.143
+   ],
+   "view": "stack"
+  },
+  {
+   "clip": [
+    2022.003,
+    2031.883
+   ],
+   "view": "stack"
+  }
+ ],
+ "texts": [
+  {
+   "textfile": "projects/ep12/text/TGJ_Jason_Short_03_Expensive_Job_0.txt",
+   "start": 0,
+   "end": 61.867,
+   "font": "/usr/share/fonts/opentype/inter/InterDisplay-Bold.otf",
+   "size": 30,
+   "color": "0xF2B13C",
+   "x": "(w-text_w)/2",
+   "y": "70"
+  },
+  {
+   "textfile": "projects/ep12/text/TGJ_Jason_Short_03_Expensive_Job_1.txt",
+   "start": 0,
+   "end": 57.867,
+   "font": "/usr/share/fonts/opentype/inter/InterDisplay-Black.otf",
+   "size": 58,
+   "color": "white",
+   "x": "(w-text_w)/2",
+   "y": "141"
+  },
+  {
+   "textfile": "projects/ep12/text/TGJ_Jason_Short_03_Expensive_Job_2.txt",
+   "start": 0,
+   "end": 57.867,
+   "font": "/usr/share/fonts/opentype/inter/InterDisplay-Black.otf",
+   "size": 58,
+   "color": "white",
+   "x": "(w-text_w)/2",
+   "y": "209"
+  },
+  {
+   "textfile": "projects/ep12/text/TGJ_Jason_Short_03_Expensive_Job_3.txt",
+   "start": 57.867,
+   "end": 61.867,
+   "font": "/usr/share/fonts/opentype/inter/InterDisplay-Black.otf",
+   "size": 58,
+   "color": "0xF2B13C",
+   "x": "(w-text_w)/2",
+   "y": "141",
+   "fade": 0.25
+  },
+  {
+   "textfile": "projects/ep12/text/TGJ_Jason_Short_03_Expensive_Job_4.txt",
+   "start": 57.867,
+   "end": 61.867,
+   "font": "/usr/share/fonts/opentype/inter/InterDisplay-Black.otf",
+   "size": 58,
+   "color": "0xF2B13C",
+   "x": "(w-text_w)/2",
+   "y": "209",
+   "fade": 0.25
+  }
+ ],
+ "ass": "projects/ep12/TGJ_Jason_Short_03_Expensive_Job.ass",
+ "loudness": -14
+}

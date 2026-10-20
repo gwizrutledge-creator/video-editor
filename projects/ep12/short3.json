@@ -1,0 +1,25 @@
+{
+ "source": "raw/EP12_Jason_McKenzie.mp4",
+ "views": "projects/ep12/views_916.json",
+ "workdir": "projects/ep12",
+ "question_dur": 4.0,
+ "out": "TGJ_Jason_Short_03_Expensive_Job.mp4",
+ "ranges": [
+  [
+   1803.662,
+   1858.143
+  ],
+  [
+   2022.003,
+   2031.883
+  ]
+ ],
+ "title": [
+  "DID YOU BUILD A BUSINESS",
+  "OR GIVE YOURSELF A JOB?"
+ ],
+ "question": [
+  "WHAT HAPPENS IF YOU STEP",
+  "AWAY FOR A WEEK?"
+ ]
+}

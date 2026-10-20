@@ -1,0 +1,147 @@
+{
+ "source": "raw/EP12_Jason_McKenzie.mp4",
+ "out": "TGJ_Jason_McKenzie_Full_Episode.mp4",
+ "views": "projects/ep12/views_169.json",
+ "card": "projects/ep12/title_card.png",
+ "card_dur": 2.0,
+ "loudness": -14,
+ "cold_open": [
+  {
+   "clip": [
+    450.9,
+    466.45
+   ],
+   "view": "jason",
+   "text": {
+    "textfile": "projects/ep12/text/years.txt",
+    "delay": 12.0,
+    "font": "/usr/share/fonts/opentype/inter/InterDisplay-Bold.otf",
+    "size": 46,
+    "color": "0xF2B13C",
+    "x": "110",
+    "y": "h-190",
+    "box": 1,
+    "fade": 0.35
+   }
+  },
+  {
+   "card_beat": 0.4
+  },
+  {
+   "clip": [
+    585.715,
+    606.45
+   ],
+   "view": "jason"
+  },
+  {
+   "card_beat": 0.4
+  },
+  {
+   "clip": [
+    743.25,
+    748.6
+   ],
+   "view": "greg"
+  }
+ ],
+ "punch_ins": [
+  {
+   "range": [
+    450.931,
+    455.163
+   ],
+   "view": "jason"
+  },
+  {
+   "range": [
+    743.022,
+    748.6
+   ],
+   "view": "greg"
+  },
+  {
+   "range": [
+    1031.298,
+    1041.557
+   ],
+   "view": "jason"
+  },
+  {
+   "range": [
+    1837.972,
+    1846.287
+   ],
+   "view": "jason"
+  },
+  {
+   "range": [
+    2022.003,
+    2029.52
+   ],
+   "view": "greg"
+  },
+  {
+   "range": [
+    2198.394,
+    2202.865
+   ],
+   "view": "jason"
+  }
+ ],
+ "chapters_out": "projects/ep12/chapters.txt",
+ "chapters": [
+  [
+   "00:00",
+   "The Greater Journey"
+  ],
+  [
+   "02:08.5",
+   "The Childhood Lesson That Created an Entrepreneur"
+  ],
+  [
+   "05:36.8",
+   "When Confidence Turns Into Self-Doubt"
+  ],
+  [
+   "07:20.6",
+   "Why Jason Was Afraid to Bill Clients"
+  ],
+  [
+   "09:42.5",
+   "The Childhood Belief Behind His Money Block"
+  ],
+  [
+   "13:35.0",
+   "A Different Way to Think About Receiving Money"
+  ],
+  [
+   "17:26.2",
+   "Why Serving Everyone Hurts Your Business"
+  ],
+  [
+   "23:41.3",
+   "Find a Paying Customer, Then Deliver"
+  ],
+  [
+   "29:14.8",
+   "The Business Owner's Invisible Cage"
+  ],
+  [
+   "36:16.8",
+   "You Can Do Anything, But Not Everything"
+  ],
+  [
+   "39:59.5",
+   "When Repeated Failures Make You Doubt Yourself"
+  ],
+  [
+   "46:09.2",
+   "Turning Your Thorn Into Something Greater"
+  ],
+  [
+   "51:31.7",
+   "What to Do When Your Business Feels Invisible"
+  ]
+ ]
+}

@@ -1,0 +1,35 @@
+# EP 12 Jason McKenzie: cut list. One cut per line: <index of the first word> | <exact words to remove>
+# (or <first>-<last> | <first words> ... <last words>). scripts/apply_edits.py checks every
+# line against transcript/words.json. Cold open + title card are added by build_episode.py.
+
+# Opening housekeeping: the standard show tagline is replaced by the cold open and title card.
+# The episode now opens on "Today on The Greater Journey, we're diving into...".
+0-81 | all right ... let's get into it.
+
+740 | um
+885 | i i
+2223 | and and it's yeah it it's
+2535 | um there is
+2760 | I mean.
+2781 | that.
+3970 | so good and so
+3991 | Um,
+# Unfulfilled detour before the "transition with purpose" question.
+4980 | Can we talk about that feeling for a minute before we transition? Um, so the next, you know, um, I guess it is a good transition.
+# Unanswered "tell us more" before switching to the podcast question.
+6178 | Man, tell us, tell us a little bit more about that.
+6190 | I want to,
+6216 | And so I want to know like between empowering the network of employees and giving people a stage to, you know,
+6813 | So let's talk about that a little more.
+# Show housekeeping.
+6875 | and then we'll just go into casual conversation here. I just want to make sure I hit all these points every time.
+8782 | um
+8812 | And I want to encourage, I guess, two more questions.
+# ~50 s recap of Jason's answer read back to him, plus "did I capture that... excellent excellent man".
+9187-9310 | so if you're feeling invisible ... excellent excellent man
+9469 | um
+9638 | small...
+
+# Meaningful thinking pauses: shortened, not removed.
+pause 8511 1.5
+pause 8843 1.2
