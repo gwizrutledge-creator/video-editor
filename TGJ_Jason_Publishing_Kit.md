@@ -3,6 +3,11 @@
 Everything you need to post, in the order you'll use it. All timestamps below match the
 exported file `TGJ_Jason_McKenzie_Full_Episode.mp4` (54:09), not the original recording.
 
+**The full episode arrives in 4 parts** (the app's upload limit is 400 MB): part 1 = 0:00–13:43,
+part 2 = 13:43–26:25, part 3 = 26:25–40:12, part 4 = 40:12–54:09. They're split losslessly in
+pauses: put them back to back on one CapCut track and export once (1080p, 30 fps) to get the
+single `TGJ_Jason_McKenzie_Full_Episode.mp4` for YouTube.
+
 ---
 
 ## 1. YouTube — full episode

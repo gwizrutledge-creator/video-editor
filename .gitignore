@@ -11,3 +11,4 @@ __pycache__/
 projects/*/asr.json
 projects/*/*.mp4
 TGJ_*.mp4
+TGJ_*_part*.mp4
