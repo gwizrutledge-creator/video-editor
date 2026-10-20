@@ -1,0 +1,3 @@
+{
+ "stack": "[in]eq=contrast=1.03:saturation=1.04,colorbalance=rm=0.025:bm=-0.025,split=2[p][q];[p]crop=902:507:979:286,scale=1080:607:flags=lanczos,pad=1080:723:0:0:color=0x0B0B0B[j];[q]crop=902:507:38:286,scale=1080:607:flags=lanczos[g];[j][g]vstack=2,pad=1080:1920:0:290:color=0x0B0B0B[out]"
+}
