@@ -1,0 +1,80 @@
+{
+ "fps": 30,
+ "runs": [
+  {
+   "start_frame": 0,
+   "end_frame": 1068,
+   "layout": "J"
+  },
+  {
+   "start_frame": 1068,
+   "end_frame": 1288,
+   "layout": "G"
+  },
+  {
+   "start_frame": 1288,
+   "end_frame": 13006,
+   "layout": "2up"
+  },
+  {
+   "start_frame": 13006,
+   "end_frame": 13126,
+   "layout": "J"
+  },
+  {
+   "start_frame": 13126,
+   "end_frame": 21335,
+   "layout": "2up"
+  },
+  {
+   "start_frame": 21335,
+   "end_frame": 21502,
+   "layout": "G"
+  },
+  {
+   "start_frame": 21502,
+   "end_frame": 28904,
+   "layout": "2up"
+  },
+  {
+   "start_frame": 28904,
+   "end_frame": 29177,
+   "layout": "J"
+  },
+  {
+   "start_frame": 29177,
+   "end_frame": 50877,
+   "layout": "2up"
+  },
+  {
+   "start_frame": 50877,
+   "end_frame": 51099,
+   "layout": "J"
+  },
+  {
+   "start_frame": 51099,
+   "end_frame": 56103,
+   "layout": "2up"
+  },
+  {
+   "start_frame": 56103,
+   "end_frame": 56316,
+   "layout": "G"
+  },
+  {
+   "start_frame": 56316,
+   "end_frame": 60506,
+   "layout": "2up"
+  },
+  {
+   "start_frame": 60506,
+   "end_frame": 60616,
+   "layout": "J"
+  },
+  {
+   "start_frame": 60616,
+   "end_frame": 1000000000,
+   "layout": "2up"
+  }
+ ]
+}

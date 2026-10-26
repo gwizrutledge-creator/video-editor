@@ -1,0 +1,446 @@
+{
+ "source": "raw/EP12_Jason_McKenzie.mp4",
+ "guest": "Jason McKenzie",
+ "people": {
+  "greg": "Gregory Rutledge",
+  "jason": "Jason McKenzie"
+ },
+ "caption_fixes": {
+  "i": "I"
+ },
+ "full": {
+  "name": "full",
+  "file": "out/full/EP12_Jason_McKenzie_Full_Edit.mp4",
+  "title": "He Was Scared to Send a Bill. The Reason Went Back to Childhood.",
+  "coldopen": [
+   [
+    0.0,
+    4.25
+   ],
+   [
+    9.3,
+    30.2
+   ],
+   [
+    1694.62,
+    1701.4
+   ],
+   [
+    2559.02,
+    2565.4
+   ],
+   [
+    35.6,
+    42.933
+   ]
+  ],
+  "keep": [
+   [
+    42.933,
+    63.6
+   ],
+   [
+    93.45,
+    255.1
+   ],
+   [
+    300.7,
+    696.3
+   ],
+   [
+    708.7,
+    765.45
+   ],
+   [
+    1010.35,
+    1013.55,
+    "teaser"
+   ],
+   [
+    765.45,
+    1247.4
+   ],
+   [
+    1280.95,
+    1469.9
+   ],
+   [
+    1478.35,
+    1615.75
+   ],
+   [
+    1687.45,
+    1695.88,
+    "teaser"
+   ],
+   [
+    1615.75,
+    1899.55
+   ],
+   [
+    1910.25,
+    2149.6
+   ],
+   [
+    2168.65,
+    2183.8
+   ],
+   [
+    2570.6,
+    2576.1,
+    "teaser"
+   ],
+   [
+    2183.8,
+    2360.15
+   ],
+   [
+    2378.2,
+    2668.6
+   ],
+   [
+    2695.45,
+    2797.85
+   ],
+   [
+    2810.15,
+    3018.6
+   ],
+   [
+    3023.45,
+    3087.75
+   ]
+  ],
+  "lower_thirds": [
+   {
+    "at": 119.4,
+    "index": 0,
+    "label": "Grounded in your unique story"
+   },
+   {
+    "at": 310.9,
+    "index": 1,
+    "label": "Reframing limiting beliefs"
+   },
+   {
+    "at": 740.3,
+    "index": 2,
+    "label": "Embracing continuous learning"
+   },
+   {
+    "at": 1287.8,
+    "index": 3,
+    "label": "Action-oriented goals"
+   },
+   {
+    "at": 1589.3,
+    "index": 4,
+    "label": "Transitioning with purpose"
+   },
+   {
+    "at": 1916.3,
+    "index": 5,
+    "label": "Empower your network"
+   },
+   {
+    "at": 2168.8,
+    "index": 6,
+    "label": "Resilience"
+   }
+  ],
+  "info": [
+   {
+    "at": 2973.6,
+    "dur": 40,
+    "title": "Connect with Jason McKenzie",
+    "line": "BoiseWeb.net  ·  Facebook: Real Jason McKenzie  ·  Small Business Big Visibility"
+   }
+  ]
+ },
+ "mids": [
+  {
+   "name": "mid1",
+   "file": "out/mid/Cut1_The_Money_Block.mp4",
+   "title": "The Money Block Hiding in Your Childhood",
+   "hook": [
+    [
+     574.1,
+     581.65
+    ]
+   ],
+   "card": "From The Greater Journey, EP 12 with Jason McKenzie",
+   "keep": [
+    [
+     300.7,
+     696.3
+    ],
+    [
+     708.7,
+     736.6
+    ],
+    [
+     775.45,
+     972.45
+    ]
+   ],
+   "lower_thirds": [
+    {
+     "at": 310.9,
+     "index": 1,
+     "label": "Reframing limiting beliefs"
+    }
+   ],
+   "end_screen": 10
+  },
+  {
+   "name": "mid2",
+   "file": "out/mid/Cut2_Say_No.mp4",
+   "title": "Stop Trying to Serve Everyone. Saying No Grew His Business.",
+   "hook": [
+    [
+     1005.2,
+     1013.55
+    ]
+   ],
+   "card": "From The Greater Journey, EP 12 with Jason McKenzie",
+   "keep": [
+    [
+     737.4,
+     765.45
+    ],
+    [
+     977.1,
+     1247.4
+    ],
+    [
+     1280.95,
+     1460.45
+    ]
+   ],
+   "lower_thirds": [
+    {
+     "at": 740.3,
+     "index": 2,
+     "label": "Embracing continuous learning"
+    },
+    {
+     "at": 1287.8,
+     "index": 3,
+     "label": "Action-oriented goals"
+    }
+   ],
+   "end_screen": 10
+  },
+  {
+   "name": "mid3",
+   "file": "out/mid/Cut3_The_Cage.mp4",
+   "title": "He Took October Off and His Business Kept Running. Here's How.",
+   "hook": [
+    [
+     1694.62,
+     1701.4
+    ]
+   ],
+   "card": "From The Greater Journey, EP 12 with Jason McKenzie",
+   "keep": [
+    [
+     1589.2,
+     1899.55
+    ],
+    [
+     1910.25,
+     2147.245
+    ]
+   ],
+   "lower_thirds": [
+    {
+     "at": 1589.3,
+     "index": 4,
+     "label": "Transitioning with purpose"
+    },
+    {
+     "at": 1916.3,
+     "index": 5,
+     "label": "Empower your network"
+    }
+   ],
+   "end_screen": 10
+  },
+  {
+   "name": "mid4",
+   "file": "out/mid/Cut4_The_Thorn.mp4",
+   "title": "What If Your Thorn Is the Reason You'll Be Great?",
+   "hook": [
+    [
+     2206.4,
+     2214.6
+    ]
+   ],
+   "card": "From The Greater Journey, EP 12 with Jason McKenzie",
+   "keep": [
+    [
+     2168.65,
+     2360.15
+    ],
+    [
+     2378.2,
+     2668.6
+    ],
+    [
+     2695.45,
+     2797.85
+    ],
+    [
+     2810.15,
+     2934.2
+    ]
+   ],
+   "lower_thirds": [
+    {
+     "at": 2168.8,
+     "index": 6,
+     "label": "Resilience"
+    }
+   ],
+   "end_screen": 10
+  }
+ ],
+ "shorts": [
+  {
+   "name": "S1",
+   "file": "out/shorts/S01_Scared_to_Send_a_Bill.mp4",
+   "title": "Scared to Send a Bill After 10 Years in Business",
+   "in": 433.533,
+   "out": 449.4,
+   "speaker": "jason",
+   "links": "Full episode",
+   "faces": {
+    "J": [
+     938,
+     416
+    ],
+    "2up": 1427
+   }
+  },
+  {
+   "name": "S2",
+   "file": "out/shorts/S02_Childhood_Money_Block.mp4",
+   "title": "The Childhood Memory Behind His Money Block",
+   "in": 565.32,
+   "out": 581.65,
+   "speaker": "jason",
+   "links": "Full episode",
+   "faces": {
+    "2up": 1422
+   }
+  },
+  {
+   "name": "S3",
+   "file": "out/shorts/S03_Fighting_for_Limits.mp4",
+   "title": "You're Fighting for Limits You Don't Even Want",
+   "in": 711.45,
+   "out": 726.4,
+   "speaker": "greg",
+   "links": "Cut 1",
+   "faces": {
+    "G": [
+     886,
+     628
+    ],
+    "2up": 457
+   }
+  },
+  {
+   "name": "S4",
+   "file": "out/shorts/S04_Every_Payment_Is_a_Thank_You.mp4",
+   "title": "Every Payment Is a Thank You",
+   "in": 775.45,
+   "out": 788.1,
+   "speaker": "jason",
+   "links": "Cut 1",
+   "faces": {
+    "2up": 1446
+   }
+  },
+  {
+   "name": "S5",
+   "file": "out/shorts/S05_Willing_to_Receive_It.mp4",
+   "title": "Are You Willing to Receive It?",
+   "in": 937.85,
+   "out": 954.3,
+   "speaker": "greg",
+   "links": "Cut 1",
+   "faces": {
+    "2up": 450
+   }
+  },
+  {
+   "name": "S6",
+   "file": "out/shorts/S06_Anyone_Who_Drinks_Water.mp4",
+   "title": "\"Anyone Who Drinks Water\" Is Not Your Customer",
+   "in": 997.6,
+   "out": 1013.6,
+   "speaker": "jason",
+   "links": "Cut 2",
+   "faces": {
+    "2up": 1438
+   }
+  },
+  {
+   "name": "S7",
+   "file": "out/shorts/S07_IT_and_Snow_Removal.mp4",
+   "title": "IT Services and Snow Removal Under One Name?",
+   "in": 1097.62,
+   "out": 1114.6,
+   "speaker": "jason",
+   "links": "Cut 2",
+   "faces": {
+    "2up": 1419
+   }
+  },
+  {
+   "name": "S8",
+   "file": "out/shorts/S08_We_Need_You_The_Cage.mp4",
+   "title": "\"We Need You\": The Day He Realized He Built a Cage",
+   "in": 1687.45,
+   "out": 1703.2,
+   "speaker": "jason",
+   "links": "Full episode",
+   "faces": {
+    "2up": 1417,
+    "J": [
+     912,
+     422
+    ]
+   }
+  },
+  {
+   "name": "S9",
+   "file": "out/shorts/S09_Expensive_Job.mp4",
+   "title": "If Your Business Needs You Every Day, You Have a Job",
+   "in": 1870.1,
+   "out": 1879.62,
+   "speaker": "greg",
+   "links": "Cut 3",
+   "faces": {
+    "G": [
+     842,
+     655
+    ],
+    "2up": 450
+   }
+  },
+  {
+   "name": "S10",
+   "file": "out/shorts/S10_Thorn_to_Greatness.mp4",
+   "title": "What If Your Thorn Is Where Your Greatness Starts?",
+   "in": 2550.3,
+   "out": 2565.42,
+   "speaker": "jason",
+   "links": "Cut 4",
+   "faces": {
+    "2up": 1426
+   }
+  }
+ ]
+}

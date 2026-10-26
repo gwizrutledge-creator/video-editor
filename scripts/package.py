@@ -6,8 +6,12 @@ Names pick outputs by their "name" field (full, mid1, short03, ...); default ren
 Every source range snaps to the footage's frame grid, the same way scripts/render.py does:
 each piece is an input-seeked copy of the raw, trimmed to an exact frame count, then all
 pieces are concatenated and encoded once. Graphics (GREATER lower-thirds, context card,
-end screen, Shorts captions) are drawn in the same pass. Also writes a CMX3600 .edl next
-to each file so the cut can be rebuilt by hand in Premiere or Resolve.
+"coming up" tags, info cards, end screen, Shorts captions) are drawn in the same pass. Also
+writes a CMX3600 .edl next to each file so the cut can be rebuilt by hand in Premiere or Resolve.
+
+A "keep" entry is [start, end] or [start, end, "teaser"] (a re-hook: a later line played early).
+Shorts follow edit/layout.json (scripts/layout.py): the crop switches between the speaker's tile
+in the two-up and the full-screen punch-ins, centred on the faces scripts/find_faces.py found.
 """
 import json
 import os
@@ -22,10 +26,12 @@ ROOT = Path(__file__).resolve().parent.parent
 GOLD, BG, GREY = "0xE8AF4C", "0x0A0A0A", "0x6A6A6A"
 FONT = "/usr/share/fonts/opentype/inter/Inter-Bold.otf"
 FONT_SEMI = "/usr/share/fonts/opentype/inter/Inter-SemiBold.otf"
-# Camera tiles in the 1920x1080 two-up layout, measured on the footage. The name bars
-# start at y=734, so Shorts crop above them.
+# Camera tiles in the 1920x1080 two-up layout, measured on the footage. Shorts crop above
+# the name bars: Jason's starts at y=734, Greg's at y=692 while it shows his handle line.
 TILES = {"greg": (38, 939), "jason": (978, 1880)}
-TILE_TOP, TILE_CROP_BOTTOM = 286, 730
+TILE_TOP = 286
+TILE_CROP_BOTTOM = {"greg": 688, "jason": 730}
+FULL_SIDE = 900  # square crop from a full-screen punch-in
 GREATER = "GREATER"
 
 
@@ -69,44 +75,45 @@ class Timeline:
 
     def __init__(self, fps: Fraction):
         self.fps = fps
-        self.items = []  # ("src", a, b, tag) or ("slate", frames, kind)
+        self.items = []
         self.frames = 0
 
-    def add_src(self, start: float, end: float, tag: str = "body") -> None:
+    def add_src(self, start: float, end: float, tag: str = "body", vchain: str = "") -> None:
         a, b = round(Fraction(start) * self.fps), round(Fraction(end) * self.fps)
         if b > a:
-            self.items.append(("src", a, b, tag, self.frames))
+            self.items.append({"kind": "src", "a": a, "b": b, "tag": tag, "rec": self.frames,
+                               "vchain": vchain})
             self.frames += b - a
 
     def add_slate(self, seconds: float, kind: str) -> None:
         n = round(Fraction(seconds) * self.fps)
-        self.items.append(("slate", n, kind, None, self.frames))
+        self.items.append({"kind": "slate", "n": n, "tag": kind, "rec": self.frames})
         self.frames += n
 
-    def out_time(self, src_t: float, skip_tags=("hook", "coldopen")) -> float:
+    def out_time(self, src_t: float, skip_tags=("hook", "coldopen", "teaser")) -> float:
         f = round(Fraction(src_t) * self.fps)
         for it in self.items:
-            if it[0] == "src" and it[3] not in skip_tags and it[1] <= f < it[2]:
-                return float((it[4] + f - it[1]) / self.fps)
+            if it["kind"] == "src" and it["tag"] not in skip_tags and it["a"] <= f < it["b"]:
+                return float((it["rec"] + f - it["a"]) / self.fps)
         raise ValueError(f"source time {src_t} is not in a kept piece")
 
-    def tag_end(self, tag: str) -> float:
-        ends = [it[4] + it[2] - it[1] for it in self.items if it[0] == "src" and it[3] == tag]
-        return float(max(ends) / self.fps)
+    def spans(self, tag: str) -> list[tuple[float, float]]:
+        return [(float(it["rec"] / self.fps), float((it["rec"] + it["b"] - it["a"]) / self.fps))
+                for it in self.items if it["kind"] == "src" and it["tag"] == tag]
 
     @property
     def seconds(self) -> float:
         return float(self.frames / self.fps)
 
 
-def piece_inputs(tl: Timeline, raw: Path, rate: int, size: tuple[int, int], vchain: str):
-    """ffmpeg input args and filter chains producing [v{i}][a{i}] for each timeline item."""
+def piece_inputs(tl: Timeline, raw: Path, rate: int, size: tuple[int, int]):
+    """ffmpeg input args and filter chains producing [cv][ca] from the timeline items."""
     fps = tl.fps
     args, graph, labels = [], [], []
     n_in = 0
     for i, it in enumerate(tl.items):
-        if it[0] == "src":
-            _, a, b, _, _ = it
+        if it["kind"] == "src":
+            a, b = it["a"], it["b"]
             n = b - a
             # Seek half a frame early so frame `a` is the first one kept, robust to rounding.
             ss = max(Fraction(0), (a - Fraction(1, 2)) / fps)
@@ -116,14 +123,13 @@ def piece_inputs(tl: Timeline, raw: Path, rate: int, size: tuple[int, int], vcha
             aoff = a / fps - ss
             d = float(n / fps)
             graph.append(
-                f"[{n_in}:v:0]trim=end_frame={n},setpts=PTS-STARTPTS{vchain}[v{i}];"
+                f"[{n_in}:v:0]trim=end_frame={n},setpts=PTS-STARTPTS{it['vchain']}[v{i}];"
                 f"[{n_in}:a:0]atrim=start={float(aoff):.6f}:duration={d:.6f},asetpts=PTS-STARTPTS,"
                 f"aformat=sample_rates={rate}:channel_layouts=stereo,"
                 f"afade=t=in:d=0.012,afade=t=out:st={max(0.0, d - 0.012):.6f}:d=0.012[a{i}]")
             n_in += 1
         else:
-            _, n, kind, _, _ = it
-            d = float(n / fps)
+            d = float(it["n"] / fps)
             graph.append(f"color=c={BG}:s={size[0]}x{size[1]}:r={fps}:d={d:.6f},"
                          f"format=yuv420p,setsar=1[v{i}];"
                          f"anullsrc=r={rate}:cl=stereo,atrim=duration={d:.6f}[a{i}]")
@@ -169,8 +175,25 @@ def end_screen(t0: float, t1: float, guest: str) -> list[str]:
             text(f"with {guest}", "1160", "580", 44, GOLD, t0, t1 + 1, FONT_SEMI, alpha=a)]
 
 
-def encode_args(out: Path, crf: int) -> list[str]:
-    return ["-c:v", "libx264", "-preset", "medium", "-crf", str(crf), "-pix_fmt", "yuv420p",
+def coming_up(t0: float, t1: float) -> list[str]:
+    """Tag on a re-hook so the jump ahead reads as a tease, not a mistake."""
+    en = f"enable='between(t,{t0:.3f},{t1:.3f})'"
+    return [f"drawbox=x=1632:y=120:w=6:h=52:color={GOLD}:t=fill:{en}",
+            f"drawtext=fontfile={FONT}:text='COMING UP':x=1652:y=128:fontsize=36:"
+            f"fontcolor={GOLD}:{en}"]
+
+
+def info_card(card: dict, t0: float, dur: float) -> list[str]:
+    """Two-line card in the bottom band (e.g. where to find the guest)."""
+    t1 = t0 + dur
+    return [f"drawbox=x=760:y=838:w=400:h=3:color={GOLD}@0.9:t=fill:"
+            f"enable='between(t,{t0:.3f},{t1:.3f})'",
+            text(card["title"].upper(), "(w-text_w)/2", "866", 40, GOLD, t0, t1),
+            text(card["line"], "(w-text_w)/2", "938", 34, "white", t0, t1, FONT_SEMI)]
+
+
+def encode_args(out: Path, crf: int, preset: str = "medium") -> list[str]:
+    return ["-c:v", "libx264", "-preset", preset, "-crf", str(crf), "-pix_fmt", "yuv420p",
             "-c:a", "aac", "-b:a", "192k", "-fps_mode", "passthrough",
             "-movflags", "+faststart", str(out)]
 
@@ -181,16 +204,17 @@ def write_edl(tl: Timeline, title: str, raw: Path, path: Path) -> None:
     ev = 0
     for it in tl.items:
         ev += 1
-        if it[0] == "src":
-            _, a, b, tag, rec = it
+        rec = it["rec"]
+        if it["kind"] == "src":
+            a, b = it["a"], it["b"]
             lines.append(f"{ev:03d}  {reel:<8} AA/V  C        {tc(a, tl.fps)} {tc(b, tl.fps)} "
                          f"{tc(rec, tl.fps)} {tc(rec + b - a, tl.fps)}")
-            lines.append(f"* FROM CLIP NAME: {raw.name}  ({tag})")
+            lines.append(f"* FROM CLIP NAME: {raw.name}  ({it['tag']})")
         else:
-            _, n, kind, _, rec = it
+            n = it["n"]
             lines.append(f"{ev:03d}  BL       V     C        00:00:00:00 {tc(n, tl.fps)} "
                          f"{tc(rec, tl.fps)} {tc(rec + n, tl.fps)}")
-            lines.append(f"* SLATE: {kind}")
+            lines.append(f"* SLATE: {it['tag']}")
     path.write_text("\n".join(lines) + "\n")
 
 
@@ -200,17 +224,21 @@ def render_landscape(spec: dict, plan: dict, raw: Path, fps: Fraction, size, rat
         tl.add_src(a, b, "hook")
     for a, b in spec.get("coldopen", []):
         tl.add_src(a, b, "coldopen")
-    for a, b in spec["keep"]:
-        tl.add_src(a, b)
+    for k in spec["keep"]:
+        tl.add_src(k[0], k[1], k[2] if len(k) > 2 else "body")
     if spec.get("end_screen"):
         tl.add_slate(spec["end_screen"], "end screen")
 
-    args, graph = piece_inputs(tl, raw, rate, size, "")
+    args, graph = piece_inputs(tl, raw, rate, size)
     draws = []
     for lt in spec.get("lower_thirds", []):
         draws += lower_third(lt, tl.out_time(lt["at"]), lt.get("dur", 7.0))
+    for card in spec.get("info", []):
+        draws += info_card(card, tl.out_time(card["at"]), card.get("dur", 8.0))
+    for t0, t1 in tl.spans("teaser"):
+        draws += coming_up(t0, t1)
     if spec.get("card"):
-        draws += context_card(spec["card"], tl.tag_end("hook"), spec.get("card_dur", 3.0))
+        draws += context_card(spec["card"], tl.spans("hook")[-1][1], spec.get("card_dur", 3.0))
     if spec.get("end_screen"):
         draws += end_screen(tl.seconds - spec["end_screen"], tl.seconds, plan["guest"])
     vout = "[cv]" + (",".join(draws) if draws else "null") + "[v]"
@@ -220,7 +248,7 @@ def render_landscape(spec: dict, plan: dict, raw: Path, fps: Fraction, size, rat
     out.parent.mkdir(parents=True, exist_ok=True)
     cmd = (["ffmpeg", "-y", "-v", "error", "-stats"] + args +
            ["-filter_complex", ";\n".join(graph), "-map", "[v]", "-map", "[ca]"] +
-           encode_args(out, spec.get("crf", 18)))
+           encode_args(out, spec.get("crf", 18), spec.get("preset", "fast")))
     subprocess.run(cmd, check=True)
     write_edl(tl, spec.get("title", spec["name"]), raw, out.with_suffix(".edl"))
     verify(out, tl)
@@ -240,6 +268,9 @@ def caption_words(plan_words: list[dict], start: float, end: float, fixes: dict)
             continue
         word = fixes.get(w["word"], w["word"])
         if word:
+            # Captions start sentences with a capital even where the transcript doesn't.
+            if not out or out[-1]["word"][-1:] in ".?!":
+                word = word[:1].upper() + word[1:]
             out.append({"word": word, "start": max(w["start"], start) - start,
                         "end": min(w["end"], end) - start})
     return out
@@ -278,10 +309,39 @@ def write_ass(words: list[dict], path: Path, total: float) -> None:
     path.write_text(head + "\n".join(ev) + "\n")
 
 
+def short_crop(layout: str, speaker: str, face) -> str:
+    """Square crop centred on the face, scaled to 1080 and placed on the 9:16 canvas."""
+    if layout == "2up":
+        side, x0, x1 = TILE_CROP_BOTTOM[speaker] - TILE_TOP, *TILES[speaker]
+        cx = face if face is not None else (x0 + x1) / 2
+        x, y = int(min(max(cx - side / 2, x0), x1 - side)), TILE_TOP
+    else:
+        side = FULL_SIDE
+        cx, cy = face if face is not None else (960, 400)
+        # Eyes a little above the middle of the square.
+        x = int(min(max(cx - side / 2, 0), 1920 - side))
+        y = int(min(max(cy - side * 0.42, 0), 1080 - side))
+    return (f",crop={side}:{side}:{x}:{y},scale=1080:1080:flags=lanczos,"
+            f"pad=1080:1920:0:420:color={BG},setsar=1")
+
+
+def layout_pieces(start: float, end: float, fps: Fraction) -> list[tuple[float, float, str]]:
+    runs = json.loads((ROOT / "edit/layout.json").read_text())["runs"]
+    a, b = round(Fraction(start) * fps), round(Fraction(end) * fps)
+    out = []
+    for r in runs:
+        lo, hi = max(a, r["start_frame"]), min(b, r["end_frame"])
+        if hi > lo:
+            out.append((float(lo / fps), float(hi / fps), r["layout"]))
+    return out
+
+
 def render_short(spec: dict, plan: dict, words: list[dict], raw: Path, fps: Fraction,
                  rate: int) -> None:
     tl = Timeline(fps)
-    tl.add_src(spec["in"], spec["out"])
+    faces = spec.get("faces", {})
+    for a, b, lay in layout_pieces(spec["in"], spec["out"], fps):
+        tl.add_src(a, b, lay, short_crop(lay, spec["speaker"], faces.get(lay)))
     dur = tl.seconds
     out = ROOT / spec["file"]
     out.parent.mkdir(parents=True, exist_ok=True)
@@ -289,14 +349,8 @@ def render_short(spec: dict, plan: dict, words: list[dict], raw: Path, fps: Frac
     write_ass(caption_words(words, spec["in"], spec["out"], plan.get("caption_fixes", {})),
               ass, dur)
 
-    side = TILES[spec["speaker"]]
-    h = TILE_CROP_BOTTOM - TILE_TOP
-    cx = spec.get("face_x", (side[0] + side[1]) / 2)
-    x = int(min(max(cx - h / 2, side[0]), side[1] - h))
     name = plan["people"][spec["speaker"]].upper()
-    vchain = (f",crop={h}:{h}:{x}:{TILE_TOP},scale=1080:1080:flags=lanczos,"
-              f"pad=1080:1920:0:420:color={BG},setsar=1")
-    args, graph = piece_inputs(tl, raw, rate, (1080, 1920), vchain)
+    args, graph = piece_inputs(tl, raw, rate, (1080, 1920))
     draws = [f"drawtext=fontfile={FONT}:text='THE GREATER JOURNEY':x=(w-text_w)/2:y=300:"
              f"fontsize=48:fontcolor={GOLD}",
              f"drawbox=x=480:y=376:w=120:h=3:color={GOLD}:t=fill",
