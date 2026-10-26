@@ -1,0 +1,1719 @@
+{
+ "source": "dubose.mp4",
+ "segments": [
+  {
+   "start": 0.131,
+   "end": 4.814,
+   "text": "it's a big hole in the market that people need and you found it and you're filling it."
+  },
+  {
+   "start": 6.035,
+   "end": 7.176,
+   "text": "That's what a business is."
+  },
+  {
+   "start": 7.796,
+   "end": 17.683,
+   "text": "I can't tell you how many people I've been talking to lately that they approach the business with what they want, what they like, who they are, but what time they spent doing this."
+  },
+  {
+   "start": 17.943,
+   "end": 21.385,
+   "text": "And, you know, you've been through school to be a doctor."
+  },
+  {
+   "start": 21.925,
+   "end": 28.97,
+   "text": "Like you could easily just be like, you know, you know how many years of experience I have, you know, how much stuff I went through and talk about you all the time."
+  },
+  {
+   "start": 30.04,
+   "end": 32.421,
+   "text": "and let that ego inflame, right?"
+  },
+  {
+   "start": 32.441,
+   "end": 37.262,
+   "text": "But you choose to flip that on its head and serve at a high level."
+  },
+  {
+   "start": 38.782,
+   "end": 43.544,
+   "text": "So it sounds like to me, you're helping doctors to become doctorpreneurs."
+  },
+  {
+   "start": 44.704,
+   "end": 45.264,
+   "text": "It is."
+  },
+  {
+   "start": 45.624,
+   "end": 46.524,
+   "text": "You took the words out of my mouth."
+  },
+  {
+   "start": 46.544,
+   "end": 47.425,
+   "text": "That's the transformation."
+  },
+  {
+   "start": 48.225,
+   "end": 53.426,
+   "text": "So the transformation is when all of us finish our training, you are a 0.1%er."
+  },
+  {
+   "start": 56.959,
+   "end": 60.302,
+   "text": "It has such a unique body of knowledge and you're great at that."
+  },
+  {
+   "start": 61.443,
+   "end": 61.903,
+   "text": "And guess what?"
+  },
+  {
+   "start": 61.923,
+   "end": 65.646,
+   "text": "You spent so much attention and time and energy on being that 0.1%."
+  },
+  {
+   "start": 65.666,
+   "end": 66.967,
+   "text": "You didn't neglect everything else."
+  },
+  {
+   "start": 67.647,
+   "end": 69.689,
+   "text": "You don't know how to do that stuff usually."
+  },
+  {
+   "start": 70.449,
+   "end": 75.713,
+   "text": "And in our culture of being a physician, then you got to do continuing medical education."
+  },
+  {
+   "start": 76.073,
+   "end": 78.535,
+   "text": "And then you got to keep up with compliance of this and this and this."
+  },
+  {
+   "start": 78.575,
+   "end": 80.697,
+   "text": "So all your energy is focused on being a doctor."
+  },
+  {
+   "start": 81.468,
+   "end": 83.657,
+   "text": "So your skill set and everything else is a lot smaller."
+  },
+  {
+   "start": 83.698,
+   "end": 87.353,
+   "text": "So the transformation for me was like, you know, since"
+  }
+ ],
+ "words": [
+  {
+   "word": "it's",
+   "start": 0.131,
+   "end": 0.251,
+   "score": 0.872
+  },
+  {
+   "word": "a",
+   "start": 0.291,
+   "end": 0.331,
+   "score": 0.516
+  },
+  {
+   "word": "big",
+   "start": 0.431,
+   "end": 0.651,
+   "score": 0.928
+  },
+  {
+   "word": "hole",
+   "start": 0.771,
+   "end": 0.952,
+   "score": 0.89
+  },
+  {
+   "word": "in",
+   "start": 0.992,
+   "end": 1.032,
+   "score": 0.984
+  },
+  {
+   "word": "the",
+   "start": 1.052,
+   "end": 1.132,
+   "score": 0.839
+  },
+  {
+   "word": "market",
+   "start": 1.172,
+   "end": 1.452,
+   "score": 0.903
+  },
+  {
+   "word": "that",
+   "start": 1.492,
+   "end": 1.612,
+   "score": 0.934
+  },
+  {
+   "word": "people",
+   "start": 1.652,
+   "end": 1.952,
+   "score": 0.719
+  },
+  {
+   "word": "need",
+   "start": 1.992,
+   "end": 2.252,
+   "score": 0.899
+  },
+  {
+   "word": "and",
+   "start": 3.293,
+   "end": 3.393,
+   "score": 0.778
+  },
+  {
+   "word": "you",
+   "start": 3.433,
+   "end": 3.613,
+   "score": 0.797
+  },
+  {
+   "word": "found",
+   "start": 3.633,
+   "end": 3.894,
+   "score": 0.833
+  },
+  {
+   "word": "it",
+   "start": 3.954,
+   "end": 4.014,
+   "score": 0.75
+  },
+  {
+   "word": "and",
+   "start": 4.134,
+   "end": 4.194,
+   "score": 0.935
+  },
+  {
+   "word": "you're",
+   "start": 4.214,
+   "end": 4.374,
+   "score": 0.901
+  },
+  {
+   "word": "filling",
+   "start": 4.394,
+   "end": 4.714,
+   "score": 0.891
+  },
+  {
+   "word": "it.",
+   "start": 4.754,
+   "end": 4.814,
+   "score": 0.997
+  },
+  {
+   "word": "That's",
+   "start": 6.035,
+   "end": 6.255,
+   "score": 0.884
+  },
+  {
+   "word": "what",
+   "start": 6.295,
+   "end": 6.415,
+   "score": 0.874
+  },
+  {
+   "word": "a",
+   "start": 6.455,
+   "end": 6.495,
+   "score": 0.499
+  },
+  {
+   "word": "business",
+   "start": 6.535,
+   "end": 6.895,
+   "score": 0.915
+  },
+  {
+   "word": "is.",
+   "start": 7.016,
+   "end": 7.176,
+   "score": 0.752
+  },
+  {
+   "word": "I",
+   "start": 7.796,
+   "end": 7.856,
+   "score": 0.993
+  },
+  {
+   "word": "can't",
+   "start": 7.916,
+   "end": 8.116,
+   "score": 0.794
+  },
+  {
+   "word": "tell",
+   "start": 8.156,
+   "end": 8.276,
+   "score": 0.916
+  },
+  {
+   "word": "you",
+   "start": 8.316,
+   "end": 8.376,
+   "score": 0.987
+  },
+  {
+   "word": "how",
+   "start": 8.416,
+   "end": 8.537,
+   "score": 0.684
+  },
+  {
+   "word": "many",
+   "start": 8.557,
+   "end": 8.697,
+   "score": 0.907
+  },
+  {
+   "word": "people",
+   "start": 8.857,
+   "end": 9.097,
+   "score": 0.808
+  },
+  {
+   "word": "I've",
+   "start": 9.137,
+   "end": 9.217,
+   "score": 0.98
+  },
+  {
+   "word": "been",
+   "start": 9.237,
+   "end": 9.377,
+   "score": 0.748
+  },
+  {
+   "word": "talking",
+   "start": 9.417,
+   "end": 9.697,
+   "score": 0.942
+  },
+  {
+   "word": "to",
+   "start": 9.717,
+   "end": 9.837,
+   "score": 0.758
+  },
+  {
+   "word": "lately",
+   "start": 9.877,
+   "end": 10.178,
+   "score": 0.847
+  },
+  {
+   "word": "that",
+   "start": 10.218,
+   "end": 10.378,
+   "score": 0.857
+  },
+  {
+   "word": "they",
+   "start": 11.018,
+   "end": 11.158,
+   "score": 0.829
+  },
+  {
+   "word": "approach",
+   "start": 11.178,
+   "end": 11.559,
+   "score": 0.818
+  },
+  {
+   "word": "the",
+   "start": 11.619,
+   "end": 11.699,
+   "score": 0.989
+  },
+  {
+   "word": "business",
+   "start": 11.739,
+   "end": 12.159,
+   "score": 0.801
+  },
+  {
+   "word": "with",
+   "start": 12.899,
+   "end": 13.04,
+   "score": 0.833
+  },
+  {
+   "word": "what",
+   "start": 13.1,
+   "end": 13.22,
+   "score": 0.766
+  },
+  {
+   "word": "they",
+   "start": 13.28,
+   "end": 13.48,
+   "score": 0.755
+  },
+  {
+   "word": "want,",
+   "start": 13.54,
+   "end": 13.78,
+   "score": 0.836
+  },
+  {
+   "word": "what",
+   "start": 13.86,
+   "end": 13.98,
+   "score": 0.927
+  },
+  {
+   "word": "they",
+   "start": 14.02,
+   "end": 14.22,
+   "score": 0.733
+  },
+  {
+   "word": "like,",
+   "start": 14.26,
+   "end": 14.581,
+   "score": 0.96
+  },
+  {
+   "word": "who",
+   "start": 14.641,
+   "end": 14.821,
+   "score": 0.946
+  },
+  {
+   "word": "they",
+   "start": 14.901,
+   "end": 15.061,
+   "score": 0.936
+  },
+  {
+   "word": "are,",
+   "start": 15.221,
+   "end": 15.361,
+   "score": 0.739
+  },
+  {
+   "word": "but",
+   "start": 15.621,
+   "end": 15.781,
+   "score": 0.793
+  },
+  {
+   "word": "what",
+   "start": 15.861,
+   "end": 16.001,
+   "score": 0.902
+  },
+  {
+   "word": "time",
+   "start": 16.262,
+   "end": 16.502,
+   "score": 0.721
+  },
+  {
+   "word": "they",
+   "start": 16.542,
+   "end": 16.722,
+   "score": 0.843
+  },
+  {
+   "word": "spent",
+   "start": 16.782,
+   "end": 17.042,
+   "score": 0.905
+  },
+  {
+   "word": "doing",
+   "start": 17.142,
+   "end": 17.422,
+   "score": 0.877
+  },
+  {
+   "word": "this.",
+   "start": 17.462,
+   "end": 17.683,
+   "score": 0.848
+  },
+  {
+   "word": "And,",
+   "start": 17.943,
+   "end": 18.063,
+   "score": 0.893
+  },
+  {
+   "word": "you",
+   "start": 18.623,
+   "end": 18.723,
+   "score": 0.766
+  },
+  {
+   "word": "know,",
+   "start": 18.743,
+   "end": 18.863,
+   "score": 0.898
+  },
+  {
+   "word": "you've",
+   "start": 18.903,
+   "end": 19.083,
+   "score": 0.885
+  },
+  {
+   "word": "been",
+   "start": 19.123,
+   "end": 19.344,
+   "score": 0.76
+  },
+  {
+   "word": "through",
+   "start": 19.604,
+   "end": 19.904,
+   "score": 0.8
+  },
+  {
+   "word": "school",
+   "start": 20.284,
+   "end": 20.604,
+   "score": 0.704
+  },
+  {
+   "word": "to",
+   "start": 20.644,
+   "end": 20.725,
+   "score": 0.803
+  },
+  {
+   "word": "be",
+   "start": 20.745,
+   "end": 20.845,
+   "score": 0.961
+  },
+  {
+   "word": "a",
+   "start": 20.945,
+   "end": 20.985,
+   "score": 0.503
+  },
+  {
+   "word": "doctor.",
+   "start": 21.025,
+   "end": 21.385,
+   "score": 0.931
+  },
+  {
+   "word": "Like",
+   "start": 21.925,
+   "end": 22.065,
+   "score": 0.376
+  },
+  {
+   "word": "you",
+   "start": 22.085,
+   "end": 22.185,
+   "score": 0.944
+  },
+  {
+   "word": "could",
+   "start": 22.205,
+   "end": 22.326,
+   "score": 0.919
+  },
+  {
+   "word": "easily",
+   "start": 22.406,
+   "end": 22.706,
+   "score": 0.765
+  },
+  {
+   "word": "just",
+   "start": 22.746,
+   "end": 22.886,
+   "score": 0.991
+  },
+  {
+   "word": "be",
+   "start": 22.926,
+   "end": 23.026,
+   "score": 0.918
+  },
+  {
+   "word": "like,",
+   "start": 23.086,
+   "end": 23.226,
+   "score": 0.921
+  },
+  {
+   "word": "you",
+   "start": 23.246,
+   "end": 23.346,
+   "score": 0.742
+  },
+  {
+   "word": "know,",
+   "start": 23.386,
+   "end": 23.566,
+   "score": 0.914
+  },
+  {
+   "word": "you",
+   "start": 23.747,
+   "end": 23.827,
+   "score": 0.992
+  },
+  {
+   "word": "know",
+   "start": 23.867,
+   "end": 23.947,
+   "score": 0.734
+  },
+  {
+   "word": "how",
+   "start": 23.967,
+   "end": 24.027,
+   "score": 0.003
+  },
+  {
+   "word": "many",
+   "start": 24.047,
+   "end": 24.187,
+   "score": 0.851
+  },
+  {
+   "word": "years",
+   "start": 24.227,
+   "end": 24.527,
+   "score": 0.731
+  },
+  {
+   "word": "of",
+   "start": 24.607,
+   "end": 24.687,
+   "score": 0.917
+  },
+  {
+   "word": "experience",
+   "start": 25.187,
+   "end": 25.628,
+   "score": 0.877
+  },
+  {
+   "word": "I",
+   "start": 25.668,
+   "end": 25.708,
+   "score": 0.998
+  },
+  {
+   "word": "have,",
+   "start": 25.748,
+   "end": 25.948,
+   "score": 0.944
+  },
+  {
+   "word": "you",
+   "start": 25.968,
+   "end": 26.028,
+   "score": 0.995
+  },
+  {
+   "word": "know,",
+   "start": 26.068,
+   "end": 26.168,
+   "score": 0.794
+  },
+  {
+   "word": "how",
+   "start": 26.188,
+   "end": 26.248,
+   "score": 0.001
+  },
+  {
+   "word": "much",
+   "start": 26.268,
+   "end": 26.388,
+   "score": 0.431
+  },
+  {
+   "word": "stuff",
+   "start": 26.408,
+   "end": 26.608,
+   "score": 0.492
+  },
+  {
+   "word": "I",
+   "start": 26.648,
+   "end": 26.708,
+   "score": 0.99
+  },
+  {
+   "word": "went",
+   "start": 26.748,
+   "end": 26.909,
+   "score": 0.602
+  },
+  {
+   "word": "through",
+   "start": 26.989,
+   "end": 27.209,
+   "score": 0.847
+  },
+  {
+   "word": "and",
+   "start": 27.229,
+   "end": 27.289,
+   "score": 0.101
+  },
+  {
+   "word": "talk",
+   "start": 27.809,
+   "end": 27.989,
+   "score": 0.968
+  },
+  {
+   "word": "about",
+   "start": 28.029,
+   "end": 28.209,
+   "score": 0.911
+  },
+  {
+   "word": "you",
+   "start": 28.249,
+   "end": 28.39,
+   "score": 0.864
+  },
+  {
+   "word": "all",
+   "start": 28.47,
+   "end": 28.59,
+   "score": 0.838
+  },
+  {
+   "word": "the",
+   "start": 28.63,
+   "end": 28.71,
+   "score": 0.847
+  },
+  {
+   "word": "time.",
+   "start": 28.75,
+   "end": 28.97,
+   "score": 0.989
+  },
+  {
+   "word": "and",
+   "start": 30.04,
+   "end": 30.16,
+   "score": 0.748
+  },
+  {
+   "word": "let",
+   "start": 30.34,
+   "end": 30.48,
+   "score": 0.88
+  },
+  {
+   "word": "that",
+   "start": 30.52,
+   "end": 30.66,
+   "score": 0.848
+  },
+  {
+   "word": "ego",
+   "start": 30.8,
+   "end": 31.26,
+   "score": 0.787
+  },
+  {
+   "word": "inflame,",
+   "start": 31.46,
+   "end": 32.121,
+   "score": 0.871
+  },
+  {
+   "word": "right?",
+   "start": 32.221,
+   "end": 32.421,
+   "score": 0.832
+  },
+  {
+   "word": "But",
+   "start": 32.441,
+   "end": 32.581,
+   "score": 0.776
+  },
+  {
+   "word": "you",
+   "start": 33.441,
+   "end": 33.561,
+   "score": 0.987
+  },
+  {
+   "word": "choose",
+   "start": 33.581,
+   "end": 33.781,
+   "score": 0.89
+  },
+  {
+   "word": "to",
+   "start": 33.821,
+   "end": 33.901,
+   "score": 0.939
+  },
+  {
+   "word": "flip",
+   "start": 33.941,
+   "end": 34.141,
+   "score": 0.802
+  },
+  {
+   "word": "that",
+   "start": 34.161,
+   "end": 34.321,
+   "score": 0.812
+  },
+  {
+   "word": "on",
+   "start": 34.381,
+   "end": 34.421,
+   "score": 0.988
+  },
+  {
+   "word": "its",
+   "start": 34.501,
+   "end": 34.581,
+   "score": 0.757
+  },
+  {
+   "word": "head",
+   "start": 34.621,
+   "end": 34.901,
+   "score": 0.74
+  },
+  {
+   "word": "and",
+   "start": 35.582,
+   "end": 35.682,
+   "score": 0.894
+  },
+  {
+   "word": "serve",
+   "start": 35.802,
+   "end": 36.182,
+   "score": 0.869
+  },
+  {
+   "word": "at",
+   "start": 36.642,
+   "end": 36.702,
+   "score": 0.756
+  },
+  {
+   "word": "a",
+   "start": 36.722,
+   "end": 36.742,
+   "score": 0.787
+  },
+  {
+   "word": "high",
+   "start": 36.782,
+   "end": 36.942,
+   "score": 0.881
+  },
+  {
+   "word": "level.",
+   "start": 36.982,
+   "end": 37.262,
+   "score": 0.857
+  },
+  {
+   "word": "So",
+   "start": 38.782,
+   "end": 39.143,
+   "score": 0.866
+  },
+  {
+   "word": "it",
+   "start": 39.743,
+   "end": 39.823,
+   "score": 0.892
+  },
+  {
+   "word": "sounds",
+   "start": 39.863,
+   "end": 40.143,
+   "score": 0.802
+  },
+  {
+   "word": "like",
+   "start": 40.203,
+   "end": 40.403,
+   "score": 0.846
+  },
+  {
+   "word": "to",
+   "start": 40.443,
+   "end": 40.543,
+   "score": 0.823
+  },
+  {
+   "word": "me,",
+   "start": 40.603,
+   "end": 40.823,
+   "score": 0.855
+  },
+  {
+   "word": "you're",
+   "start": 41.283,
+   "end": 41.443,
+   "score": 0.649
+  },
+  {
+   "word": "helping",
+   "start": 41.483,
+   "end": 41.783,
+   "score": 0.768
+  },
+  {
+   "word": "doctors",
+   "start": 41.823,
+   "end": 42.283,
+   "score": 0.852
+  },
+  {
+   "word": "to",
+   "start": 42.323,
+   "end": 42.383,
+   "score": 0.964
+  },
+  {
+   "word": "become",
+   "start": 42.423,
+   "end": 42.683,
+   "score": 0.854
+  },
+  {
+   "word": "doctorpreneurs.",
+   "start": 42.723,
+   "end": 43.544,
+   "score": 0.758
+  },
+  {
+   "word": "It",
+   "start": 44.704,
+   "end": 44.884,
+   "score": 0.63
+  },
+  {
+   "word": "is.",
+   "start": 44.984,
+   "end": 45.264,
+   "score": 0.857
+  },
+  {
+   "word": "You",
+   "start": 45.624,
+   "end": 45.744,
+   "score": 0.337
+  },
+  {
+   "word": "took",
+   "start": 45.764,
+   "end": 45.884,
+   "score": 0.273
+  },
+  {
+   "word": "the",
+   "start": 45.904,
+   "end": 45.984,
+   "score": 0.658
+  },
+  {
+   "word": "words",
+   "start": 46.004,
+   "end": 46.144,
+   "score": 0.809
+  },
+  {
+   "word": "out",
+   "start": 46.184,
+   "end": 46.264,
+   "score": 0.342
+  },
+  {
+   "word": "of",
+   "start": 46.284,
+   "end": 46.324,
+   "score": 0.004
+  },
+  {
+   "word": "my",
+   "start": 46.344,
+   "end": 46.384,
+   "score": 0.012
+  },
+  {
+   "word": "mouth.",
+   "start": 46.404,
+   "end": 46.524,
+   "score": 0.342
+  },
+  {
+   "word": "That's",
+   "start": 46.544,
+   "end": 46.664,
+   "score": 0.01
+  },
+  {
+   "word": "the",
+   "start": 46.685,
+   "end": 46.765,
+   "score": 0.869
+  },
+  {
+   "word": "transformation.",
+   "start": 46.805,
+   "end": 47.425,
+   "score": 0.895
+  },
+  {
+   "word": "So",
+   "start": 48.225,
+   "end": 48.505,
+   "score": 0.757
+  },
+  {
+   "word": "the",
+   "start": 48.545,
+   "end": 48.625,
+   "score": 0.915
+  },
+  {
+   "word": "transformation",
+   "start": 48.665,
+   "end": 49.265,
+   "score": 0.896
+  },
+  {
+   "word": "is",
+   "start": 49.345,
+   "end": 49.405,
+   "score": 0.872
+  },
+  {
+   "word": "when",
+   "start": 49.845,
+   "end": 50.025,
+   "score": 0.495
+  },
+  {
+   "word": "all",
+   "start": 50.325,
+   "end": 50.446,
+   "score": 0.863
+  },
+  {
+   "word": "of",
+   "start": 50.466,
+   "end": 50.506,
+   "score": 0.302
+  },
+  {
+   "word": "us",
+   "start": 50.566,
+   "end": 50.626,
+   "score": 0.734
+  },
+  {
+   "word": "finish",
+   "start": 50.666,
+   "end": 50.986,
+   "score": 0.596
+  },
+  {
+   "word": "our",
+   "start": 51.026,
+   "end": 51.146,
+   "score": 0.631
+  },
+  {
+   "word": "training,",
+   "start": 51.206,
+   "end": 51.526,
+   "score": 0.82
+  },
+  {
+   "word": "you",
+   "start": 52.066,
+   "end": 52.246,
+   "score": 0.89
+  },
+  {
+   "word": "are",
+   "start": 52.386,
+   "end": 52.526,
+   "score": 0.856
+  },
+  {
+   "word": "a",
+   "start": 52.546,
+   "end": 52.566,
+   "score": 0.006
+  },
+  {
+   "word": "0.1%er.",
+   "start": 52.586,
+   "end": 53.426,
+   "score": 0.721
+  },
+  {
+   "word": "It",
+   "start": 56.959,
+   "end": 57.199,
+   "score": 0.658
+  },
+  {
+   "word": "has",
+   "start": 57.239,
+   "end": 57.42,
+   "score": 0.83
+  },
+  {
+   "word": "such",
+   "start": 57.5,
+   "end": 57.68,
+   "score": 0.718
+  },
+  {
+   "word": "a",
+   "start": 57.7,
+   "end": 57.72,
+   "score": 0.004
+  },
+  {
+   "word": "unique",
+   "start": 57.76,
+   "end": 58.1,
+   "score": 0.869
+  },
+  {
+   "word": "body",
+   "start": 58.14,
+   "end": 58.42,
+   "score": 0.866
+  },
+  {
+   "word": "of",
+   "start": 58.44,
+   "end": 58.5,
+   "score": 0.474
+  },
+  {
+   "word": "knowledge",
+   "start": 58.54,
+   "end": 59.141,
+   "score": 0.765
+  },
+  {
+   "word": "and",
+   "start": 59.301,
+   "end": 59.381,
+   "score": 0.528
+  },
+  {
+   "word": "you're",
+   "start": 59.401,
+   "end": 59.561,
+   "score": 0.574
+  },
+  {
+   "word": "great",
+   "start": 59.601,
+   "end": 59.881,
+   "score": 0.65
+  },
+  {
+   "word": "at",
+   "start": 59.921,
+   "end": 60.002,
+   "score": 0.738
+  },
+  {
+   "word": "that.",
+   "start": 60.042,
+   "end": 60.302,
+   "score": 0.923
+  },
+  {
+   "word": "And",
+   "start": 61.443,
+   "end": 61.523,
+   "score": 0.169
+  },
+  {
+   "word": "guess",
+   "start": 61.543,
+   "end": 61.723,
+   "score": 0.785
+  },
+  {
+   "word": "what?",
+   "start": 61.743,
+   "end": 61.903,
+   "score": 0.802
+  },
+  {
+   "word": "You",
+   "start": 61.923,
+   "end": 62.003,
+   "score": 0.879
+  },
+  {
+   "word": "spent",
+   "start": 62.023,
+   "end": 62.283,
+   "score": 0.396
+  },
+  {
+   "word": "so",
+   "start": 62.303,
+   "end": 62.423,
+   "score": 0.515
+  },
+  {
+   "word": "much",
+   "start": 62.443,
+   "end": 62.583,
+   "score": 0.201
+  },
+  {
+   "word": "attention",
+   "start": 62.643,
+   "end": 63.204,
+   "score": 0.757
+  },
+  {
+   "word": "and",
+   "start": 63.424,
+   "end": 63.524,
+   "score": 0.806
+  },
+  {
+   "word": "time",
+   "start": 63.584,
+   "end": 63.824,
+   "score": 0.928
+  },
+  {
+   "word": "and",
+   "start": 63.904,
+   "end": 63.964,
+   "score": 0.871
+  },
+  {
+   "word": "energy",
+   "start": 64.065,
+   "end": 64.245,
+   "score": 0.418
+  },
+  {
+   "word": "on",
+   "start": 64.305,
+   "end": 64.445,
+   "score": 0.552
+  },
+  {
+   "word": "being",
+   "start": 64.505,
+   "end": 64.745,
+   "score": 0.834
+  },
+  {
+   "word": "that",
+   "start": 64.765,
+   "end": 65.145,
+   "score": 0.848
+  },
+  {
+   "word": "0.1%.",
+   "start": 65.185,
+   "end": 65.646,
+   "score": 0.696
+  },
+  {
+   "word": "You",
+   "start": 65.666,
+   "end": 65.746,
+   "score": 0.968
+  },
+  {
+   "word": "didn't",
+   "start": 65.766,
+   "end": 65.946,
+   "score": 0.632
+  },
+  {
+   "word": "neglect",
+   "start": 65.986,
+   "end": 66.366,
+   "score": 0.882
+  },
+  {
+   "word": "everything",
+   "start": 66.406,
+   "end": 66.706,
+   "score": 0.872
+  },
+  {
+   "word": "else.",
+   "start": 66.787,
+   "end": 66.967,
+   "score": 0.913
+  },
+  {
+   "word": "You",
+   "start": 67.647,
+   "end": 67.727,
+   "score": 0.915
+  },
+  {
+   "word": "don't",
+   "start": 67.767,
+   "end": 67.887,
+   "score": 0.844
+  },
+  {
+   "word": "know",
+   "start": 67.927,
+   "end": 68.027,
+   "score": 0.827
+  },
+  {
+   "word": "how",
+   "start": 68.067,
+   "end": 68.168,
+   "score": 0.135
+  },
+  {
+   "word": "to",
+   "start": 68.188,
+   "end": 68.328,
+   "score": 0.694
+  },
+  {
+   "word": "do",
+   "start": 68.348,
+   "end": 68.448,
+   "score": 0.39
+  },
+  {
+   "word": "that",
+   "start": 68.468,
+   "end": 68.568,
+   "score": 0.2
+  },
+  {
+   "word": "stuff",
+   "start": 68.588,
+   "end": 69.148,
+   "score": 0.603
+  },
+  {
+   "word": "usually.",
+   "start": 69.348,
+   "end": 69.689,
+   "score": 0.883
+  },
+  {
+   "word": "And",
+   "start": 70.449,
+   "end": 70.509,
+   "score": 0.847
+  },
+  {
+   "word": "in",
+   "start": 70.569,
+   "end": 70.629,
+   "score": 0.412
+  },
+  {
+   "word": "our",
+   "start": 70.689,
+   "end": 70.809,
+   "score": 0.287
+  },
+  {
+   "word": "culture",
+   "start": 70.89,
+   "end": 71.49,
+   "score": 0.801
+  },
+  {
+   "word": "of",
+   "start": 71.71,
+   "end": 71.79,
+   "score": 0.974
+  },
+  {
+   "word": "being",
+   "start": 72.17,
+   "end": 72.391,
+   "score": 0.445
+  },
+  {
+   "word": "a",
+   "start": 72.571,
+   "end": 72.611,
+   "score": 0.638
+  },
+  {
+   "word": "physician,",
+   "start": 72.651,
+   "end": 73.211,
+   "score": 0.932
+  },
+  {
+   "word": "then",
+   "start": 73.852,
+   "end": 73.972,
+   "score": 0.316
+  },
+  {
+   "word": "you",
+   "start": 73.992,
+   "end": 74.112,
+   "score": 0.929
+  },
+  {
+   "word": "got",
+   "start": 74.132,
+   "end": 74.212,
+   "score": 0.94
+  },
+  {
+   "word": "to",
+   "start": 74.232,
+   "end": 74.272,
+   "score": 0.001
+  },
+  {
+   "word": "do",
+   "start": 74.292,
+   "end": 74.392,
+   "score": 0.759
+  },
+  {
+   "word": "continuing",
+   "start": 74.412,
+   "end": 74.792,
+   "score": 0.619
+  },
+  {
+   "word": "medical",
+   "start": 74.812,
+   "end": 75.153,
+   "score": 0.448
+  },
+  {
+   "word": "education.",
+   "start": 75.193,
+   "end": 75.713,
+   "score": 0.944
+  },
+  {
+   "word": "And",
+   "start": 76.073,
+   "end": 76.133,
+   "score": 0.961
+  },
+  {
+   "word": "then",
+   "start": 76.153,
+   "end": 76.254,
+   "score": 0.886
+  },
+  {
+   "word": "you",
+   "start": 76.274,
+   "end": 76.374,
+   "score": 0.987
+  },
+  {
+   "word": "got",
+   "start": 76.394,
+   "end": 76.494,
+   "score": 0.908
+  },
+  {
+   "word": "to",
+   "start": 76.514,
+   "end": 76.574,
+   "score": 0.31
+  },
+  {
+   "word": "keep",
+   "start": 76.614,
+   "end": 76.794,
+   "score": 0.895
+  },
+  {
+   "word": "up",
+   "start": 76.854,
+   "end": 76.974,
+   "score": 0.452
+  },
+  {
+   "word": "with",
+   "start": 76.994,
+   "end": 77.094,
+   "score": 0.434
+  },
+  {
+   "word": "compliance",
+   "start": 77.114,
+   "end": 77.554,
+   "score": 0.406
+  },
+  {
+   "word": "of",
+   "start": 77.635,
+   "end": 77.695,
+   "score": 0.717
+  },
+  {
+   "word": "this",
+   "start": 77.715,
+   "end": 77.875,
+   "score": 0.71
+  },
+  {
+   "word": "and",
+   "start": 77.895,
+   "end": 77.955,
+   "score": 0.002
+  },
+  {
+   "word": "this",
+   "start": 77.975,
+   "end": 78.135,
+   "score": 0.453
+  },
+  {
+   "word": "and",
+   "start": 78.155,
+   "end": 78.355,
+   "score": 0.452
+  },
+  {
+   "word": "this.",
+   "start": 78.375,
+   "end": 78.535,
+   "score": 0.35
+  },
+  {
+   "word": "So",
+   "start": 78.575,
+   "end": 78.735,
+   "score": 0.902
+  },
+  {
+   "word": "all",
+   "start": 78.815,
+   "end": 78.935,
+   "score": 0.883
+  },
+  {
+   "word": "your",
+   "start": 78.976,
+   "end": 79.096,
+   "score": 0.74
+  },
+  {
+   "word": "energy",
+   "start": 79.156,
+   "end": 79.456,
+   "score": 0.841
+  },
+  {
+   "word": "is",
+   "start": 79.476,
+   "end": 79.556,
+   "score": 0.374
+  },
+  {
+   "word": "focused",
+   "start": 79.596,
+   "end": 79.856,
+   "score": 0.505
+  },
+  {
+   "word": "on",
+   "start": 79.916,
+   "end": 79.996,
+   "score": 0.742
+  },
+  {
+   "word": "being",
+   "start": 80.016,
+   "end": 80.216,
+   "score": 0.814
+  },
+  {
+   "word": "a",
+   "start": 80.256,
+   "end": 80.296,
+   "score": 0.512
+  },
+  {
+   "word": "doctor.",
+   "start": 80.337,
+   "end": 80.697,
+   "score": 0.952
+  },
+  {
+   "word": "So",
+   "start": 81.468,
+   "end": 81.589,
+   "score": 0.882
+  },
+  {
+   "word": "your",
+   "start": 81.609,
+   "end": 81.709,
+   "score": 0.602
+  },
+  {
+   "word": "skill",
+   "start": 81.73,
+   "end": 81.991,
+   "score": 0.681
+  },
+  {
+   "word": "set",
+   "start": 82.011,
+   "end": 82.131,
+   "score": 0.529
+  },
+  {
+   "word": "and",
+   "start": 82.151,
+   "end": 82.212,
+   "score": 0.028
+  },
+  {
+   "word": "everything",
+   "start": 82.232,
+   "end": 82.493,
+   "score": 0.806
+  },
+  {
+   "word": "else",
+   "start": 82.553,
+   "end": 82.854,
+   "score": 0.839
+  },
+  {
+   "word": "is",
+   "start": 82.995,
+   "end": 83.055,
+   "score": 0.763
+  },
+  {
+   "word": "a",
+   "start": 83.075,
+   "end": 83.095,
+   "score": 0.007
+  },
+  {
+   "word": "lot",
+   "start": 83.115,
+   "end": 83.316,
+   "score": 0.742
+  },
+  {
+   "word": "smaller.",
+   "start": 83.356,
+   "end": 83.657,
+   "score": 0.71
+  },
+  {
+   "word": "So",
+   "start": 83.698,
+   "end": 83.818,
+   "score": 0.82
+  },
+  {
+   "word": "the",
+   "start": 83.838,
+   "end": 83.919,
+   "score": 0.02
+  },
+  {
+   "word": "transformation",
+   "start": 83.959,
+   "end": 84.722,
+   "score": 0.789
+  },
+  {
+   "word": "for",
+   "start": 85.043,
+   "end": 85.144,
+   "score": 0.673
+  },
+  {
+   "word": "me",
+   "start": 85.184,
+   "end": 85.284,
+   "score": 0.888
+  },
+  {
+   "word": "was",
+   "start": 85.324,
+   "end": 85.425,
+   "score": 0.677
+  },
+  {
+   "word": "like,",
+   "start": 85.445,
+   "end": 85.666,
+   "score": 0.596
+  },
+  {
+   "word": "you",
+   "start": 86.59,
+   "end": 86.69,
+   "score": 0.851
+  },
+  {
+   "word": "know,",
+   "start": 86.73,
+   "end": 86.891,
+   "score": 0.951
+  },
+  {
+   "word": "since",
+   "start": 87.212,
+   "end": 87.353,
+   "score": 0.784
+  }
+ ]
+}

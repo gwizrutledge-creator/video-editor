@@ -1,0 +1,23 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 2
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Cap,Barlow SemiBold,66,&H00DDEBF3&,&H00DDEBF3&,&H00000000,&H96000000,0,0,0,0,100,100,0,0,1,5,2,5,60,60,0,1
+Style: Name,Bebas Neue,74,&H004BA2C9&,&H004BA2C9&,&H00000000,&H00000000,0,0,0,0,100,100,2,0,1,0,0,8,60,60,0,1
+Style: Title,Barlow Medium,40,&H00DDEBF3&,&H00DDEBF3&,&H00000000,&H00000000,0,0,0,0,100,100,1,0,1,0,0,8,60,60,0,1
+Style: Card1,Bebas Neue,118,&H00DDEBF3&,&H00DDEBF3&,&H00000000,&H00000000,0,0,0,0,100,100,2,0,1,0,0,5,70,70,0,1
+Style: Card2,Barlow SemiBold,66,&H00DDEBF3&,&H00DDEBF3&,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,0,0,5,70,70,0,1
+Style: Card3,Barlow Bold,58,&H004BA2C9&,&H004BA2C9&,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,0,0,5,60,60,0,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 1,0:00:00.30,0:00:04.60,Name,,0,0,0,,{\fad(250,250)}{\pos(540,92)}GREGORY “G-WIZ” RUTLEDGE
+Dialogue: 1,0:00:00.30,0:00:04.60,Title,,0,0,0,,{\fad(250,250)}{\pos(540,176)}Host, Question Everything
+Dialogue: 1,0:00:27.66,0:00:31.56,Card1,,0,0,0,,{\fad(250,250)}{\pos(540,800)}HELP G-WIZ\NBECOME TOP HOST.
+Dialogue: 1,0:00:27.96,0:00:31.56,Card2,,0,0,0,,{\fad(250,250)}{\pos(540,1030)}Vote for Gregory Rutledge.
+Dialogue: 1,0:00:28.26,0:00:31.56,Card3,,0,0,0,,{\fad(250,250)}{\pos(540,1130)}tophost.org/2026/gregory-rutledge

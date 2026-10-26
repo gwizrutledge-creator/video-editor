@@ -1,0 +1,254 @@
+{
+ "out": "TGJ_TopHost_Reel_v1.mp4",
+ "canvas": [
+  1080,
+  1920
+ ],
+ "fps": 30,
+ "bg": "0x0B0B0B",
+ "layouts": {
+  "dubose": {
+   "single": [
+    720,
+    720,
+    280,
+    0
+   ],
+   "w": 1080,
+   "h": 1080,
+   "y": 250
+  },
+  "erica": {
+   "stack": [
+    [
+     640,
+     360,
+     0,
+     0
+    ],
+    [
+     640,
+     360,
+     640,
+     0
+    ]
+   ],
+   "y": 250,
+   "gap": 204
+  },
+  "doug": {
+   "stack": [
+    [
+     640,
+     360,
+     0,
+     180
+    ],
+    [
+     640,
+     360,
+     640,
+     180
+    ]
+   ],
+   "y": 250,
+   "gap": 204
+  },
+  "debbie": {
+   "stack": [
+    [
+     640,
+     360,
+     0,
+     180
+    ],
+    [
+     640,
+     360,
+     640,
+     180
+    ]
+   ],
+   "y": 250,
+   "gap": 204
+  },
+  "brannan": {
+   "stack": [
+    [
+     600,
+     338,
+     27,
+     190
+    ],
+    [
+     600,
+     338,
+     653,
+     190
+    ]
+   ],
+   "y": 250,
+   "gap": 204
+  }
+ },
+ "caption_y": {
+  "dubose": 1440,
+  "erica": 960,
+  "doug": 960,
+  "debbie": 960,
+  "brannan": 960
+ },
+ "items": [
+  {
+   "src": "projects/tophost/src/dubose.mp4",
+   "in": 38.62,
+   "out": 47.62,
+   "layout": "dubose",
+   "speaker": "Gregory → Dr. DuBose"
+  },
+  {
+   "src": "projects/tophost/src/erica.mp4",
+   "in": 41.4,
+   "out": 44.8,
+   "layout": "erica",
+   "speaker": "Gregory"
+  },
+  {
+   "src": "projects/tophost/src/erica.mp4",
+   "in": 46.55,
+   "out": 51.05,
+   "layout": "erica",
+   "speaker": "Erika"
+  },
+  {
+   "src": "projects/tophost/src/erica.mp4",
+   "in": 52.0,
+   "out": 55.85,
+   "layout": "erica",
+   "speaker": "Erika"
+  },
+  {
+   "src": "projects/tophost/src/erica.mp4",
+   "in": 89.4,
+   "out": 93.45,
+   "layout": "erica",
+   "speaker": "Gregory"
+  },
+  {
+   "src": "projects/tophost/src/erica.mp4",
+   "in": 95.15,
+   "out": 99.06,
+   "layout": "erica",
+   "speaker": "Erika"
+  },
+  {
+   "src": "projects/tophost/src/doug.mp4",
+   "in": 57.35,
+   "out": 68.25,
+   "layout": "doug",
+   "speaker": "Gregory"
+  },
+  {
+   "src": "projects/tophost/src/doug.mp4",
+   "in": 71.35,
+   "out": 77.95,
+   "layout": "doug",
+   "speaker": "Doug"
+  },
+  {
+   "src": "projects/tophost/src/debbie.mp4",
+   "in": 33.25,
+   "out": 41.25,
+   "layout": "debbie",
+   "speaker": "Gregory"
+  },
+  {
+   "src": "projects/tophost/src/debbie.mp4",
+   "in": 42.45,
+   "out": 45.65,
+   "layout": "debbie",
+   "speaker": "Debbie"
+  },
+  {
+   "src": "projects/tophost/src/debbie.mp4",
+   "in": 47.15,
+   "out": 48.62,
+   "layout": "debbie",
+   "speaker": "Debbie"
+  },
+  {
+   "src": "projects/tophost/src/debbie.mp4",
+   "in": 82.2,
+   "out": 95.75,
+   "layout": "debbie",
+   "speaker": "Debbie"
+  },
+  {
+   "src": "projects/tophost/src/debbie.mp4",
+   "in": 102.2,
+   "out": 107.1,
+   "layout": "debbie",
+   "speaker": "Gregory (“Safe, heard.”) → Debbie & Gregory (“And understood.”)"
+  },
+  {
+   "src": "projects/tophost/src/brannan.mp4",
+   "in": 50.5,
+   "out": 59.7,
+   "layout": "brannan",
+   "speaker": "Brannan (Gregory listening)"
+  },
+  {
+   "card": "projects/tophost/black_916.png",
+   "dur": 4.5
+  }
+ ],
+ "emphasis": [
+  "doctorpreneurs.",
+  "forgiveness?",
+  "ego.",
+  "question",
+  "everything."
+ ],
+ "graphics": [
+  {
+   "style": "Name",
+   "text": "GREGORY “G-WIZ” RUTLEDGE",
+   "start": 0.3,
+   "end": 4.6,
+   "x": 540,
+   "y": 92
+  },
+  {
+   "style": "Title",
+   "text": "Host, Question Everything",
+   "start": 0.3,
+   "end": 4.6,
+   "x": 540,
+   "y": 176
+  },
+  {
+   "style": "Card1",
+   "text": "HELP G-WIZ\\NBECOME TOP HOST.",
+   "start": 86.63,
+   "end": 91.03,
+   "x": 540,
+   "y": 800
+  },
+  {
+   "style": "Card2",
+   "text": "Vote for Gregory Rutledge.",
+   "start": 87.03,
+   "end": 91.03,
+   "x": 540,
+   "y": 1030
+  },
+  {
+   "style": "Card3",
+   "text": "tophost.org/2026/gregory-rutledge",
+   "start": 87.43,
+   "end": 91.03,
+   "x": 540,
+   "y": 1130
+  }
+ ]
+}

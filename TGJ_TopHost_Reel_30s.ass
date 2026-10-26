@@ -1,0 +1,34 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 2
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Cap,Barlow SemiBold,66,&H00DDEBF3&,&H00DDEBF3&,&H00000000,&H96000000,0,0,0,0,100,100,0,0,1,5,2,5,60,60,0,1
+Style: Name,Bebas Neue,74,&H004BA2C9&,&H004BA2C9&,&H00000000,&H00000000,0,0,0,0,100,100,2,0,1,0,0,8,60,60,0,1
+Style: Title,Barlow Medium,40,&H00DDEBF3&,&H00DDEBF3&,&H00000000,&H00000000,0,0,0,0,100,100,1,0,1,0,0,8,60,60,0,1
+Style: Card1,Bebas Neue,118,&H00DDEBF3&,&H00DDEBF3&,&H00000000,&H00000000,0,0,0,0,100,100,2,0,1,0,0,5,70,70,0,1
+Style: Card2,Barlow SemiBold,66,&H00DDEBF3&,&H00DDEBF3&,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,0,0,5,70,70,0,1
+Style: Card3,Barlow Bold,58,&H004BA2C9&,&H004BA2C9&,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,0,0,5,60,60,0,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 1,0:00:00.30,0:00:04.60,Name,,0,0,0,,{\fad(250,250)}{\pos(540,92)}GREGORY “G-WIZ” RUTLEDGE
+Dialogue: 1,0:00:00.30,0:00:04.60,Title,,0,0,0,,{\fad(250,250)}{\pos(540,176)}Host, Question Everything
+Dialogue: 1,0:00:27.66,0:00:31.56,Card1,,0,0,0,,{\fad(250,250)}{\pos(540,800)}HELP G-WIZ\NBECOME TOP HOST.
+Dialogue: 1,0:00:27.96,0:00:31.56,Card2,,0,0,0,,{\fad(250,250)}{\pos(540,1030)}Vote for Gregory Rutledge.
+Dialogue: 1,0:00:28.26,0:00:31.56,Card3,,0,0,0,,{\fad(250,250)}{\pos(540,1130)}tophost.org/2026/gregory-rutledge
+Dialogue: 0,0:00:00.16,0:00:02.60,Cap,,0,0,0,,{\pos(540,1440)}So it sounds\Nlike to me,
+Dialogue: 0,0:00:02.66,0:00:05.32,Cap,,0,0,0,,{\pos(540,1440)}you're helping doctors\Nto become {\c&H004BA2C9&}doctorpreneurs.{\c&H00DDEBF3&}
+Dialogue: 0,0:00:06.08,0:00:08.15,Cap,,0,0,0,,{\pos(540,1440)}It is. You took the\Nwords out of my mouth.
+Dialogue: 0,0:00:08.15,0:00:10.39,Cap,,0,0,0,,{\pos(540,960)}What do you think\Nhad to go for you to
+Dialogue: 0,0:00:10.39,0:00:12.17,Cap,,0,0,0,,{\pos(540,960)}be able to dig deeper?
+Dialogue: 0,0:00:13.16,0:00:14.10,Cap,,0,0,0,,{\pos(540,960)}Stubbornness.
+Dialogue: 0,0:00:17.64,0:00:18.53,Cap,,0,0,0,,{\pos(540,960)}My {\c&H004BA2C9&}ego.{\c&H00DDEBF3&}
+Dialogue: 0,0:00:18.53,0:00:20.97,Cap,,0,0,0,,{\pos(540,960)}You are with this\Npodcast and this
+Dialogue: 0,0:00:20.97,0:00:24.04,Cap,,0,0,0,,{\pos(540,960)}space, bringing\Nexperts together to
+Dialogue: 0,0:00:24.04,0:00:25.40,Cap,,0,0,0,,{\pos(540,960)}teach them the thing\Nthat school didn't
+Dialogue: 0,0:00:25.40,0:00:27.62,Cap,,0,0,0,,{\pos(540,960)}teach them, which is how\Nto {\c&H004BA2C9&}question{\c&H00DDEBF3&} {\c&H004BA2C9&}everything.{\c&H00DDEBF3&}

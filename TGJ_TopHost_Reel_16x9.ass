@@ -1,0 +1,61 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1920
+PlayResY: 1080
+WrapStyle: 2
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Cap,Barlow SemiBold,66,&H00DDEBF3&,&H00DDEBF3&,&H00000000,&H96000000,0,0,0,0,100,100,0,0,1,5,2,5,60,60,0,1
+Style: Name,Bebas Neue,74,&H004BA2C9&,&H004BA2C9&,&H00000000,&H00000000,0,0,0,0,100,100,2,0,1,0,0,8,60,60,0,1
+Style: Title,Barlow Medium,40,&H00DDEBF3&,&H00DDEBF3&,&H00000000,&H00000000,0,0,0,0,100,100,1,0,1,0,0,8,60,60,0,1
+Style: Card1,Bebas Neue,118,&H00DDEBF3&,&H00DDEBF3&,&H00000000,&H00000000,0,0,0,0,100,100,2,0,1,0,0,5,70,70,0,1
+Style: Card2,Barlow SemiBold,66,&H00DDEBF3&,&H00DDEBF3&,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,0,0,5,70,70,0,1
+Style: Card3,Barlow Bold,58,&H004BA2C9&,&H004BA2C9&,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,0,0,5,60,60,0,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 1,0:00:00.30,0:00:04.60,Name,,0,0,0,,{\fad(250,250)}{\pos(960,752)}GREGORY “G-WIZ” RUTLEDGE
+Dialogue: 1,0:00:00.30,0:00:04.60,Title,,0,0,0,,{\fad(250,250)}{\pos(960,826)}Host, Question Everything
+Dialogue: 1,0:01:25.38,0:01:29.78,Card1,,0,0,0,,{\fad(250,250)}{\pos(960,380)}HELP G-WIZ\NBECOME TOP HOST.
+Dialogue: 1,0:01:25.78,0:01:29.78,Card2,,0,0,0,,{\fad(250,250)}{\pos(960,600)}Vote for Gregory Rutledge.
+Dialogue: 1,0:01:26.18,0:01:29.78,Card3,,0,0,0,,{\fad(250,250)}{\pos(960,690)}tophost.org/2026/gregory-rutledge
+Dialogue: 0,0:00:00.16,0:00:02.60,Cap,,0,0,0,,{\pos(960,950)}So it sounds\Nlike to me,
+Dialogue: 0,0:00:02.66,0:00:05.32,Cap,,0,0,0,,{\pos(960,950)}you're helping doctors\Nto become {\c&H004BA2C9&}doctorpreneurs.{\c&H00DDEBF3&}
+Dialogue: 0,0:00:06.08,0:00:07.92,Cap,,0,0,0,,{\pos(960,950)}It is. You took the\Nwords out of my mouth.
+Dialogue: 0,0:00:07.92,0:00:09.15,Cap,,0,0,0,,{\pos(960,950)}That's the\Ntransformation.
+Dialogue: 0,0:00:09.15,0:00:11.01,Cap,,0,0,0,,{\pos(960,830)}What was the best\Nlesson you learned
+Dialogue: 0,0:00:11.27,0:00:12.58,Cap,,0,0,0,,{\pos(960,830)}from all that\Nrejection?
+Dialogue: 0,0:00:12.58,0:00:16.00,Cap,,0,0,0,,{\pos(960,830)}I think the best\Nlesson that I learned
+Dialogue: 0,0:00:16.00,0:00:19.01,Cap,,0,0,0,,{\pos(960,830)}was that when\NI overcome,
+Dialogue: 0,0:00:19.31,0:00:20.94,Cap,,0,0,0,,{\pos(960,830)}other people\Ncan overcome.
+Dialogue: 0,0:00:20.94,0:00:25.00,Cap,,0,0,0,,{\pos(960,830)}When I overcome,\Nothers overcome too.
+Dialogue: 0,0:00:25.00,0:00:26.98,Cap,,0,0,0,,{\pos(960,830)}It's contagious,\Nisn't it?
+Dialogue: 0,0:00:27.00,0:00:28.91,Cap,,0,0,0,,{\pos(960,830)}It's contagious.
+Dialogue: 0,0:00:28.91,0:00:30.47,Cap,,0,0,0,,{\pos(960,830)}There was a point\Nwhere you had to
+Dialogue: 0,0:00:30.47,0:00:32.89,Cap,,0,0,0,,{\pos(960,830)}overcome some\Nsort of barrier.
+Dialogue: 0,0:00:33.01,0:00:35.35,Cap,,0,0,0,,{\pos(960,830)}in order to dig\Ndeeper into yourself.
+Dialogue: 0,0:00:35.53,0:00:37.77,Cap,,0,0,0,,{\pos(960,830)}What do you think\Nhad to go for you to
+Dialogue: 0,0:00:37.77,0:00:39.55,Cap,,0,0,0,,{\pos(960,830)}be able to dig deeper?
+Dialogue: 0,0:00:40.52,0:00:41.46,Cap,,0,0,0,,{\pos(960,830)}Stubbornness.
+Dialogue: 0,0:00:45.01,0:00:45.82,Cap,,0,0,0,,{\pos(960,830)}My {\c&H004BA2C9&}ego.{\c&H00DDEBF3&}
+Dialogue: 0,0:00:45.82,0:00:49.03,Cap,,0,0,0,,{\pos(960,830)}How did you find your\Nway to {\c&H004BA2C9&}forgiveness?{\c&H00DDEBF3&}
+Dialogue: 0,0:00:49.03,0:00:50.43,Cap,,0,0,0,,{\pos(960,830)}I know that's not\Nin the script here,
+Dialogue: 0,0:00:50.43,0:00:52.23,Cap,,0,0,0,,{\pos(960,830)}but that's coming\Nfrom my heart.
+Dialogue: 0,0:00:52.23,0:00:53.11,Cap,,0,0,0,,{\pos(960,830)}Absolutely.
+Dialogue: 0,0:00:53.11,0:00:55.38,Cap,,0,0,0,,{\pos(960,830)}It took a lot\Nof prayer,
+Dialogue: 0,0:00:55.52,0:00:56.36,Cap,,0,0,0,,{\pos(960,830)}to be honest.
+Dialogue: 0,0:00:56.36,0:00:57.79,Cap,,0,0,0,,{\pos(960,830)}It took a lot\Nof journaling.
+Dialogue: 0,0:00:57.79,0:01:00.51,Cap,,0,0,0,,{\pos(960,830)}So I just want people\Nto be able to know
+Dialogue: 0,0:01:00.51,0:01:02.47,Cap,,0,0,0,,{\pos(960,830)}that they can\Nexpress their self
+Dialogue: 0,0:01:03.35,0:01:06.35,Cap,,0,0,0,,{\pos(960,830)}in that outlet and\Nfeel safe and heard
+Dialogue: 0,0:01:06.35,0:01:09.53,Cap,,0,0,0,,{\pos(960,830)}and understood in\Na safe environment
+Dialogue: 0,0:01:09.53,0:01:11.39,Cap,,0,0,0,,{\pos(960,830)}that they can create\Nfor their selves.
+Dialogue: 0,0:01:11.39,0:01:13.05,Cap,,0,0,0,,{\pos(960,830)}Safe, heard.
+Dialogue: 0,0:01:13.75,0:01:14.43,Cap,,0,0,0,,{\pos(960,830)}And understood.
+Dialogue: 0,0:01:14.43,0:01:16.27,Cap,,0,0,0,,{\pos(960,830)}And understood.
+Dialogue: 0,0:01:16.27,0:01:18.71,Cap,,0,0,0,,{\pos(960,830)}You are with this\Npodcast and this
+Dialogue: 0,0:01:18.71,0:01:21.77,Cap,,0,0,0,,{\pos(960,830)}space, bringing\Nexperts together to
+Dialogue: 0,0:01:21.77,0:01:23.13,Cap,,0,0,0,,{\pos(960,830)}teach them the thing\Nthat school didn't
+Dialogue: 0,0:01:23.13,0:01:25.35,Cap,,0,0,0,,{\pos(960,830)}teach them, which is how\Nto {\c&H004BA2C9&}question{\c&H00DDEBF3&} {\c&H004BA2C9&}everything.{\c&H00DDEBF3&}

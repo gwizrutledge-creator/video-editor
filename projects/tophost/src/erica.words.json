@@ -1,0 +1,1424 @@
+{
+ "source": "erica.mp4",
+ "segments": [
+  {
+   "start": 0.031,
+   "end": 4.572,
+   "text": "I was so proud of myself for asking a how question because I just applied."
+  },
+  {
+   "start": 4.772,
+   "end": 8.513,
+   "text": "I took action on what I just learned in the moment, girl."
+  },
+  {
+   "start": 8.893,
+   "end": 9.253,
+   "text": "Okay."
+  },
+  {
+   "start": 9.633,
+   "end": 25.237,
+   "text": "So what would you say was the biggest lesson that turned you from discouraged"
+  },
+  {
+   "start": 27.364,
+   "end": 29.684,
+   "text": "to this is what I do for a living."
+  },
+  {
+   "start": 29.984,
+   "end": 33.325,
+   "text": "Because that's powerful."
+  },
+  {
+   "start": 33.545,
+   "end": 34.465,
+   "text": "That's powerful."
+  },
+  {
+   "start": 35.846,
+   "end": 37.046,
+   "text": "Okay, say the question again."
+  },
+  {
+   "start": 37.066,
+   "end": 38.066,
+   "text": "Say it again."
+  },
+  {
+   "start": 38.086,
+   "end": 40.366,
+   "text": "Let me simplify it."
+  },
+  {
+   "start": 40.746,
+   "end": 40.966,
+   "text": "Okay."
+  },
+  {
+   "start": 41.547,
+   "end": 44.627,
+   "text": "What was the best lesson you learned from all that rejection?"
+  },
+  {
+   "start": 46.727,
+   "end": 55.649,
+   "text": "I think the best lesson that I learned was that when I overcome, other people can overcome."
+  },
+  {
+   "start": 61.861,
+   "end": 86.128,
+   "text": "and this is what I mean right when I finally broke through my own barriers when I finally stopped telling myself that I was not worth it that I cannot do it that I was too afraid when I finally showed up other people got to overcome as well it was beautiful it was beautiful so I think that was the biggest lesson wow"
+  },
+  {
+   "start": 89.576,
+   "end": 93.277,
+   "text": "When I overcome, others overcome too."
+  },
+  {
+   "start": 95.318,
+   "end": 96.898,
+   "text": "It's contagious, isn't it?"
+  },
+  {
+   "start": 97.318,
+   "end": 99.039,
+   "text": "It's contagious."
+  },
+  {
+   "start": 99.079,
+   "end": 102.12,
+   "text": "Give me goosebumps."
+  },
+  {
+   "start": 102.18,
+   "end": 108.062,
+   "text": "Oh my goodness."
+  },
+  {
+   "start": 109.823,
+   "end": 117.425,
+   "text": "It's so crazy how the Bible, it has said the same thing for thousands of years."
+  },
+  {
+   "start": 118.435,
+   "end": 120.58,
+   "text": "And I've read it so many different times."
+  },
+  {
+   "start": 121.342,
+   "end": 124.931,
+   "text": "In the same passage, I'll read it at different times in my life."
+  },
+  {
+   "start": 126.214,
+   "end": 126.315,
+   "text": "And"
+  }
+ ],
+ "words": [
+  {
+   "word": "I",
+   "start": 0.031,
+   "end": 0.071,
+   "score": 0.911
+  },
+  {
+   "word": "was",
+   "start": 0.091,
+   "end": 0.231,
+   "score": 0.779
+  },
+  {
+   "word": "so",
+   "start": 0.271,
+   "end": 0.431,
+   "score": 0.998
+  },
+  {
+   "word": "proud",
+   "start": 0.531,
+   "end": 0.731,
+   "score": 0.976
+  },
+  {
+   "word": "of",
+   "start": 0.771,
+   "end": 0.811,
+   "score": 0.713
+  },
+  {
+   "word": "myself",
+   "start": 0.851,
+   "end": 1.151,
+   "score": 0.872
+  },
+  {
+   "word": "for",
+   "start": 1.191,
+   "end": 1.291,
+   "score": 0.966
+  },
+  {
+   "word": "asking",
+   "start": 1.371,
+   "end": 1.671,
+   "score": 0.8
+  },
+  {
+   "word": "a",
+   "start": 1.711,
+   "end": 1.751,
+   "score": 0.498
+  },
+  {
+   "word": "how",
+   "start": 1.831,
+   "end": 2.051,
+   "score": 0.99
+  },
+  {
+   "word": "question",
+   "start": 2.111,
+   "end": 2.592,
+   "score": 0.807
+  },
+  {
+   "word": "because",
+   "start": 3.032,
+   "end": 3.312,
+   "score": 0.821
+  },
+  {
+   "word": "I",
+   "start": 3.392,
+   "end": 3.512,
+   "score": 0.676
+  },
+  {
+   "word": "just",
+   "start": 3.612,
+   "end": 3.912,
+   "score": 0.913
+  },
+  {
+   "word": "applied.",
+   "start": 3.992,
+   "end": 4.572,
+   "score": 0.851
+  },
+  {
+   "word": "I",
+   "start": 4.772,
+   "end": 4.872,
+   "score": 0.915
+  },
+  {
+   "word": "took",
+   "start": 4.892,
+   "end": 5.112,
+   "score": 0.895
+  },
+  {
+   "word": "action",
+   "start": 5.332,
+   "end": 5.652,
+   "score": 0.923
+  },
+  {
+   "word": "on",
+   "start": 5.712,
+   "end": 5.812,
+   "score": 0.636
+  },
+  {
+   "word": "what",
+   "start": 5.852,
+   "end": 6.032,
+   "score": 0.722
+  },
+  {
+   "word": "I",
+   "start": 6.072,
+   "end": 6.192,
+   "score": 0.564
+  },
+  {
+   "word": "just",
+   "start": 6.272,
+   "end": 6.453,
+   "score": 0.518
+  },
+  {
+   "word": "learned",
+   "start": 6.573,
+   "end": 6.953,
+   "score": 0.719
+  },
+  {
+   "word": "in",
+   "start": 7.033,
+   "end": 7.133,
+   "score": 0.966
+  },
+  {
+   "word": "the",
+   "start": 7.173,
+   "end": 7.273,
+   "score": 0.692
+  },
+  {
+   "word": "moment,",
+   "start": 7.393,
+   "end": 7.933,
+   "score": 0.621
+  },
+  {
+   "word": "girl.",
+   "start": 8.013,
+   "end": 8.513,
+   "score": 0.851
+  },
+  {
+   "word": "Okay.",
+   "start": 8.893,
+   "end": 9.253,
+   "score": 0.63
+  },
+  {
+   "word": "So",
+   "start": 9.633,
+   "end": 9.933,
+   "score": 0.887
+  },
+  {
+   "word": "what",
+   "start": 11.674,
+   "end": 11.954,
+   "score": 0.696
+  },
+  {
+   "word": "would",
+   "start": 12.774,
+   "end": 12.954,
+   "score": 0.82
+  },
+  {
+   "word": "you",
+   "start": 12.994,
+   "end": 13.114,
+   "score": 0.839
+  },
+  {
+   "word": "say",
+   "start": 13.214,
+   "end": 13.494,
+   "score": 0.63
+  },
+  {
+   "word": "was",
+   "start": 15.615,
+   "end": 15.815,
+   "score": 0.757
+  },
+  {
+   "word": "the",
+   "start": 15.895,
+   "end": 16.015,
+   "score": 0.88
+  },
+  {
+   "word": "biggest",
+   "start": 16.175,
+   "end": 16.595,
+   "score": 0.827
+  },
+  {
+   "word": "lesson",
+   "start": 16.775,
+   "end": 17.255,
+   "score": 0.896
+  },
+  {
+   "word": "that",
+   "start": 19.856,
+   "end": 20.256,
+   "score": 0.844
+  },
+  {
+   "word": "turned",
+   "start": 20.336,
+   "end": 20.736,
+   "score": 0.809
+  },
+  {
+   "word": "you",
+   "start": 20.776,
+   "end": 20.976,
+   "score": 0.851
+  },
+  {
+   "word": "from",
+   "start": 22.156,
+   "end": 22.596,
+   "score": 0.828
+  },
+  {
+   "word": "discouraged",
+   "start": 22.616,
+   "end": 25.237,
+   "score": 0.847
+  },
+  {
+   "word": "to",
+   "start": 27.364,
+   "end": 27.744,
+   "score": 0.863
+  },
+  {
+   "word": "this",
+   "start": 28.104,
+   "end": 28.304,
+   "score": 0.996
+  },
+  {
+   "word": "is",
+   "start": 28.384,
+   "end": 28.464,
+   "score": 0.778
+  },
+  {
+   "word": "what",
+   "start": 28.504,
+   "end": 28.644,
+   "score": 0.904
+  },
+  {
+   "word": "I",
+   "start": 28.704,
+   "end": 28.804,
+   "score": 0.817
+  },
+  {
+   "word": "do",
+   "start": 28.844,
+   "end": 29.024,
+   "score": 0.835
+  },
+  {
+   "word": "for",
+   "start": 29.084,
+   "end": 29.224,
+   "score": 0.942
+  },
+  {
+   "word": "a",
+   "start": 29.264,
+   "end": 29.284,
+   "score": 0.962
+  },
+  {
+   "word": "living.",
+   "start": 29.364,
+   "end": 29.684,
+   "score": 0.905
+  },
+  {
+   "word": "Because",
+   "start": 29.984,
+   "end": 32.585,
+   "score": 0.611
+  },
+  {
+   "word": "that's",
+   "start": 32.605,
+   "end": 32.805,
+   "score": 0.312
+  },
+  {
+   "word": "powerful.",
+   "start": 32.845,
+   "end": 33.325,
+   "score": 0.925
+  },
+  {
+   "word": "That's",
+   "start": 33.545,
+   "end": 33.805,
+   "score": 0.444
+  },
+  {
+   "word": "powerful.",
+   "start": 33.845,
+   "end": 34.465,
+   "score": 0.933
+  },
+  {
+   "word": "Okay,",
+   "start": 35.846,
+   "end": 36.206,
+   "score": 0.599
+  },
+  {
+   "word": "say",
+   "start": 36.226,
+   "end": 36.326,
+   "score": 0.817
+  },
+  {
+   "word": "the",
+   "start": 36.346,
+   "end": 36.426,
+   "score": 0.789
+  },
+  {
+   "word": "question",
+   "start": 36.486,
+   "end": 36.766,
+   "score": 0.899
+  },
+  {
+   "word": "again.",
+   "start": 36.806,
+   "end": 37.046,
+   "score": 0.889
+  },
+  {
+   "word": "Say",
+   "start": 37.066,
+   "end": 37.526,
+   "score": 0.517
+  },
+  {
+   "word": "it",
+   "start": 37.546,
+   "end": 37.586,
+   "score": 0.229
+  },
+  {
+   "word": "again.",
+   "start": 37.746,
+   "end": 38.066,
+   "score": 0.63
+  },
+  {
+   "word": "Let",
+   "start": 38.086,
+   "end": 39.606,
+   "score": 0.615
+  },
+  {
+   "word": "me",
+   "start": 39.686,
+   "end": 39.766,
+   "score": 0.153
+  },
+  {
+   "word": "simplify",
+   "start": 39.806,
+   "end": 40.246,
+   "score": 0.975
+  },
+  {
+   "word": "it.",
+   "start": 40.286,
+   "end": 40.366,
+   "score": 0.701
+  },
+  {
+   "word": "Okay.",
+   "start": 40.746,
+   "end": 40.966,
+   "score": 0.359
+  },
+  {
+   "word": "What",
+   "start": 41.547,
+   "end": 41.667,
+   "score": 0.892
+  },
+  {
+   "word": "was",
+   "start": 41.687,
+   "end": 41.807,
+   "score": 0.883
+  },
+  {
+   "word": "the",
+   "start": 41.827,
+   "end": 41.887,
+   "score": 0.982
+  },
+  {
+   "word": "best",
+   "start": 41.947,
+   "end": 42.127,
+   "score": 0.994
+  },
+  {
+   "word": "lesson",
+   "start": 42.187,
+   "end": 42.447,
+   "score": 0.398
+  },
+  {
+   "word": "you",
+   "start": 42.527,
+   "end": 42.647,
+   "score": 0.507
+  },
+  {
+   "word": "learned",
+   "start": 42.687,
+   "end": 43.007,
+   "score": 0.733
+  },
+  {
+   "word": "from",
+   "start": 43.667,
+   "end": 43.827,
+   "score": 0.834
+  },
+  {
+   "word": "all",
+   "start": 43.867,
+   "end": 43.987,
+   "score": 0.824
+  },
+  {
+   "word": "that",
+   "start": 44.027,
+   "end": 44.147,
+   "score": 0.904
+  },
+  {
+   "word": "rejection?",
+   "start": 44.187,
+   "end": 44.627,
+   "score": 0.99
+  },
+  {
+   "word": "I",
+   "start": 46.727,
+   "end": 46.807,
+   "score": 0.786
+  },
+  {
+   "word": "think",
+   "start": 46.907,
+   "end": 47.207,
+   "score": 0.968
+  },
+  {
+   "word": "the",
+   "start": 47.368,
+   "end": 47.488,
+   "score": 0.996
+  },
+  {
+   "word": "best",
+   "start": 47.608,
+   "end": 47.988,
+   "score": 0.846
+  },
+  {
+   "word": "lesson",
+   "start": 48.228,
+   "end": 48.808,
+   "score": 0.788
+  },
+  {
+   "word": "that",
+   "start": 48.848,
+   "end": 49.048,
+   "score": 0.784
+  },
+  {
+   "word": "I",
+   "start": 49.208,
+   "end": 49.308,
+   "score": 0.956
+  },
+  {
+   "word": "learned",
+   "start": 49.368,
+   "end": 49.808,
+   "score": 0.68
+  },
+  {
+   "word": "was",
+   "start": 50.148,
+   "end": 50.388,
+   "score": 0.856
+  },
+  {
+   "word": "that",
+   "start": 50.488,
+   "end": 50.848,
+   "score": 0.932
+  },
+  {
+   "word": "when",
+   "start": 52.268,
+   "end": 52.508,
+   "score": 0.73
+  },
+  {
+   "word": "I",
+   "start": 52.788,
+   "end": 52.908,
+   "score": 0.825
+  },
+  {
+   "word": "overcome,",
+   "start": 53.089,
+   "end": 53.709,
+   "score": 0.864
+  },
+  {
+   "word": "other",
+   "start": 54.409,
+   "end": 54.669,
+   "score": 0.889
+  },
+  {
+   "word": "people",
+   "start": 54.709,
+   "end": 54.989,
+   "score": 0.833
+  },
+  {
+   "word": "can",
+   "start": 55.029,
+   "end": 55.189,
+   "score": 0.866
+  },
+  {
+   "word": "overcome.",
+   "start": 55.249,
+   "end": 55.649,
+   "score": 0.924
+  },
+  {
+   "word": "and",
+   "start": 61.861,
+   "end": 61.961,
+   "score": 0.703
+  },
+  {
+   "word": "this",
+   "start": 62.181,
+   "end": 62.381,
+   "score": 0.899
+  },
+  {
+   "word": "is",
+   "start": 62.501,
+   "end": 62.621,
+   "score": 0.951
+  },
+  {
+   "word": "what",
+   "start": 62.701,
+   "end": 63.141,
+   "score": 0.688
+  },
+  {
+   "word": "I",
+   "start": 63.261,
+   "end": 63.381,
+   "score": 0.631
+  },
+  {
+   "word": "mean",
+   "start": 63.521,
+   "end": 63.901,
+   "score": 0.383
+  },
+  {
+   "word": "right",
+   "start": 64.121,
+   "end": 64.461,
+   "score": 0.9
+  },
+  {
+   "word": "when",
+   "start": 66.042,
+   "end": 66.282,
+   "score": 0.863
+  },
+  {
+   "word": "I",
+   "start": 66.602,
+   "end": 66.682,
+   "score": 0.976
+  },
+  {
+   "word": "finally",
+   "start": 66.822,
+   "end": 67.322,
+   "score": 0.866
+  },
+  {
+   "word": "broke",
+   "start": 67.402,
+   "end": 67.662,
+   "score": 0.876
+  },
+  {
+   "word": "through",
+   "start": 67.722,
+   "end": 67.962,
+   "score": 0.838
+  },
+  {
+   "word": "my",
+   "start": 68.042,
+   "end": 68.202,
+   "score": 0.788
+  },
+  {
+   "word": "own",
+   "start": 68.322,
+   "end": 68.443,
+   "score": 0.89
+  },
+  {
+   "word": "barriers",
+   "start": 68.503,
+   "end": 69.043,
+   "score": 0.819
+  },
+  {
+   "word": "when",
+   "start": 69.683,
+   "end": 69.843,
+   "score": 0.824
+  },
+  {
+   "word": "I",
+   "start": 69.923,
+   "end": 70.023,
+   "score": 0.797
+  },
+  {
+   "word": "finally",
+   "start": 70.223,
+   "end": 70.703,
+   "score": 0.83
+  },
+  {
+   "word": "stopped",
+   "start": 70.743,
+   "end": 71.043,
+   "score": 0.873
+  },
+  {
+   "word": "telling",
+   "start": 71.063,
+   "end": 71.343,
+   "score": 0.846
+  },
+  {
+   "word": "myself",
+   "start": 71.383,
+   "end": 71.743,
+   "score": 0.864
+  },
+  {
+   "word": "that",
+   "start": 71.803,
+   "end": 71.924,
+   "score": 0.983
+  },
+  {
+   "word": "I",
+   "start": 72.004,
+   "end": 72.064,
+   "score": 0.768
+  },
+  {
+   "word": "was",
+   "start": 72.104,
+   "end": 72.224,
+   "score": 0.814
+  },
+  {
+   "word": "not",
+   "start": 72.264,
+   "end": 72.404,
+   "score": 0.885
+  },
+  {
+   "word": "worth",
+   "start": 72.524,
+   "end": 72.764,
+   "score": 0.646
+  },
+  {
+   "word": "it",
+   "start": 72.824,
+   "end": 72.964,
+   "score": 0.851
+  },
+  {
+   "word": "that",
+   "start": 73.124,
+   "end": 73.324,
+   "score": 0.821
+  },
+  {
+   "word": "I",
+   "start": 73.464,
+   "end": 73.524,
+   "score": 0.998
+  },
+  {
+   "word": "cannot",
+   "start": 73.564,
+   "end": 73.904,
+   "score": 0.892
+  },
+  {
+   "word": "do",
+   "start": 73.964,
+   "end": 74.144,
+   "score": 0.83
+  },
+  {
+   "word": "it",
+   "start": 74.184,
+   "end": 74.244,
+   "score": 0.732
+  },
+  {
+   "word": "that",
+   "start": 74.324,
+   "end": 74.464,
+   "score": 0.875
+  },
+  {
+   "word": "I",
+   "start": 74.544,
+   "end": 74.604,
+   "score": 0.881
+  },
+  {
+   "word": "was",
+   "start": 74.644,
+   "end": 74.784,
+   "score": 0.877
+  },
+  {
+   "word": "too",
+   "start": 74.844,
+   "end": 75.024,
+   "score": 0.993
+  },
+  {
+   "word": "afraid",
+   "start": 75.124,
+   "end": 75.585,
+   "score": 0.872
+  },
+  {
+   "word": "when",
+   "start": 75.985,
+   "end": 76.105,
+   "score": 0.987
+  },
+  {
+   "word": "I",
+   "start": 76.145,
+   "end": 76.225,
+   "score": 0.785
+  },
+  {
+   "word": "finally",
+   "start": 76.305,
+   "end": 76.705,
+   "score": 0.912
+  },
+  {
+   "word": "showed",
+   "start": 76.785,
+   "end": 77.105,
+   "score": 0.875
+  },
+  {
+   "word": "up",
+   "start": 77.245,
+   "end": 77.345,
+   "score": 0.924
+  },
+  {
+   "word": "other",
+   "start": 78.085,
+   "end": 78.325,
+   "score": 0.909
+  },
+  {
+   "word": "people",
+   "start": 78.505,
+   "end": 78.846,
+   "score": 0.893
+  },
+  {
+   "word": "got",
+   "start": 78.926,
+   "end": 79.166,
+   "score": 0.799
+  },
+  {
+   "word": "to",
+   "start": 79.186,
+   "end": 79.286,
+   "score": 0.925
+  },
+  {
+   "word": "overcome",
+   "start": 79.446,
+   "end": 79.986,
+   "score": 0.865
+  },
+  {
+   "word": "as",
+   "start": 80.106,
+   "end": 80.206,
+   "score": 0.554
+  },
+  {
+   "word": "well",
+   "start": 80.306,
+   "end": 80.606,
+   "score": 0.9
+  },
+  {
+   "word": "it",
+   "start": 80.686,
+   "end": 80.746,
+   "score": 0.974
+  },
+  {
+   "word": "was",
+   "start": 80.786,
+   "end": 80.946,
+   "score": 0.764
+  },
+  {
+   "word": "beautiful",
+   "start": 81.106,
+   "end": 81.866,
+   "score": 0.805
+  },
+  {
+   "word": "it",
+   "start": 81.886,
+   "end": 81.926,
+   "score": 0.0
+  },
+  {
+   "word": "was",
+   "start": 82.507,
+   "end": 82.627,
+   "score": 0.896
+  },
+  {
+   "word": "beautiful",
+   "start": 82.687,
+   "end": 83.167,
+   "score": 0.849
+  },
+  {
+   "word": "so",
+   "start": 83.527,
+   "end": 83.647,
+   "score": 0.993
+  },
+  {
+   "word": "I",
+   "start": 83.727,
+   "end": 83.787,
+   "score": 0.995
+  },
+  {
+   "word": "think",
+   "start": 83.827,
+   "end": 83.987,
+   "score": 0.876
+  },
+  {
+   "word": "that",
+   "start": 84.007,
+   "end": 84.147,
+   "score": 0.797
+  },
+  {
+   "word": "was",
+   "start": 84.167,
+   "end": 84.267,
+   "score": 0.835
+  },
+  {
+   "word": "the",
+   "start": 84.287,
+   "end": 84.387,
+   "score": 0.762
+  },
+  {
+   "word": "biggest",
+   "start": 84.407,
+   "end": 84.727,
+   "score": 0.758
+  },
+  {
+   "word": "lesson",
+   "start": 84.767,
+   "end": 85.047,
+   "score": 0.949
+  },
+  {
+   "word": "wow",
+   "start": 85.067,
+   "end": 86.128,
+   "score": 0.624
+  },
+  {
+   "word": "When",
+   "start": 89.576,
+   "end": 89.736,
+   "score": 0.969
+  },
+  {
+   "word": "I",
+   "start": 89.976,
+   "end": 90.076,
+   "score": 0.801
+  },
+  {
+   "word": "overcome,",
+   "start": 90.216,
+   "end": 90.976,
+   "score": 0.745
+  },
+  {
+   "word": "others",
+   "start": 91.677,
+   "end": 92.017,
+   "score": 0.737
+  },
+  {
+   "word": "overcome",
+   "start": 92.177,
+   "end": 92.817,
+   "score": 0.874
+  },
+  {
+   "word": "too.",
+   "start": 92.957,
+   "end": 93.277,
+   "score": 0.8
+  },
+  {
+   "word": "It's",
+   "start": 95.318,
+   "end": 95.458,
+   "score": 0.876
+  },
+  {
+   "word": "contagious,",
+   "start": 95.518,
+   "end": 96.278,
+   "score": 0.886
+  },
+  {
+   "word": "isn't",
+   "start": 96.358,
+   "end": 96.478,
+   "score": 0.167
+  },
+  {
+   "word": "it?",
+   "start": 96.698,
+   "end": 96.898,
+   "score": 0.749
+  },
+  {
+   "word": "It's",
+   "start": 97.318,
+   "end": 97.439,
+   "score": 0.493
+  },
+  {
+   "word": "contagious.",
+   "start": 97.479,
+   "end": 99.039,
+   "score": 0.564
+  },
+  {
+   "word": "Give",
+   "start": 99.079,
+   "end": 99.319,
+   "score": 0.463
+  },
+  {
+   "word": "me",
+   "start": 99.759,
+   "end": 99.899,
+   "score": 0.654
+  },
+  {
+   "word": "goosebumps.",
+   "start": 99.939,
+   "end": 102.12,
+   "score": 0.614
+  },
+  {
+   "word": "Oh",
+   "start": 102.18,
+   "end": 102.38,
+   "score": 0.777
+  },
+  {
+   "word": "my",
+   "start": 102.72,
+   "end": 103.0,
+   "score": 0.843
+  },
+  {
+   "word": "goodness.",
+   "start": 103.12,
+   "end": 108.062,
+   "score": 0.84
+  },
+  {
+   "word": "It's",
+   "start": 109.823,
+   "end": 109.983,
+   "score": 0.673
+  },
+  {
+   "word": "so",
+   "start": 110.043,
+   "end": 110.243,
+   "score": 0.943
+  },
+  {
+   "word": "crazy",
+   "start": 110.323,
+   "end": 110.823,
+   "score": 0.885
+  },
+  {
+   "word": "how",
+   "start": 110.843,
+   "end": 113.004,
+   "score": 0.905
+  },
+  {
+   "word": "the",
+   "start": 113.764,
+   "end": 113.864,
+   "score": 0.852
+  },
+  {
+   "word": "Bible,",
+   "start": 113.904,
+   "end": 114.284,
+   "score": 0.815
+  },
+  {
+   "word": "it",
+   "start": 114.984,
+   "end": 115.044,
+   "score": 0.99
+  },
+  {
+   "word": "has",
+   "start": 115.084,
+   "end": 115.184,
+   "score": 0.809
+  },
+  {
+   "word": "said",
+   "start": 115.224,
+   "end": 115.404,
+   "score": 0.991
+  },
+  {
+   "word": "the",
+   "start": 115.444,
+   "end": 115.564,
+   "score": 0.896
+  },
+  {
+   "word": "same",
+   "start": 115.644,
+   "end": 115.904,
+   "score": 0.836
+  },
+  {
+   "word": "thing",
+   "start": 116.004,
+   "end": 116.225,
+   "score": 0.94
+  },
+  {
+   "word": "for",
+   "start": 116.265,
+   "end": 116.405,
+   "score": 0.887
+  },
+  {
+   "word": "thousands",
+   "start": 116.485,
+   "end": 117.005,
+   "score": 0.775
+  },
+  {
+   "word": "of",
+   "start": 117.065,
+   "end": 117.125,
+   "score": 0.75
+  },
+  {
+   "word": "years.",
+   "start": 117.185,
+   "end": 117.425,
+   "score": 0.822
+  },
+  {
+   "word": "And",
+   "start": 118.435,
+   "end": 118.535,
+   "score": 0.986
+  },
+  {
+   "word": "I've",
+   "start": 118.575,
+   "end": 118.736,
+   "score": 0.842
+  },
+  {
+   "word": "read",
+   "start": 118.776,
+   "end": 118.936,
+   "score": 0.626
+  },
+  {
+   "word": "it",
+   "start": 118.956,
+   "end": 119.037,
+   "score": 0.666
+  },
+  {
+   "word": "so",
+   "start": 119.197,
+   "end": 119.438,
+   "score": 0.903
+  },
+  {
+   "word": "many",
+   "start": 119.498,
+   "end": 119.698,
+   "score": 0.906
+  },
+  {
+   "word": "different",
+   "start": 119.738,
+   "end": 120.079,
+   "score": 0.934
+  },
+  {
+   "word": "times.",
+   "start": 120.119,
+   "end": 120.58,
+   "score": 0.804
+  },
+  {
+   "word": "In",
+   "start": 121.342,
+   "end": 121.423,
+   "score": 0.804
+  },
+  {
+   "word": "the",
+   "start": 121.463,
+   "end": 121.563,
+   "score": 0.992
+  },
+  {
+   "word": "same",
+   "start": 121.623,
+   "end": 121.964,
+   "score": 0.713
+  },
+  {
+   "word": "passage,",
+   "start": 122.044,
+   "end": 122.485,
+   "score": 0.96
+  },
+  {
+   "word": "I'll",
+   "start": 122.545,
+   "end": 122.706,
+   "score": 0.8
+  },
+  {
+   "word": "read",
+   "start": 122.746,
+   "end": 122.946,
+   "score": 0.795
+  },
+  {
+   "word": "it",
+   "start": 122.986,
+   "end": 123.026,
+   "score": 0.997
+  },
+  {
+   "word": "at",
+   "start": 123.668,
+   "end": 123.768,
+   "score": 0.867
+  },
+  {
+   "word": "different",
+   "start": 123.808,
+   "end": 124.109,
+   "score": 0.887
+  },
+  {
+   "word": "times",
+   "start": 124.149,
+   "end": 124.37,
+   "score": 0.804
+  },
+  {
+   "word": "in",
+   "start": 124.43,
+   "end": 124.47,
+   "score": 0.902
+  },
+  {
+   "word": "my",
+   "start": 124.51,
+   "end": 124.63,
+   "score": 0.846
+  },
+  {
+   "word": "life.",
+   "start": 124.671,
+   "end": 124.931,
+   "score": 0.971
+  },
+  {
+   "word": "And",
+   "start": 126.214,
+   "end": 126.315,
+   "score": 0.748
+  }
+ ]
+}

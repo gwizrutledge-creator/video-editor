@@ -1,0 +1,275 @@
+{
+ "out": "TGJ_TopHost_Reel_16x9.mp4",
+ "canvas": [
+  1920,
+  1080
+ ],
+ "fps": 30,
+ "bg": "0x0B0B0B",
+ "layouts": {
+  "dubose": {
+   "single": [
+    1280,
+    720,
+    0,
+    0
+   ],
+   "w": 1280,
+   "h": 720,
+   "y": 30
+  },
+  "erica": {
+   "side": [
+    [
+     640,
+     360,
+     0,
+     0
+    ],
+    [
+     640,
+     360,
+     640,
+     0
+    ]
+   ],
+   "w": 930,
+   "gap": 20,
+   "y": 150
+  },
+  "doug": {
+   "side": [
+    [
+     640,
+     360,
+     0,
+     180
+    ],
+    [
+     640,
+     360,
+     640,
+     180
+    ]
+   ],
+   "w": 930,
+   "gap": 20,
+   "y": 150
+  },
+  "debbie": {
+   "side": [
+    [
+     640,
+     360,
+     0,
+     180
+    ],
+    [
+     640,
+     360,
+     640,
+     180
+    ]
+   ],
+   "w": 930,
+   "gap": 20,
+   "y": 150
+  },
+  "brannan": {
+   "side": [
+    [
+     600,
+     338,
+     27,
+     190
+    ],
+    [
+     600,
+     338,
+     653,
+     190
+    ]
+   ],
+   "w": 930,
+   "gap": 20,
+   "y": 150
+  }
+ },
+ "caption_y": {
+  "dubose": 950,
+  "erica": 830,
+  "doug": 830,
+  "debbie": 830,
+  "brannan": 830
+ },
+ "items": [
+  {
+   "src": "projects/tophost/src/dubose.mp4",
+   "in": 38.62,
+   "out": 47.62,
+   "layout": "dubose",
+   "speaker": "Gregory → Dr. DuBose"
+  },
+  {
+   "src": "projects/tophost/src/erica.mp4",
+   "in": 41.4,
+   "out": 44.8,
+   "layout": "erica",
+   "speaker": "Gregory"
+  },
+  {
+   "src": "projects/tophost/src/erica.mp4",
+   "in": 46.55,
+   "out": 51.05,
+   "layout": "erica",
+   "speaker": "Erika"
+  },
+  {
+   "src": "projects/tophost/src/erica.mp4",
+   "in": 52.0,
+   "out": 55.85,
+   "layout": "erica",
+   "sentence_start": false,
+   "speaker": "Erika"
+  },
+  {
+   "src": "projects/tophost/src/erica.mp4",
+   "in": 89.4,
+   "out": 93.45,
+   "layout": "erica",
+   "speaker": "Gregory"
+  },
+  {
+   "src": "projects/tophost/src/erica.mp4",
+   "in": 95.15,
+   "out": 99.06,
+   "layout": "erica",
+   "speaker": "Erika"
+  },
+  {
+   "src": "projects/tophost/src/doug.mp4",
+   "in": 57.35,
+   "out": 61.4,
+   "layout": "doug",
+   "speaker": "Gregory"
+  },
+  {
+   "src": "projects/tophost/src/doug.mp4",
+   "in": 61.9,
+   "out": 68.25,
+   "layout": "doug",
+   "sentence_start": false,
+   "speaker": "Gregory"
+  },
+  {
+   "src": "projects/tophost/src/doug.mp4",
+   "in": 71.35,
+   "out": 77.95,
+   "layout": "doug",
+   "speaker": "Doug"
+  },
+  {
+   "src": "projects/tophost/src/debbie.mp4",
+   "in": 33.25,
+   "out": 34.1,
+   "layout": "debbie",
+   "speaker": "Gregory"
+  },
+  {
+   "src": "projects/tophost/src/debbie.mp4",
+   "in": 34.85,
+   "out": 41.25,
+   "layout": "debbie",
+   "sentence_start": false,
+   "speaker": "Gregory → Debbie (“Absolutely.”)"
+  },
+  {
+   "src": "projects/tophost/src/debbie.mp4",
+   "in": 42.45,
+   "out": 45.65,
+   "layout": "debbie",
+   "speaker": "Debbie"
+  },
+  {
+   "src": "projects/tophost/src/debbie.mp4",
+   "in": 47.15,
+   "out": 48.62,
+   "layout": "debbie",
+   "speaker": "Debbie"
+  },
+  {
+   "src": "projects/tophost/src/debbie.mp4",
+   "in": 82.2,
+   "out": 95.75,
+   "layout": "debbie",
+   "speaker": "Debbie"
+  },
+  {
+   "src": "projects/tophost/src/debbie.mp4",
+   "in": 102.2,
+   "out": 107.1,
+   "layout": "debbie",
+   "speaker": "Gregory (“Safe, heard.”) → Debbie & Gregory (“And understood.”)"
+  },
+  {
+   "src": "projects/tophost/src/brannan.mp4",
+   "in": 50.5,
+   "out": 59.7,
+   "layout": "brannan",
+   "speaker": "Brannan (Gregory listening)"
+  },
+  {
+   "card": "projects/tophost/black_169.png",
+   "dur": 4.5
+  }
+ ],
+ "emphasis": [
+  "doctorpreneurs.",
+  "forgiveness?",
+  "ego.",
+  "question",
+  "everything."
+ ],
+ "graphics": [
+  {
+   "style": "Name",
+   "text": "GREGORY “G-WIZ” RUTLEDGE",
+   "start": 0.3,
+   "end": 4.6,
+   "x": 960,
+   "y": 752
+  },
+  {
+   "style": "Title",
+   "text": "Host, Question Everything",
+   "start": 0.3,
+   "end": 4.6,
+   "x": 960,
+   "y": 826
+  },
+  {
+   "style": "Card1",
+   "text": "HELP G-WIZ\\NBECOME TOP HOST.",
+   "start": 85.38,
+   "end": 89.78,
+   "x": 960,
+   "y": 380
+  },
+  {
+   "style": "Card2",
+   "text": "Vote for Gregory Rutledge.",
+   "start": 85.78,
+   "end": 89.78,
+   "x": 960,
+   "y": 600
+  },
+  {
+   "style": "Card3",
+   "text": "tophost.org/2026/gregory-rutledge",
+   "start": 86.18,
+   "end": 89.78,
+   "x": 960,
+   "y": 690
+  }
+ ]
+}
