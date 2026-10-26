@@ -17,3 +17,13 @@ Layout: raw/ (raw clip), transcript/ (words.json, cuts.json), scripts/, vendor/ 
   drive.usercontent.google.com instead (needs the file shared "anyone with the link" and that host allowed).
 - Allowing hosts in Network access did not reach the already-running container; the new policy applies to a fresh session.
 - WhisperX install from PyPI works here: whisperx 3.8.6 + torch 2.8.0 (takes several minutes; redo it in each new container).
+- EP 12 Jason McKenzie: the user's chosen source is Drive "From Thorn to Greatness: A Greater Journey.mp4", file id
+  1pC3LmO7KT-Q0DZxG_MhDbInTiPjbbVuI (folder "Gregory Podcast Episodes - Packaging/Jason McKenzie"), 1920x1080 30 fps, 51:28,
+  saved as raw/EP12_Jason_McKenzie.mp4. Already has a cold open (0:00-0:41) and title card (0:41-0:43); remote two-up layout
+  (Greg tile x 38-939, Jason x 978-1880, y 286-792, name bars from y 734). Audio is dual-mono: no per-speaker channels.
+- Drive downloads can fail with "Quota exceeded" (HTML instead of video); another copy of the file may still work.
+- WhisperX alignment needs NLTK punkt_tab; NLTK's downloader refuses the proxy, so curl
+  raw.githubusercontent.com/nltk/nltk_data/gh-pages/packages/tokenizers/punkt_tab.zip into ~/nltk_data/tokenizers/.
+- transcribe.py caches the unaligned ASR in transcript/asr.json; WHISPER_MODEL=large-v3-turbo took ~15 min for 51 min here.
+- scripts/package.py renders edit/plan.json (full edit, mid-length cuts, 9:16 Shorts with captions) + an EDL per file;
+  scripts/find_faces.py (tools venv ~/.cache/video-editor/tools-venv with opencv) centres Shorts on the speaker's face.

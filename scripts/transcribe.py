@@ -1,6 +1,7 @@
 """Transcribe the raw clip with WhisperX (large-v3, word-level alignment).
 
 Usage: ~/.cache/video-editor/whisperx-venv/bin/python scripts/transcribe.py raw/<clip>
+Set WHISPER_MODEL to use another model (e.g. large-v3-turbo, ~4x faster on CPU).
 Writes transcript/audio.wav (16 kHz mono) and transcript/words.json.
 Skips the work if words.json already exists for the same footage.
 """
@@ -16,6 +17,7 @@ os.environ.setdefault("HF_HUB_DISABLE_SYMLINKS", "1")
 
 ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / "transcript"
+MODEL = os.environ.get("WHISPER_MODEL", "large-v3")
 
 
 def fingerprint(path: Path) -> str:
@@ -49,16 +51,26 @@ def main() -> None:
 
     device, compute = ("cuda", "float16") if torch.cuda.is_available() else ("cpu", "int8")
     audio = whisperx.load_audio(str(wav))
-    try:
-        model = whisperx.load_model("large-v3", device, compute_type=compute)
-        result = model.transcribe(audio, batch_size=8 if device == "cpu" else 16)
-    except RuntimeError as e:
-        if device != "cuda":
-            raise
-        print(f"CUDA failed ({e}); falling back to CPU int8.")
-        device, compute = "cpu", "int8"
-        model = whisperx.load_model("large-v3", device, compute_type=compute)
-        result = model.transcribe(audio, batch_size=8)
+    # The unaligned result is cached so a failed alignment doesn't cost a re-transcription.
+    asr_path = OUT / "asr.json"
+    asr = json.loads(asr_path.read_text()) if asr_path.exists() else {}
+    if asr.get("fingerprint") == fp and asr.get("model") == MODEL:
+        result, device, compute = asr["result"], asr["device"], asr["compute"]
+        print(f"Reusing {asr_path} ({MODEL}); aligning only.")
+    else:
+        try:
+            model = whisperx.load_model(MODEL, device, compute_type=compute)
+            result = model.transcribe(audio, batch_size=8 if device == "cpu" else 16)
+        except RuntimeError as e:
+            if device != "cuda":
+                raise
+            print(f"CUDA failed ({e}); falling back to CPU int8.")
+            device, compute = "cpu", "int8"
+            model = whisperx.load_model(MODEL, device, compute_type=compute)
+            result = model.transcribe(audio, batch_size=8)
+        asr_path.write_text(json.dumps({"fingerprint": fp, "model": MODEL, "device": device,
+                                        "compute": compute, "result": result},
+                                       ensure_ascii=False))
 
     lang = result["language"]
     align_model, meta = whisperx.load_align_model(language_code=lang, device=device)
@@ -74,6 +86,7 @@ def main() -> None:
         "source": raw.name,
         "fingerprint": fp,
         "language": lang,
+        "model": MODEL,
         "device": f"{device}/{compute}",
         "segments": [{"start": s["start"], "end": s["end"], "text": s["text"].strip()}
                      for s in aligned["segments"]],
