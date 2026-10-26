@@ -27,3 +27,8 @@ Layout: raw/ (raw clip), transcript/ (words.json, cuts.json), scripts/, vendor/ 
 - transcribe.py caches the unaligned ASR in transcript/asr.json; WHISPER_MODEL=large-v3-turbo took ~15 min for 51 min here.
 - scripts/package.py renders edit/plan.json (full edit, mid-length cuts, 9:16 Shorts with captions) + an EDL per file;
   scripts/find_faces.py (tools venv ~/.cache/video-editor/tools-venv with opencv) centres Shorts on the speaker's face.
+- EP 12 delivered: edit/plan.json drives everything (python3 scripts/package.py edit/plan.json [names]); renders land
+  in out/ (gitignored). Full edit ~45 min to render (preset fast), Cuts ~10 min each, Shorts <1 min each.
+  edit/EDIT_LIST.md is the human edit list. The punch-ins (full-screen Jason/Greg) are in edit/layout.json.
+- Big files reach the user with SendUserFile (worked up to ~1 GB); the Drive connector only takes inline base64.
+- tools venv needs opencv-python-headless<5 (OpenCV 5 dropped CascadeClassifier).
