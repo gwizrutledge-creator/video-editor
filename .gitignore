@@ -6,3 +6,4 @@ vendor/*
 *.log
 out/
 transcript/asr.json
+__pycache__/
