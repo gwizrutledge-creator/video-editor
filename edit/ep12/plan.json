@@ -1,5 +1,7 @@
 {
  "source": "raw/EP12_Jason_McKenzie.mp4",
+ "transcript": "transcript/ep12/words.json",
+ "layout": "edit/ep12/layout.json",
  "guest": "Jason McKenzie",
  "people": {
   "greg": "Gregory Rutledge",
@@ -10,7 +12,7 @@
  },
  "full": {
   "name": "full",
-  "file": "out/full/EP12_Jason_McKenzie_Full_Edit.mp4",
+  "file": "out/ep12/full/EP12_Jason_McKenzie_Full_Edit.mp4",
   "title": "He Was Scared to Send a Bill. The Reason Went Back to Childhood.",
   "coldopen": [
    [
@@ -160,7 +162,7 @@
  "mids": [
   {
    "name": "mid1",
-   "file": "out/mid/Cut1_The_Money_Block.mp4",
+   "file": "out/ep12/mid/Cut1_The_Money_Block.mp4",
    "title": "The Money Block Hiding in Your Childhood",
    "hook": [
     [
@@ -194,7 +196,7 @@
   },
   {
    "name": "mid2",
-   "file": "out/mid/Cut2_Say_No.mp4",
+   "file": "out/ep12/mid/Cut2_Say_No.mp4",
    "title": "Stop Trying to Serve Everyone. Saying No Grew His Business.",
    "hook": [
     [
@@ -233,7 +235,7 @@
   },
   {
    "name": "mid3",
-   "file": "out/mid/Cut3_The_Cage.mp4",
+   "file": "out/ep12/mid/Cut3_The_Cage.mp4",
    "title": "He Took October Off and His Business Kept Running. Here's How.",
    "hook": [
     [
@@ -268,7 +270,7 @@
   },
   {
    "name": "mid4",
-   "file": "out/mid/Cut4_The_Thorn.mp4",
+   "file": "out/ep12/mid/Cut4_The_Thorn.mp4",
    "title": "What If Your Thorn Is the Reason You'll Be Great?",
    "hook": [
     [
@@ -308,7 +310,7 @@
  "shorts": [
   {
    "name": "S1",
-   "file": "out/shorts/S01_Scared_to_Send_a_Bill.mp4",
+   "file": "out/ep12/shorts/S01_Scared_to_Send_a_Bill.mp4",
    "title": "Scared to Send a Bill After 10 Years in Business",
    "in": 433.533,
    "out": 449.4,
@@ -324,7 +326,7 @@
   },
   {
    "name": "S2",
-   "file": "out/shorts/S02_Childhood_Money_Block.mp4",
+   "file": "out/ep12/shorts/S02_Childhood_Money_Block.mp4",
    "title": "The Childhood Memory Behind His Money Block",
    "in": 565.32,
    "out": 581.65,
@@ -336,7 +338,7 @@
   },
   {
    "name": "S3",
-   "file": "out/shorts/S03_Fighting_for_Limits.mp4",
+   "file": "out/ep12/shorts/S03_Fighting_for_Limits.mp4",
    "title": "You're Fighting for Limits You Don't Even Want",
    "in": 711.45,
    "out": 726.4,
@@ -352,7 +354,7 @@
   },
   {
    "name": "S4",
-   "file": "out/shorts/S04_Every_Payment_Is_a_Thank_You.mp4",
+   "file": "out/ep12/shorts/S04_Every_Payment_Is_a_Thank_You.mp4",
    "title": "Every Payment Is a Thank You",
    "in": 775.45,
    "out": 788.1,
@@ -364,7 +366,7 @@
   },
   {
    "name": "S5",
-   "file": "out/shorts/S05_Willing_to_Receive_It.mp4",
+   "file": "out/ep12/shorts/S05_Willing_to_Receive_It.mp4",
    "title": "Are You Willing to Receive It?",
    "in": 937.85,
    "out": 954.3,
@@ -376,7 +378,7 @@
   },
   {
    "name": "S6",
-   "file": "out/shorts/S06_Anyone_Who_Drinks_Water.mp4",
+   "file": "out/ep12/shorts/S06_Anyone_Who_Drinks_Water.mp4",
    "title": "\"Anyone Who Drinks Water\" Is Not Your Customer",
    "in": 997.6,
    "out": 1013.6,
@@ -388,7 +390,7 @@
   },
   {
    "name": "S7",
-   "file": "out/shorts/S07_IT_and_Snow_Removal.mp4",
+   "file": "out/ep12/shorts/S07_IT_and_Snow_Removal.mp4",
    "title": "IT Services and Snow Removal Under One Name?",
    "in": 1097.62,
    "out": 1114.6,
@@ -400,7 +402,7 @@
   },
   {
    "name": "S8",
-   "file": "out/shorts/S08_We_Need_You_The_Cage.mp4",
+   "file": "out/ep12/shorts/S08_We_Need_You_The_Cage.mp4",
    "title": "\"We Need You\": The Day He Realized He Built a Cage",
    "in": 1687.45,
    "out": 1703.2,
@@ -416,7 +418,7 @@
   },
   {
    "name": "S9",
-   "file": "out/shorts/S09_Expensive_Job.mp4",
+   "file": "out/ep12/shorts/S09_Expensive_Job.mp4",
    "title": "If Your Business Needs You Every Day, You Have a Job",
    "in": 1870.1,
    "out": 1879.62,
@@ -432,7 +434,7 @@
   },
   {
    "name": "S10",
-   "file": "out/shorts/S10_Thorn_to_Greatness.mp4",
+   "file": "out/ep12/shorts/S10_Thorn_to_Greatness.mp4",
    "title": "What If Your Thorn Is Where Your Greatness Starts?",
    "in": 2550.3,
    "out": 2565.42,

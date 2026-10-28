@@ -7,7 +7,7 @@ Source: Drive "From Thorn to Greatness: A Greater Journey.mp4" (1920×1080, 30 f
 **Title:** He Was Scared to Send a Bill. The Reason Went Back to Childhood.  
 **Thumbnail:** B · "10 YEARS IN. STILL SCARED." (A/B/C test from the audit)  
 **Length:** 48:06 (from 51:28)  
-**File:** `out/full/EP12_Jason_McKenzie_Full_Edit.mp4`
+**File:** `out/ep12/full/EP12_Jason_McKenzie_Full_Edit.mp4`
 
 | # | Source in | Source out | Action | Edit in | Reason |
 |---|---|---|---|---|---|
@@ -69,7 +69,7 @@ Each one: strongest line (under 15 s) → text card "From The Greater Journey, E
 
 ### The Money Block Hiding in Your Childhood
 
-`out/mid/Cut1_The_Money_Block.mp4` · 10:38
+`out/ep12/mid/Cut1_The_Money_Block.mp4` · 10:38
 
 | Part | Source in | Source out | Edit in |
 |---|---|---|---|
@@ -83,7 +83,7 @@ Lower-thirds: R · Reframing limiting beliefs
 
 ### Stop Trying to Serve Everyone. Saying No Grew His Business.
 
-`out/mid/Cut2_Say_No.mp4` · 8:16
+`out/ep12/mid/Cut2_Say_No.mp4` · 8:16
 
 | Part | Source in | Source out | Edit in |
 |---|---|---|---|
@@ -97,7 +97,7 @@ Lower-thirds: E · Embracing continuous learning, A · Action-oriented goals
 
 ### He Took October Off and His Business Kept Running. Here's How.
 
-`out/mid/Cut3_The_Cage.mp4` · 9:24
+`out/ep12/mid/Cut3_The_Cage.mp4` · 9:24
 
 | Part | Source in | Source out | Edit in |
 |---|---|---|---|
@@ -110,7 +110,7 @@ Lower-thirds: T · Transitioning with purpose, E · Empower your network
 
 ### What If Your Thorn Is the Reason You'll Be Great?
 
-`out/mid/Cut4_The_Thorn.mp4` · 12:07
+`out/ep12/mid/Cut4_The_Thorn.mp4` · 12:07
 
 | Part | Source in | Source out | Edit in |
 |---|---|---|---|

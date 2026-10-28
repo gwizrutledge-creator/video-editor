@@ -1,6 +1,6 @@
 """Render the packaged outputs described in edit/plan.json from the raw episode.
 
-Usage: python3 scripts/package.py edit/plan.json [name ...]
+Usage: python3 scripts/package.py edit/<ep>/plan.json [name ...]
 Names pick outputs by their "name" field (full, mid1, short03, ...); default renders all.
 
 Every source range snaps to the footage's frame grid, the same way scripts/render.py does:
@@ -10,8 +10,10 @@ pieces are concatenated and encoded once. Graphics (GREATER lower-thirds, contex
 writes a CMX3600 .edl next to each file so the cut can be rebuilt by hand in Premiere or Resolve.
 
 A "keep" entry is [start, end] or [start, end, "teaser"] (a re-hook: a later line played early).
-Shorts follow edit/layout.json (scripts/layout.py): the crop switches between the speaker's tile
-in the two-up and the full-screen punch-ins, centred on the faces scripts/find_faces.py found.
+The plan names the episode's transcript and layout map. Shorts follow the layout map
+(scripts/layout.py): the crop switches between the speaker's tile in the two-up and the
+full-screen punch-ins, centred on the faces scripts/find_faces.py found. The plan's "geometry"
+overrides the camera-tile positions below, which were measured on EP 12.
 """
 import json
 import os
@@ -33,6 +35,13 @@ TILE_TOP = 286
 TILE_CROP_BOTTOM = {"greg": 688, "jason": 730}
 FULL_SIDE = 900  # square crop from a full-screen punch-in
 GREATER = "GREATER"
+
+
+def geometry(plan: dict) -> dict:
+    geo = {"tiles": TILES, "tile_top": TILE_TOP, "crop_bottom": TILE_CROP_BOTTOM,
+           "full_side": FULL_SIDE}
+    geo.update(plan.get("geometry", {}))
+    return geo
 
 
 def probe(path: Path) -> tuple[Fraction, int, int, int]:
@@ -276,57 +285,101 @@ def caption_words(plan_words: list[dict], start: float, end: float, fixes: dict)
     return out
 
 
+# Shorts follow the v1.1 safe zone (YouTube Shorts, TikTok, Reels): everything that matters
+# sits inside x 110-880, y 290-1250. Captions: bottom line ends above y 1250, centred at x 495,
+# 2 lines of 3-5 words, 770 px max, one key word in gold. Eyes land around y 760-800.
+SAFE_X0, SAFE_CX, SAFE_BOTTOM, CAP_MAX_W, CAP_SIZE = 110, 495, 1240, 740, 70
+VIDEO_Y = 335  # top of the 1080x1080 face picture on the 9:16 canvas
+STOP = set("""a an and are as at be but by do for from had has have he her his i i'm if in
+into is it it's just like me my of on or our she so than that the their them then there they
+this to up us was we were what when which who will with you your""".split())
+
+
+def text_width(t: str, size: int, font: str = FONT) -> int:
+    from PIL import ImageFont
+    return int(ImageFont.truetype(font, size).getlength(t))
+
+
+def caption_chunks(words: list[dict]) -> list[list[list[dict]]]:
+    """Group words into on-screen captions of at most two lines, each line 3-5 words that
+    fit CAP_MAX_W. A sentence end or a pause starts a new caption."""
+    chunks, lines = [], [[]]
+    for i, w in enumerate(words):
+        line = lines[-1]
+        fits = text_width(" ".join(x["word"] for x in line + [w]), CAP_SIZE) <= CAP_MAX_W
+        if line and (not fits or len(line) == 5):
+            if len(lines) == 2:
+                chunks.append(lines)
+                lines = [[]]
+            else:
+                lines.append([])
+        lines[-1].append(w)
+        nxt = words[i + 1] if i + 1 < len(words) else None
+        if nxt is None or w["word"][-1:] in ".?!" or nxt["start"] - w["end"] > 0.6:
+            chunks.append(lines)
+            lines = [[]]
+        elif w["word"][-1:] in ",;:" and len(lines[-1]) >= 3 and len(lines) == 1:
+            lines.append([])
+    return [c for c in chunks if c[0]]
+
+
+def key_word(chunk: list[list[dict]]) -> int:
+    """Index (in reading order) of the word to put in gold: the longest non-filler word."""
+    flat = [w["word"] for line in chunk for w in line]
+    bare = [x.strip(".,?!;:\"'").lower() for x in flat]
+    best = max(range(len(flat)), key=lambda k: (bare[k] not in STOP, len(bare[k])))
+    return best
+
+
 def write_ass(words: list[dict], path: Path, total: float) -> None:
-    """Up to three words on screen, the one being spoken in gold. Each chunk stays up until
-    the next one starts, so there is never a blank caption mid-sentence."""
-    chunks, cur = [], []
-    for w in words:
-        cur.append(w)
-        if len(cur) == 3 or w["word"][-1:] in ".?!,;:":
-            chunks.append(cur)
-            cur = []
-    if cur:
-        chunks.append(cur)
+    """Each caption stays up until the next one starts; the first is on screen at frame one."""
     head = ("[Script Info]\nScriptType: v4.00+\nPlayResX: 1080\nPlayResY: 1920\n"
             "WrapStyle: 2\nScaledBorderAndShadow: yes\n\n[V4+ Styles]\n"
             "Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, "
             "BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, "
             "BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding\n"
-            "Style: Cap,Inter,84,&H00FFFFFF,&H00FFFFFF,&H00000000,&H64000000,-1,0,0,0,100,100,"
-            "0,0,1,6,0,5,60,60,0,1\n\n[Events]\n"
+            f"Style: Cap,Inter,{CAP_SIZE},&H00FFFFFF,&H00FFFFFF,&H00000000,&H64000000,-1,0,0,0,"
+            "100,100,0,0,1,5,0,2,0,0,0,1\n\n[Events]\n"
             "Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text\n")
-    ev = []
     gold = "&H4CAFE8&"  # #E8AF4C in ASS BGR
+    chunks = caption_chunks(words)
+    ev = []
     for ci, ch in enumerate(chunks):
-        nxt = chunks[ci + 1][0]["start"] if ci + 1 < len(chunks) else total
-        for wi, w in enumerate(ch):
-            s = 0.0 if ci == 0 and wi == 0 else w["start"]  # first words on screen at once
-            e = ch[wi + 1]["start"] if wi + 1 < len(ch) else nxt
-            parts = [(f"{{\\c{gold}}}{x['word']}{{\\c&HFFFFFF&}}" if j == wi else x["word"])
-                     for j, x in enumerate(ch)]
-            ev.append(f"Dialogue: 0,{ass_time(s)},{ass_time(e)},Cap,,0,0,0,,"
-                      f"{{\\pos(540,1640)}}{' '.join(parts)}")
+        s = 0.0 if ci == 0 else ch[0][0]["start"]
+        e = chunks[ci + 1][0][0]["start"] if ci + 1 < len(chunks) else total
+        k, n, lines = key_word(ch), 0, []
+        for line in ch:
+            parts = []
+            for w in line:
+                parts.append(f"{{\\c{gold}}}{w['word']}{{\\c&HFFFFFF&}}" if n == k else w["word"])
+                n += 1
+            lines.append(" ".join(parts))
+        text = "\\N".join(lines)
+        ev.append(f"Dialogue: 0,{ass_time(s)},{ass_time(e)},Cap,,0,0,0,,"
+                  f"{{\\pos({SAFE_CX},{SAFE_BOTTOM})}}{text}")
     path.write_text(head + "\n".join(ev) + "\n")
 
 
-def short_crop(layout: str, speaker: str, face) -> str:
-    """Square crop centred on the face, scaled to 1080 and placed on the 9:16 canvas."""
+def short_crop(layout: str, speaker: str, face, geo: dict) -> str:
+    """Square crop with the face at x 495 of 1080 (the safe box's centre line), scaled to
+    1080 and placed at VIDEO_Y on the 9:16 canvas."""
     if layout == "2up":
-        side, x0, x1 = TILE_CROP_BOTTOM[speaker] - TILE_TOP, *TILES[speaker]
+        top = geo["tile_top"]
+        side, (x0, x1) = geo["crop_bottom"][speaker] - top, geo["tiles"][speaker]
         cx = face if face is not None else (x0 + x1) / 2
-        x, y = int(min(max(cx - side / 2, x0), x1 - side)), TILE_TOP
+        x, y = int(min(max(cx - side * SAFE_CX / 1080, x0), x1 - side)), top
     else:
-        side = FULL_SIDE
+        side = geo["full_side"]
         cx, cy = face if face is not None else (960, 400)
-        # Eyes a little above the middle of the square.
-        x = int(min(max(cx - side / 2, 0), 1920 - side))
-        y = int(min(max(cy - side * 0.42, 0), 1080 - side))
+        x = int(min(max(cx - side * SAFE_CX / 1080, 0), 1920 - side))
+        y = int(min(max(cy - side * 0.40, 0), 1080 - side))
     return (f",crop={side}:{side}:{x}:{y},scale=1080:1080:flags=lanczos,"
-            f"pad=1080:1920:0:420:color={BG},setsar=1")
+            f"pad=1080:1920:0:{VIDEO_Y}:color={BG},setsar=1")
 
 
-def layout_pieces(start: float, end: float, fps: Fraction) -> list[tuple[float, float, str]]:
-    runs = json.loads((ROOT / "edit/layout.json").read_text())["runs"]
+def layout_pieces(start: float, end: float, fps: Fraction,
+                  layout: str) -> list[tuple[float, float, str]]:
+    runs = json.loads((ROOT / layout).read_text())["runs"]
     a, b = round(Fraction(start) * fps), round(Fraction(end) * fps)
     out = []
     for r in runs:
@@ -340,8 +393,9 @@ def render_short(spec: dict, plan: dict, words: list[dict], raw: Path, fps: Frac
                  rate: int) -> None:
     tl = Timeline(fps)
     faces = spec.get("faces", {})
-    for a, b, lay in layout_pieces(spec["in"], spec["out"], fps):
-        tl.add_src(a, b, lay, short_crop(lay, spec["speaker"], faces.get(lay)))
+    geo = geometry(plan)
+    for a, b, lay in layout_pieces(spec["in"], spec["out"], fps, plan["layout"]):
+        tl.add_src(a, b, lay, short_crop(lay, spec["speaker"], faces.get(lay), geo))
     dur = tl.seconds
     out = ROOT / spec["file"]
     out.parent.mkdir(parents=True, exist_ok=True)
@@ -349,13 +403,14 @@ def render_short(spec: dict, plan: dict, words: list[dict], raw: Path, fps: Frac
     write_ass(caption_words(words, spec["in"], spec["out"], plan.get("caption_fixes", {})),
               ass, dur)
 
+    # Brand top-left inside the safe box, then who is speaking.
     name = plan["people"][spec["speaker"]].upper()
+    brand_w = text_width("THE GREATER JOURNEY", 32)
     args, graph = piece_inputs(tl, raw, rate, (1080, 1920))
-    draws = [f"drawtext=fontfile={FONT}:text='THE GREATER JOURNEY':x=(w-text_w)/2:y=300:"
-             f"fontsize=48:fontcolor={GOLD}",
-             f"drawbox=x=480:y=376:w=120:h=3:color={GOLD}:t=fill",
-             f"drawtext=fontfile={FONT_SEMI}:text='{esc(name)}':x=(w-text_w)/2:y=1512:"
-             f"fontsize=36:fontcolor={GOLD}",
+    draws = [f"drawtext=fontfile={FONT}:text='THE GREATER JOURNEY':x={SAFE_X0}:y=294:"
+             f"fontsize=32:fontcolor={GOLD}",
+             f"drawtext=fontfile={FONT_SEMI}:text='|  {esc(name)}':x={SAFE_X0 + brand_w + 18}:"
+             f"y=294:fontsize=32:fontcolor=white",
              f"subtitles=filename='{ass}':fontsdir=/usr/share/fonts/opentype/inter"]
     graph.append("[cv]" + ",".join(draws) + "[v]")
     cmd = (["ffmpeg", "-y", "-v", "error", "-stats"] + args +
@@ -373,7 +428,7 @@ def verify(out: Path, tl: Timeline) -> None:
          str(out)], capture_output=True, text=True, check=True)
     j = json.loads(res.stdout)
     got = int(j["streams"][0]["nb_read_frames"])
-    print(f"{out.relative_to(ROOT)}: {j['streams'][0]['width']}x{j['streams'][0]['height']}, "
+    print(f"{out.relative_to(ROOT) if out.is_relative_to(ROOT) else out}: {j['streams'][0]['width']}x{j['streams'][0]['height']}, "
           f"{got} frames ({float(j['format']['duration']):.2f} s), expected {tl.frames} -> "
           f"{'MATCH' if got == tl.frames else 'MISMATCH'}")
 
@@ -391,7 +446,7 @@ def main() -> None:
             render_landscape(spec, plan, raw, fps, (w, h), rate)
     shorts = [s for s in plan.get("shorts", []) if not want or s["name"] in want]
     if shorts:
-        words = json.loads((ROOT / "transcript/words.json").read_text())["words"]
+        words = json.loads((ROOT / plan["transcript"]).read_text())["words"]
         words = [x for x in words if "start" in x and "end" in x]
         for spec in shorts:
             render_short(spec, plan, words, raw, fps, rate)

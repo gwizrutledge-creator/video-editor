@@ -1,6 +1,7 @@
 vendor/*
 !vendor/.gitkeep
 *.wav
+transcript/*/asr.json
 *.mp4
 *.mov
 *.log

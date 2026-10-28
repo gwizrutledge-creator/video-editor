@@ -1,0 +1,280 @@
+{
+ "fps": 30,
+ "runs": [
+  {
+   "start_frame": 0,
+   "end_frame": 1129,
+   "layout": "2up"
+  },
+  {
+   "start_frame": 1129,
+   "end_frame": 1152,
+   "layout": "full"
+  },
+  {
+   "start_frame": 1152,
+   "end_frame": 1153,
+   "layout": "full"
+  },
+  {
+   "start_frame": 1153,
+   "end_frame": 1154,
+   "layout": "full"
+  },
+  {
+   "start_frame": 1154,
+   "end_frame": 1155,
+   "layout": "full"
+  },
+  {
+   "start_frame": 1155,
+   "end_frame": 1182,
+   "layout": "full"
+  },
+  {
+   "start_frame": 1182,
+   "end_frame": 1183,
+   "layout": "full"
+  },
+  {
+   "start_frame": 1183,
+   "end_frame": 1184,
+   "layout": "full"
+  },
+  {
+   "start_frame": 1184,
+   "end_frame": 1185,
+   "layout": "full"
+  },
+  {
+   "start_frame": 1185,
+   "end_frame": 1220,
+   "layout": "full"
+  },
+  {
+   "start_frame": 1220,
+   "end_frame": 1221,
+   "layout": "full"
+  },
+  {
+   "start_frame": 1221,
+   "end_frame": 1226,
+   "layout": "full"
+  },
+  {
+   "start_frame": 1226,
+   "end_frame": 1228,
+   "layout": "full"
+  },
+  {
+   "start_frame": 1228,
+   "end_frame": 1231,
+   "layout": "full"
+  },
+  {
+   "start_frame": 1231,
+   "end_frame": 1232,
+   "layout": "full"
+  },
+  {
+   "start_frame": 1232,
+   "end_frame": 1233,
+   "layout": "full"
+  },
+  {
+   "start_frame": 1233,
+   "end_frame": 1234,
+   "layout": "full"
+  },
+  {
+   "start_frame": 1234,
+   "end_frame": 1235,
+   "layout": "full"
+  },
+  {
+   "start_frame": 1235,
+   "end_frame": 1236,
+   "layout": "full"
+  },
+  {
+   "start_frame": 1236,
+   "end_frame": 1237,
+   "layout": "full"
+  },
+  {
+   "start_frame": 1237,
+   "end_frame": 1259,
+   "layout": "full"
+  },
+  {
+   "start_frame": 1259,
+   "end_frame": 1260,
+   "layout": "full"
+  },
+  {
+   "start_frame": 1260,
+   "end_frame": 1261,
+   "layout": "full"
+  },
+  {
+   "start_frame": 1261,
+   "end_frame": 1262,
+   "layout": "full"
+  },
+  {
+   "start_frame": 1262,
+   "end_frame": 1270,
+   "layout": "full"
+  },
+  {
+   "start_frame": 1270,
+   "end_frame": 1271,
+   "layout": "full"
+  },
+  {
+   "start_frame": 1271,
+   "end_frame": 1272,
+   "layout": "full"
+  },
+  {
+   "start_frame": 1272,
+   "end_frame": 1304,
+   "layout": "full"
+  },
+  {
+   "start_frame": 1304,
+   "end_frame": 1306,
+   "layout": "full"
+  },
+  {
+   "start_frame": 1306,
+   "end_frame": 1307,
+   "layout": "full"
+  },
+  {
+   "start_frame": 1307,
+   "end_frame": 1308,
+   "layout": "full"
+  },
+  {
+   "start_frame": 1308,
+   "end_frame": 1309,
+   "layout": "full"
+  },
+  {
+   "start_frame": 1309,
+   "end_frame": 1310,
+   "layout": "full"
+  },
+  {
+   "start_frame": 1310,
+   "end_frame": 1320,
+   "layout": "full"
+  },
+  {
+   "start_frame": 1320,
+   "end_frame": 1321,
+   "layout": "full"
+  },
+  {
+   "start_frame": 1321,
+   "end_frame": 1322,
+   "layout": "full"
+  },
+  {
+   "start_frame": 1322,
+   "end_frame": 1323,
+   "layout": "full"
+  },
+  {
+   "start_frame": 1323,
+   "end_frame": 1324,
+   "layout": "full"
+  },
+  {
+   "start_frame": 1324,
+   "end_frame": 1325,
+   "layout": "full"
+  },
+  {
+   "start_frame": 1325,
+   "end_frame": 1342,
+   "layout": "full"
+  },
+  {
+   "start_frame": 1342,
+   "end_frame": 1385,
+   "layout": "full"
+  },
+  {
+   "start_frame": 1385,
+   "end_frame": 1386,
+   "layout": "full"
+  },
+  {
+   "start_frame": 1386,
+   "end_frame": 1387,
+   "layout": "full"
+  },
+  {
+   "start_frame": 1387,
+   "end_frame": 1394,
+   "layout": "full"
+  },
+  {
+   "start_frame": 1394,
+   "end_frame": 1395,
+   "layout": "full"
+  },
+  {
+   "start_frame": 1395,
+   "end_frame": 1396,
+   "layout": "full"
+  },
+  {
+   "start_frame": 1396,
+   "end_frame": 1397,
+   "layout": "full"
+  },
+  {
+   "start_frame": 1397,
+   "end_frame": 1398,
+   "layout": "full"
+  },
+  {
+   "start_frame": 1398,
+   "end_frame": 1409,
+   "layout": "full"
+  },
+  {
+   "start_frame": 1409,
+   "end_frame": 1410,
+   "layout": "full"
+  },
+  {
+   "start_frame": 1410,
+   "end_frame": 1411,
+   "layout": "full"
+  },
+  {
+   "start_frame": 1411,
+   "end_frame": 1412,
+   "layout": "full"
+  },
+  {
+   "start_frame": 1412,
+   "end_frame": 1413,
+   "layout": "full"
+  },
+  {
+   "start_frame": 1413,
+   "end_frame": 1468,
+   "layout": "full"
+  },
+  {
+   "start_frame": 1468,
+   "end_frame": 1000000000,
+   "layout": "2up"
+  }
+ ]
+}

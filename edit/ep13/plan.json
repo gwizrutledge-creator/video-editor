@@ -1,0 +1,9 @@
+{
+ "source": "raw/EP13_Mark_Drake.mp4",
+ "transcript": "transcript/ep13/words.json",
+ "layout": "edit/ep13/layout.json",
+ "guest": "Mark Drake",
+ "people": {"greg": "Gregory Rutledge", "mark": "Mark Drake"},
+ "geometry": {"tiles": {"greg": [32, 943], "mark": [976, 1887]}, "tile_top": 286,
+              "crop_bottom": {"greg": 730, "mark": 730}, "full_side": 900}
+}

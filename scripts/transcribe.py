@@ -1,8 +1,8 @@
 """Transcribe the raw clip with WhisperX (large-v3, word-level alignment).
 
-Usage: ~/.cache/video-editor/whisperx-venv/bin/python scripts/transcribe.py raw/<clip>
+Usage: ~/.cache/video-editor/whisperx-venv/bin/python scripts/transcribe.py raw/<clip> [out_dir]
 Set WHISPER_MODEL to use another model (e.g. large-v3-turbo, ~4x faster on CPU).
-Writes transcript/audio.wav (16 kHz mono) and transcript/words.json.
+Writes audio.wav (16 kHz mono) and words.json to out_dir (default transcript/).
 Skips the work if words.json already exists for the same footage.
 """
 import hashlib
@@ -32,14 +32,15 @@ def fingerprint(path: Path) -> str:
 
 def main() -> None:
     raw = Path(sys.argv[1]).resolve()
+    out = Path(sys.argv[2]).resolve() if len(sys.argv) > 2 else OUT
     fp = fingerprint(raw)
-    words_path = OUT / "words.json"
+    words_path = out / "words.json"
     if words_path.exists() and json.loads(words_path.read_text()).get("fingerprint") == fp:
         print(f"{words_path} already holds this footage; not transcribing again.")
         return
 
-    OUT.mkdir(exist_ok=True)
-    wav = OUT / "audio.wav"
+    out.mkdir(parents=True, exist_ok=True)
+    wav = out / "audio.wav"
     subprocess.run(
         ["ffmpeg", "-y", "-v", "error", "-i", str(raw), "-vn", "-ac", "1", "-ar", "16000",
          "-c:a", "pcm_s16le", str(wav)],
@@ -52,7 +53,7 @@ def main() -> None:
     device, compute = ("cuda", "float16") if torch.cuda.is_available() else ("cpu", "int8")
     audio = whisperx.load_audio(str(wav))
     # The unaligned result is cached so a failed alignment doesn't cost a re-transcription.
-    asr_path = OUT / "asr.json"
+    asr_path = out / "asr.json"
     asr = json.loads(asr_path.read_text()) if asr_path.exists() else {}
     if asr.get("fingerprint") == fp and asr.get("model") == MODEL:
         result, device, compute = asr["result"], asr["device"], asr["compute"]
