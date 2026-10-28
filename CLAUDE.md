@@ -16,7 +16,8 @@ Layout: raw/ (raw clip), transcript/ (words.json, cuts.json), scripts/, vendor/ 
   The Drive connector returns files as base64 in the chat, which can't carry 2 GB; download it with curl from
   drive.usercontent.google.com instead (needs the file shared "anyone with the link" and that host allowed).
 - Allowing hosts in Network access did not reach the already-running container; the new policy applies to a fresh session.
-- WhisperX install from PyPI works here: whisperx 3.8.6 + torch 2.8.0 (takes several minutes; redo it in each new container).
+- WhisperX install from PyPI works here: whisperx 3.8.6 + torch 2.8.0. scripts/setup.sh does it (5.6 min from a warm uv
+  cache); CPU-only torch would skip ~3 GB of CUDA wheels but download-r2.pytorch.org is blocked, so it falls back to PyPI.
 - EP 12 Jason McKenzie: the user's chosen source is Drive "From Thorn to Greatness: A Greater Journey.mp4", file id
   1pC3LmO7KT-Q0DZxG_MhDbInTiPjbbVuI (folder "Gregory Podcast Episodes - Packaging/Jason McKenzie"), 1920x1080 30 fps, 51:28,
   saved as raw/EP12_Jason_McKenzie.mp4. Already has a cold open (0:00-0:41) and title card (0:41-0:43); remote two-up layout
@@ -27,9 +28,22 @@ Layout: raw/ (raw clip), transcript/ (words.json, cuts.json), scripts/, vendor/ 
 - transcribe.py caches the unaligned ASR in transcript/asr.json; WHISPER_MODEL=large-v3-turbo took ~15 min for 51 min here.
 - scripts/package.py renders edit/plan.json (full edit, mid-length cuts, 9:16 Shorts with captions) + an EDL per file;
   scripts/find_faces.py (tools venv ~/.cache/video-editor/tools-venv with opencv) centres Shorts on the speaker's face.
-- EP 12 delivered: edit/plan.json drives everything (python3 scripts/package.py edit/plan.json [names]); renders land
-  in out/ (gitignored). Full edit ~45 min to render (preset fast), Cuts ~10 min each, Shorts <1 min each.
-  edit/EDIT_LIST.md is the human edit list. The punch-ins (full-screen Jason/Greg) are in edit/layout.json.
+- Per-episode folders: transcript/<ep>/ (words.json, audio.wav), edit/<ep>/ (plan.json, layout.json, reasons.json,
+  EDIT_LIST.md), out/<ep>/ (renders, gitignored). Workflow for a new episode:
+  1. bash scripts/setup.sh (skip if the environment's setup script already ran it)
+  2. curl the footage into raw/; check it is 1080p+
+  3. WHISPER_MODEL=large-v3-turbo ~/.cache/video-editor/whisperx-venv/bin/python scripts/transcribe.py raw/<clip> transcript/<ep>
+  4. write edit/<ep>/plan.json (source, transcript, layout, geometry = camera tiles measured on a frame)
+  5. tools-venv python scripts/layout.py edit/<ep>/plan.json; then fill full/mids/shorts in the plan
+  6. tools-venv python scripts/find_faces.py edit/<ep>/plan.json
+  7. python3 scripts/package.py edit/<ep>/plan.json [names]; python3 scripts/edit_list.py edit/<ep>/plan.json
+  Render times on 4 cores: full ~45 min (preset fast), cuts ~8-10 min each, Shorts <1 min each.
+- The user's BLOOM prompt and per-episode audits live in their claude.ai artifact S4ff86efYz3bdbsHYV8ksY (episode data
+  sits in the page's script; grep the saved HTML for "id: 'epNN'"). Master prompt v1.1 (26 Oct 2026) adds filler/stutter
+  cuts, recap bridges <=5 s, an on-screen re-hook every 5-8 min, and the Shorts safe zone (x 110-880, y 290-1250).
+- "tighten": true in a plan spec cuts transcribed fillers, stutter repeats and quiet gaps >1.2 s (keeps laughter).
+- EP 13 Mark Drake: Drive file 1RYwAFROXCZMep7G-9t6L1eY1G4d5ds1L ("EP 13 Mark Drake YouTube Final.mp4", 55:42), saved as
+  raw/EP13_Mark_Drake.mp4. Two-up only (Greg x 32-943, Mark x 976-1887, y 286-793); channel intro 0:37.6-0:48.9.
 - Big files reach the user with SendUserFile, capped at 400 MiB per file (a 932 MiB full edit was refused); split
   with ffmpeg -c copy -f segment (lossless) and send the parts. The Drive connector only takes inline base64.
 - tools venv needs opencv-python-headless<5 (OpenCV 5 dropped CascadeClassifier).

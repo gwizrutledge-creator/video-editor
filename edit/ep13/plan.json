@@ -3,7 +3,553 @@
  "transcript": "transcript/ep13/words.json",
  "layout": "edit/ep13/layout.json",
  "guest": "Mark Drake",
- "people": {"greg": "Gregory Rutledge", "mark": "Mark Drake"},
- "geometry": {"tiles": {"greg": [32, 943], "mark": [976, 1887]}, "tile_top": 286,
-              "crop_bottom": {"greg": 730, "mark": 730}, "full_side": 900}
+ "people": {
+  "greg": "Gregory Rutledge",
+  "mark": "Mark Drake"
+ },
+ "geometry": {
+  "tiles": {
+   "greg": [
+    32,
+    943
+   ],
+   "mark": [
+    976,
+    1887
+   ]
+  },
+  "tile_top": 286,
+  "crop_bottom": {
+   "greg": 730,
+   "mark": 730
+  },
+  "full_side": 900,
+  "video_y": 375
+ },
+ "caption_fixes": {
+  "i": "I",
+  "god": "God",
+  "god's": "God's",
+  "hunting": "haunting",
+  "myron": "Myron",
+  "california": "California",
+  "mark": "Mark",
+  "drake": "Drake"
+ },
+ "full": {
+  "name": "full",
+  "file": "out/ep13/full/EP13_Mark_Drake_Full_Edit.mp4",
+  "title": "Former Gang Member Can Now Start a Business in His Sleep",
+  "tighten": true,
+  "coldopen": [
+   [
+    0.0,
+    33.42
+   ]
+  ],
+  "keep": [
+   [
+    37.633,
+    274.4
+   ],
+   [
+    291.55,
+    312.15
+   ],
+   [
+    317.4,
+    565.4
+   ],
+   [
+    625.55,
+    844.4
+   ],
+   [
+    881.25,
+    904.48
+   ],
+   [
+    940.7,
+    1213.6
+   ],
+   [
+    1230.65,
+    1638.3
+   ],
+   [
+    1652.9,
+    1662.4
+   ],
+   [
+    1711.95,
+    1920.0
+   ],
+   [
+    1938.0,
+    2074.78
+   ],
+   [
+    2094.25,
+    2362.45
+   ],
+   [
+    2391.25,
+    2685.72
+   ],
+   [
+    2697.25,
+    2715.85
+   ],
+   [
+    2727.05,
+    2824.1
+   ],
+   [
+    2835.25,
+    2846.9
+   ],
+   [
+    2873.85,
+    2998.62
+   ],
+   [
+    3013.55,
+    3341.83
+   ]
+  ],
+  "lower_thirds": [
+   {
+    "at": 78.4,
+    "index": 0,
+    "label": "Grounded in your unique story"
+   },
+   {
+    "at": 388.8,
+    "index": 1,
+    "label": "Reframing limiting beliefs"
+   },
+   {
+    "at": 625.6,
+    "index": 2,
+    "label": "Embracing continuous learning"
+   },
+   {
+    "at": 887.3,
+    "index": 3,
+    "label": "Action-oriented goals"
+   },
+   {
+    "at": 1441.6,
+    "index": 4,
+    "label": "Transitioning with purpose"
+   },
+   {
+    "at": 2095.2,
+    "index": 5,
+    "label": "Empower your network"
+   },
+   {
+    "at": 2700.1,
+    "index": 6,
+    "label": "Resilience"
+   }
+  ],
+  "teases": [
+   {
+    "at": 345.0,
+    "text": "The one year that has haunted him for 20 years"
+   },
+   {
+    "at": 730.0,
+    "text": "Why he can start a business in his sleep"
+   },
+   {
+    "at": 1120.0,
+    "text": "Start in a Porsche, finish on a bike"
+   },
+   {
+    "at": 1595.0,
+    "text": "What happened in sixth grade"
+   },
+   {
+    "at": 1980.0,
+    "text": "Partnership before profit"
+   },
+   {
+    "at": 2430.0,
+    "text": "From $65K to $250K on free content"
+   },
+   {
+    "at": 2752.0,
+    "text": "Perspective from a man who faced 20 years in prison"
+   },
+   {
+    "at": 3060.0,
+    "text": "One step to take when you feel stuck"
+   }
+  ],
+  "info": [
+   {
+    "at": 3275.4,
+    "dur": 12,
+    "title": "Connect with Mark Drake",
+    "line": "Instagram: @beingmarkdrake  ·  Scyene Solution"
+   }
+  ]
+ },
+ "mids": [
+  {
+   "name": "mid1",
+   "file": "out/ep13/mid/Cut1_The_Promise.mp4",
+   "title": "No Degree, $7.25 an Hour, and a Promise From God",
+   "tighten": true,
+   "hook": [
+    [
+     415.55,
+     428.2
+    ]
+   ],
+   "card": "From The Greater Journey, EP 13 with Mark Drake",
+   "keep": [
+    [
+     69.7,
+     274.4
+    ],
+    [
+     291.55,
+     312.15
+    ],
+    [
+     317.4,
+     563.3
+    ]
+   ],
+   "lower_thirds": [
+    {
+     "at": 78.4,
+     "index": 0,
+     "label": "Grounded in your unique story"
+    },
+    {
+     "at": 388.8,
+     "index": 1,
+     "label": "Reframing limiting beliefs"
+    }
+   ],
+   "end_screen": 10
+  },
+  {
+   "name": "mid2",
+   "file": "out/ep13/mid/Cut2_The_Organized_Mind.mp4",
+   "title": "He Can Start a Business in His Sleep. Here's His Playbook.",
+   "tighten": true,
+   "hook": [
+    [
+     1074.05,
+     1087.55
+    ]
+   ],
+   "card": "From The Greater Journey, EP 13 with Mark Drake",
+   "keep": [
+    [
+     625.55,
+     844.4
+    ],
+    [
+     881.25,
+     904.48
+    ],
+    [
+     940.7,
+     1213.6
+    ],
+    [
+     1230.65,
+     1339.95
+    ]
+   ],
+   "lower_thirds": [
+    {
+     "at": 625.6,
+     "index": 2,
+     "label": "Embracing continuous learning"
+    },
+    {
+     "at": 887.3,
+     "index": 3,
+     "label": "Action-oriented goals"
+    }
+   ],
+   "end_screen": 10
+  },
+  {
+   "name": "mid3",
+   "file": "out/ep13/mid/Cut3_Ego_and_Sixth_Grade.mp4",
+   "title": "He Traced His Imposter Syndrome Back to One Year: 6th Grade",
+   "tighten": true,
+   "hook": [
+    [
+     1844.97,
+     1853.1
+    ]
+   ],
+   "card": "From The Greater Journey, EP 13 with Mark Drake",
+   "keep": [
+    [
+     1341.55,
+     1638.3
+    ],
+    [
+     1652.9,
+     1662.4
+    ],
+    [
+     1711.95,
+     1920.0
+    ],
+    [
+     1938.0,
+     1952.95
+    ]
+   ],
+   "lower_thirds": [
+    {
+     "at": 1441.6,
+     "index": 4,
+     "label": "Transitioning with purpose"
+    }
+   ],
+   "end_screen": 10
+  },
+  {
+   "name": "mid4",
+   "file": "out/ep13/mid/Cut4_Partnership_Before_Profit.mp4",
+   "title": "Partnership Before Profit: How He Built 6 Figures in Referrals",
+   "tighten": true,
+   "hook": [
+    [
+     2283.88,
+     2291.04
+    ]
+   ],
+   "card": "From The Greater Journey, EP 13 with Mark Drake",
+   "keep": [
+    [
+     2065.6,
+     2074.78
+    ],
+    [
+     2094.25,
+     2362.45
+    ],
+    [
+     2391.25,
+     2626.1
+    ]
+   ],
+   "lower_thirds": [
+    {
+     "at": 2095.2,
+     "index": 5,
+     "label": "Empower your network"
+    }
+   ],
+   "end_screen": 10
+  },
+  {
+   "name": "mid5",
+   "file": "out/ep13/mid/Cut5_Resilience_and_the_Next_Step.mp4",
+   "title": "Stuck in Your Business? Go Back to the Last Thing God Told You",
+   "tighten": true,
+   "hook": [
+    [
+     2882.75,
+     2892.4
+    ]
+   ],
+   "card": "From The Greater Journey, EP 13 with Mark Drake",
+   "keep": [
+    [
+     2697.25,
+     2715.85
+    ],
+    [
+     2727.05,
+     2824.1
+    ],
+    [
+     2835.25,
+     2846.9
+    ],
+    [
+     2873.85,
+     2998.62
+    ],
+    [
+     3013.55,
+     3239.9
+    ]
+   ],
+   "lower_thirds": [
+    {
+     "at": 2700.1,
+     "index": 6,
+     "label": "Resilience"
+    }
+   ],
+   "end_screen": 10
+  }
+ ],
+ "shorts": [
+  {
+   "name": "S1",
+   "file": "out/ep13/shorts/S01_Promise_at_7_25.mp4",
+   "title": "God Promised Him Wealth at $7.25 an Hour",
+   "in": 4.7,
+   "out": 18.55,
+   "speaker": "mark",
+   "links": "Full episode",
+   "desc": "God promised Mark Drake he'd be the richest man he knew. At the time, he was making $7.25 an hour.",
+   "keyword": "trust god",
+   "hashtags": "#ChristianEntrepreneur #TrustGod #Shorts",
+   "faces": {
+    "2up": 1368
+   }
+  },
+  {
+   "name": "S2",
+   "file": "out/ep13/shorts/S02_Youd_Never_Know.mp4",
+   "title": "You'd Never Know Where He Started",
+   "in": 317.47,
+   "out": 329.52,
+   "speaker": "greg",
+   "links": "Full episode",
+   "desc": "Gregory Rutledge was a drug dealer. Where he's come since, you would never know.",
+   "keyword": "christian motivation",
+   "hashtags": "#ChristianEntrepreneur #Testimony #Shorts",
+   "faces": {
+    "2up": 373
+   }
+  },
+  {
+   "name": "S3",
+   "file": "out/ep13/shorts/S03_Hope_Without_Wisdom.mp4",
+   "title": "You Can't Have Hope Without Wisdom",
+   "in": 661.5,
+   "out": 677.6,
+   "speaker": "mark",
+   "links": "Cut 2",
+   "desc": "Mark Drake in six words: you can't have hope without wisdom.",
+   "keyword": "christian motivation",
+   "hashtags": "#ChristianEntrepreneur #Faith #Shorts",
+   "faces": {
+    "2up": 1362
+   }
+  },
+  {
+   "name": "S4",
+   "file": "out/ep13/shorts/S04_Business_in_His_Sleep.mp4",
+   "title": "He Can Start a Business in His Sleep",
+   "in": 1074.05,
+   "out": 1087.55,
+   "speaker": "mark",
+   "links": "Full episode",
+   "desc": "Mark Drake can start a business in his sleep. He used to, until he got organized.",
+   "keyword": "christian entrepreneur",
+   "hashtags": "#ChristianEntrepreneur #SmallBusiness #Shorts",
+   "faces": {
+    "2up": 1344
+   }
+  },
+  {
+   "name": "S5",
+   "file": "out/ep13/shorts/S05_Porsche_to_Bike.mp4",
+   "title": "Started in a Porsche, Finished on a Bike",
+   "in": 1517.15,
+   "out": 1530.6,
+   "speaker": "mark",
+   "links": "Full episode",
+   "desc": "Mark Drake started in a Porsche and may land in California on a bike. He still reached his goal.",
+   "keyword": "how to stay consistent with goals",
+   "hashtags": "#ChristianEntrepreneur #Goals #Shorts",
+   "faces": {
+    "2up": 1330
+   }
+  },
+  {
+   "name": "S6",
+   "file": "out/ep13/shorts/S06_What_Sixth_Grade_Took.mp4",
+   "title": "What Sixth Grade Took From Him",
+   "in": 1843.9,
+   "out": 1860.5,
+   "speaker": "mark",
+   "links": "Full episode",
+   "desc": "One year of sixth grade took something from Mark Drake that haunted him for 20 years.",
+   "keyword": "personal development",
+   "hashtags": "#ChristianEntrepreneur #Healing #Shorts",
+   "faces": {
+    "2up": 1333
+   }
+  },
+  {
+   "name": "S7",
+   "file": "out/ep13/shorts/S07_Heal_Before_You_Bleed.mp4",
+   "title": "Heal Before You Bleed on Others",
+   "in": 1938.0,
+   "out": 1952.95,
+   "speaker": "greg",
+   "links": "Cut 3",
+   "desc": "Gregory Rutledge: if you don't heal whatever cut you got, you'll bleed on people who didn't cut you.",
+   "keyword": "christian motivation",
+   "hashtags": "#ChristianEntrepreneur #Healing #Shorts",
+   "faces": {
+    "2up": 474
+   }
+  },
+  {
+   "name": "S8",
+   "file": "out/ep13/shorts/S08_How_May_I_Serve.mp4",
+   "title": "Four Words That Will Change Your Life",
+   "in": 2385.95,
+   "out": 2395.9,
+   "speaker": "greg",
+   "links": "Cut 4",
+   "desc": "Gregory Rutledge's four words that will change your life: How may I serve?",
+   "keyword": "christian entrepreneur",
+   "hashtags": "#ChristianEntrepreneur #Leadership #Shorts",
+   "faces": {
+    "2up": 490
+   }
+  },
+  {
+   "name": "S9",
+   "file": "out/ep13/shorts/S09_Facing_20_Years.mp4",
+   "title": "Nothing Compares to Facing 20 Years",
+   "in": 2882.83,
+   "out": 2898.45,
+   "speaker": "mark",
+   "links": "Full episode",
+   "desc": "Mark Drake puts today's setbacks in perspective after facing 20 years in prison.",
+   "keyword": "trust god",
+   "hashtags": "#ChristianEntrepreneur #Perspective #Shorts",
+   "faces": {
+    "2up": 1346
+   }
+  },
+  {
+   "name": "S10",
+   "file": "out/ep13/shorts/S10_Step_Backwards.mp4",
+   "title": "Stuck? Take a Step Backwards",
+   "in": 3175.0,
+   "out": 3183.45,
+   "speaker": "mark",
+   "links": "Cut 5",
+   "desc": "Feeling stuck? Mark Drake says take a step backwards and do what you were supposed to do.",
+   "keyword": "how to find your purpose in life",
+   "hashtags": "#ChristianEntrepreneur #Purpose #Shorts",
+   "faces": {
+    "2up": 1413
+   }
+  }
+ ]
 }

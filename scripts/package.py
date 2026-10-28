@@ -201,6 +201,16 @@ def info_card(card: dict, t0: float, dur: float) -> list[str]:
             text(card["line"], "(w-text_w)/2", "938", 34, "white", t0, t1, FONT_SEMI)]
 
 
+def tease(card: dict, t0: float, dur: float) -> list[str]:
+    """On-screen re-hook in the empty band above the cameras: "COMING UP" and one line about
+    a moment still ahead."""
+    t1 = t0 + dur
+    return [text("COMING UP", "(w-text_w)/2", "112", 30, GOLD, t0, t1),
+            f"drawbox=x=900:y=156:w=120:h=3:color={GOLD}@0.9:t=fill:"
+            f"enable='between(t,{t0:.3f},{t1:.3f})'",
+            text(card["text"], "(w-text_w)/2", "180", 46, "white", t0, t1, FONT_SEMI)]
+
+
 def encode_args(out: Path, crf: int, preset: str = "medium") -> list[str]:
     return ["-c:v", "libx264", "-preset", preset, "-crf", str(crf), "-pix_fmt", "yuv420p",
             "-c:a", "aac", "-b:a", "192k", "-fps_mode", "passthrough",
@@ -227,13 +237,74 @@ def write_edl(tl: Timeline, title: str, raw: Path, path: Path) -> None:
     path.write_text("\n".join(lines) + "\n")
 
 
+FILLERS = {"um", "umm", "uh", "uhh", "uhm", "erm", "hmm", "mm", "mhm"}
+EMPHASIS = {"really", "very", "so", "no", "yes", "yeah", "go", "pay", "that's"}  # keep "really, really"
+DEAD_AIR, DEAD_AIR_KEEP, QUIET_DB = 1.2, 0.5, -40.0
+
+
+def tighten(keep: list, plan: dict) -> tuple[list, list]:
+    """Cut transcribed fillers ("um", "uh"), the first word of a stutter ("the the"), and
+    shorten quiet gaps longer than DEAD_AIR to
+    DEAD_AIR_KEEP inside each body range. Gaps with sound in them (laughter, a breath before
+    an emotional line) stay. Returns the split keep list and the trims [start, end, why]."""
+    import array
+    import wave
+    words = [w for w in json.loads((ROOT / plan["transcript"]).read_text())["words"]
+             if "start" in w and "end" in w]
+    wav = wave.open(str((ROOT / plan["transcript"]).parent / "audio.wav"))
+    rate = wav.getframerate()
+    pcm = array.array("h", wav.readframes(wav.getnframes()))
+
+    def loud_db(a: float, b: float) -> float:
+        seg = pcm[int(a * rate):int(b * rate)]
+        if not seg:
+            return -99.0
+        rms = (sum(x * x for x in seg[::4]) / len(seg[::4])) ** 0.5
+        return 20 * __import__("math").log10(max(rms, 1) / 32768)
+
+    out, trims = [], []
+    for k in keep:
+        a, b, tag = k[0], k[1], (k[2] if len(k) > 2 else "body")
+        if tag != "body":
+            out.append(k)
+            continue
+        inside = [w for w in words if w["start"] >= a and w["end"] <= b]
+        cuts = []
+        for i, w in enumerate(inside):
+            prev_end = inside[i - 1]["end"] if i else a
+            nxt = inside[i + 1]["start"] if i + 1 < len(inside) else b
+            bare = w["word"].strip(".,?!;:-").lower()
+            if bare in FILLERS:
+                cuts.append((max(prev_end, w["start"] - 0.04), min(nxt, w["end"] + 0.04), "filler"))
+            elif (i + 1 < len(inside) and bare.isalpha() and bare not in EMPHASIS
+                  and w["word"][-1:].isalpha()
+                  and inside[i + 1]["word"].strip(".,?!;:-").lower() == bare
+                  and inside[i + 1]["start"] - w["end"] < 0.6):
+                cuts.append((max(prev_end, w["start"] - 0.03), nxt - 0.02, "repeat"))
+            if i + 1 < len(inside):
+                gap0, gap1 = w["end"], inside[i + 1]["start"]
+                if gap1 - gap0 > DEAD_AIR and loud_db(gap0 + 0.1, gap1 - 0.1) < QUIET_DB:
+                    pad = DEAD_AIR_KEEP / 2
+                    cuts.append((gap0 + pad, gap1 - pad, "dead air"))
+        pos = a
+        for c0, c1, why in sorted(cuts):
+            if c1 - c0 < 0.12 or c0 < pos:
+                continue
+            out.append([pos, c0])
+            trims.append([round(c0, 3), round(c1, 3), why])
+            pos = c1
+        out.append([pos, b])
+    return out, trims
+
+
 def render_landscape(spec: dict, plan: dict, raw: Path, fps: Fraction, size, rate: int) -> None:
     tl = Timeline(fps)
     for a, b in spec.get("hook", []):
         tl.add_src(a, b, "hook")
     for a, b in spec.get("coldopen", []):
         tl.add_src(a, b, "coldopen")
-    for k in spec["keep"]:
+    keep = tighten(spec["keep"], plan)[0] if spec.get("tighten") else spec["keep"]
+    for k in keep:
         tl.add_src(k[0], k[1], k[2] if len(k) > 2 else "body")
     if spec.get("end_screen"):
         tl.add_slate(spec["end_screen"], "end screen")
@@ -244,6 +315,8 @@ def render_landscape(spec: dict, plan: dict, raw: Path, fps: Fraction, size, rat
         draws += lower_third(lt, tl.out_time(lt["at"]), lt.get("dur", 7.0))
     for card in spec.get("info", []):
         draws += info_card(card, tl.out_time(card["at"]), card.get("dur", 8.0))
+    for card in spec.get("teases", []):
+        draws += tease(card, tl.out_time(card["at"]), card.get("dur", 6.0))
     for t0, t1 in tl.spans("teaser"):
         draws += coming_up(t0, t1)
     if spec.get("card"):
@@ -290,9 +363,12 @@ def caption_words(plan_words: list[dict], start: float, end: float, fixes: dict)
 # 2 lines of 3-5 words, 770 px max, one key word in gold. Eyes land around y 760-800.
 SAFE_X0, SAFE_CX, SAFE_BOTTOM, CAP_MAX_W, CAP_SIZE = 110, 495, 1240, 740, 70
 VIDEO_Y = 335  # top of the 1080x1080 face picture on the 9:16 canvas
-STOP = set("""a an and are as at be but by do for from had has have he her his i i'm if in
-into is it it's just like me my of on or our she so than that the their them then there they
-this to up us was we were what when which who will with you your""".split())
+STOP = set("""a about all an and any are as at be because been being but by can could do every
+for from going gonna had has have he her his how i i'm if in into is it it's just know like me
+more much my of on or our really she should so some someone something than that the their them
+then there there's these they this those through to until up us very was we were what whatever
+when where which while who why will with without would you your don't didn't doesn't i'll
+i've you're we're they're that's""".split())
 
 
 def text_width(t: str, size: int, font: str = FONT) -> int:
@@ -362,7 +438,7 @@ def write_ass(words: list[dict], path: Path, total: float) -> None:
 
 def short_crop(layout: str, speaker: str, face, geo: dict) -> str:
     """Square crop with the face at x 495 of 1080 (the safe box's centre line), scaled to
-    1080 and placed at VIDEO_Y on the 9:16 canvas."""
+    1080 and placed at VIDEO_Y (or the plan's geometry "video_y") on the 9:16 canvas."""
     if layout == "2up":
         top = geo["tile_top"]
         side, (x0, x1) = geo["crop_bottom"][speaker] - top, geo["tiles"][speaker]
@@ -374,7 +450,7 @@ def short_crop(layout: str, speaker: str, face, geo: dict) -> str:
         x = int(min(max(cx - side * SAFE_CX / 1080, 0), 1920 - side))
         y = int(min(max(cy - side * 0.40, 0), 1080 - side))
     return (f",crop={side}:{side}:{x}:{y},scale=1080:1080:flags=lanczos,"
-            f"pad=1080:1920:0:{VIDEO_Y}:color={BG},setsar=1")
+            f"pad=1080:1920:0:{geo.get('video_y', VIDEO_Y)}:color={BG},setsar=1")
 
 
 def layout_pieces(start: float, end: float, fps: Fraction,
