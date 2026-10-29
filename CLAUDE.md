@@ -17,3 +17,7 @@ Layout: raw/ (raw clip), transcript/ (words.json, cuts.json), scripts/, vendor/ 
   drive.usercontent.google.com instead (needs the file shared "anyone with the link" and that host allowed).
 - Allowing hosts in Network access did not reach the already-running container; the new policy applies to a fresh session.
 - WhisperX install from PyPI works here: whisperx 3.8.6 + torch 2.8.0 (takes several minutes; redo it in each new container).
+- Later session: huggingface.co and download.pytorch.org reachable; large-v3 + English align model download fine.
+  iCloud share links are blocked (share.icloud.com, icloud.com, ckdatabasews.icloud.com, *.icloud-content.com).
+- Current job: Gary Vee keynote (iCloud link, not yet in the container) -> scripts/clips.py vertical clips:
+  5-8 clips of 30-60 s plus 10 quote clips of 17 s or less, burned-in captions.
