@@ -1,7 +1,8 @@
 """Build edit/SCHEDULE.csv and edit/SCHEDULE.md: the posting calendar for EP 13, EP 12 and EP 14
 from the audit's 3-week calendars (long videos 11:00 a.m. Central, Shorts 12:30 p.m. on three platforms).
 
-Usage: python3 scripts/schedule.py
+Usage: python3 scripts/schedule.py <saved copy of the audit page's HTML>
+(The audit page supplies the full-episode descriptions and tags.)
 """
 import csv, json
 from datetime import date, datetime, timedelta, timezone
@@ -57,6 +58,7 @@ EP["ep13"] = dict(label="EP 13 · Mark Drake", guest_link="📸 Follow Mark: htt
   full_title="Former Gang Member Can Now Start a Business in His Sleep",
   cuts={m["name"]: (m["title"], m["file"], ep13_cut_desc[m["name"]], ep13_cut_tags[m["name"]]) for m in p13["mids"]},
   shorts={s["name"]: (s["title"], s["file"], s["desc"], s["hashtags"], s["links"]) for s in p13["shorts"]},
+  keywords={s["name"]: s.get("keyword", "") for s in p13["shorts"]},
   weeks=[["full","S1","S2","mid1","S3","mid2","S4"],[None,"S5","S6","mid3","S7","mid4","S8"],[None,"S9",None,"mid5","S10",None,None]])
 
 p14 = plan("ep14")
@@ -65,8 +67,22 @@ EP["ep14"] = dict(label="EP 14 · Brock Valentine", guest_link="🌐 Brock Valen
   full_title="It Doesn't Matter What You Offer If You Can't Get in the Room",
   cuts={m["name"]: (m["title"], m["file"], m["desc"], ep14_cut_tags[m["name"]]) for m in p14["mids"]},
   shorts={s["name"]: (s["title"], s["file"], s["desc"], s["hashtags"], s["links"]) for s in p14["shorts"]},
+  keywords={s["name"]: s.get("keyword", "") for s in p14["shorts"]},
   # audit calendar with its cuts renumbered (audit Cut 4 -> 3, Cut 5 -> 4, Cuts 2+3 -> 2)
   weeks=[["full","S1","S3","mid1","S2","mid3","S8"],[None,"S9","S7","mid4","S10","mid2","S6"],[None,None,None,None,"S4",None,"S5"]])
+
+# Full-episode descriptions, tags and notes come from the audit page (saved HTML copy passed as argv[1]).
+import re, sys
+AUDIT = Path(sys.argv[1]).read_text() if len(sys.argv) > 1 else ""
+CONSTS = {"LINKS": LINKS, "BROCK": "🌐 Brock Valentine: https://thebvalentine.com [confirm]"}
+def audit_field(ep, field):
+    block = AUDIT.split(f"id: '{ep}'", 1)[1].split("\n  id: '", 1)[0] if f"id: '{ep}'" in AUDIT else ""
+    m = re.search(field + r": `(.*?)`", block, re.S)
+    return re.sub(r"\$\{(\w+)\}", lambda g: CONSTS.get(g.group(1), g.group(0)), m.group(1)) if m else ""
+for ep in EP:
+    EP[ep]["full_desc"] = audit_field(ep, "description")
+    EP[ep]["full_tags"] = audit_field(ep, "tags")
+EP["ep13"]["full_note"] = "End screen → the Jeff Caliguire episode (per the audit)"
 
 ORDER = ["ep13", "ep12", "ep14"]
 START = date(2026, 11, 9)  # first Monday after today
@@ -85,21 +101,24 @@ for ep in ORDER:
                 t = datetime(day.year, day.month, day.day, *LONG_T, tzinfo=CT)
                 rows.append(dict(date=day.isoformat(), time_ct="11:00 AM", utc=t.astimezone(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
                     episode=e["label"], item="Full episode", platform="YouTube", file="(your full-episode upload)",
-                    title=e["full_title"], caption="", hashtags="", related=""))
+                    title=e["full_title"], caption=e["full_desc"], hashtags=e["full_tags"],
+                    keyword="", related=e.get("full_note", "")))
             elif item.startswith("mid"):
                 title, f, desc, tags = e["cuts"][item]
                 t = datetime(day.year, day.month, day.day, *LONG_T, tzinfo=CT)
                 caption = f"{desc}\n\n▶️ Full episode: [link to the full episode]\n{e['guest_link']}\n{LINKS}"
                 rows.append(dict(date=day.isoformat(), time_ct="11:00 AM", utc=t.astimezone(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
                     episode=e["label"], item=f"Cut {cutnum[item]}", platform="YouTube", file=f, title=title,
-                    caption=caption, hashtags=tags, related="End screen → full episode"))
+                    caption=caption, hashtags=tags, keyword="", related="End screen → full episode"))
             else:
                 title, f, desc, tags, link = e["shorts"][item]
+                kw = e.get("keywords", {}).get(item, "")
                 t = datetime(day.year, day.month, day.day, *SHORT_T, tzinfo=CT)
                 for plat in ("YouTube Shorts", "TikTok", "Instagram Reels"):
                     rows.append(dict(date=day.isoformat(), time_ct="12:30 PM", utc=t.astimezone(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
                         episode=e["label"], item=item, platform=plat, file=f, title=title,
-                        caption=desc, hashtags=tags, related=(link if plat == "YouTube Shorts" else f"Link in bio → {link}")))
+                        caption=desc, hashtags=tags, keyword=kw,
+                        related=(link if plat == "YouTube Shorts" else f"Link in bio → {link}")))
     day0 += timedelta(weeks=3)
 
 # A Short must link to a video that is already live when it posts.

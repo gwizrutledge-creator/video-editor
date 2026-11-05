@@ -9,7 +9,7 @@ Totals: 13 cuts, 30 Shorts × 3 platforms = 90 Short posts, plus 3 full episodes
 
 | Date | Time (CT) | Post | Where | Title | Related video |
 |---|---|---|---|---|---|
-| Mon Nov 9 | 11:00 AM | Full episode | YouTube | Former Gang Member Can Now Start a Business in His Sleep |  |
+| Mon Nov 9 | 11:00 AM | Full episode | YouTube | Former Gang Member Can Now Start a Business in His Sleep | End screen → the Jeff Caliguire episode (per the audit) |
 | Tue Nov 10 | 12:30 PM | S1 | YouTube Shorts · TikTok · Reels | God Promised Him Wealth at $7.25 an Hour | Full episode |
 | Wed Nov 11 | 12:30 PM | S2 | YouTube Shorts · TikTok · Reels | You'd Never Know Where He Started | Full episode |
 | Thu Nov 12 | 11:00 AM | Cut 1 | YouTube | No Degree, $7.25 an Hour, and a Promise From God | End screen → full episode |
