@@ -351,7 +351,9 @@ def caption_words(plan_words: list[dict], start: float, end: float, fixes: dict)
         word = fixes.get(w["word"], w["word"])
         if word:
             # Captions start sentences with a capital even where the transcript doesn't.
-            if not out or out[-1]["word"][-1:] in ".?!":
+            prev = out[-1]["word"] if out else ""
+            abbrev = "." in prev[:-1]  # "D.C." doesn't end a sentence
+            if not out or (prev[-1:] in ".?!" and not abbrev):
                 word = word[:1].upper() + word[1:]
             out.append({"word": word, "start": max(w["start"], start) - start,
                         "end": min(w["end"], end) - start})
@@ -484,9 +486,9 @@ def render_short(spec: dict, plan: dict, words: list[dict], raw: Path, fps: Frac
     brand_w = text_width("THE GREATER JOURNEY", 32)
     args, graph = piece_inputs(tl, raw, rate, (1080, 1920))
     draws = [f"drawtext=fontfile={FONT}:text='THE GREATER JOURNEY':x={SAFE_X0}:y=294:"
-             f"fontsize=32:fontcolor={GOLD}",
+             f"fontsize=32:fontcolor={GOLD}:box=1:boxcolor={BG}@0.75:boxborderw=8",
              f"drawtext=fontfile={FONT_SEMI}:text='|  {esc(name)}':x={SAFE_X0 + brand_w + 18}:"
-             f"y=294:fontsize=32:fontcolor=white",
+             f"y=294:fontsize=32:fontcolor=white:box=1:boxcolor={BG}@0.75:boxborderw=8",
              f"subtitles=filename='{ass}':fontsdir=/usr/share/fonts/opentype/inter"]
     graph.append("[cv]" + ",".join(draws) + "[v]")
     cmd = (["ffmpeg", "-y", "-v", "error", "-stats"] + args +
@@ -517,7 +519,7 @@ def main() -> None:
     fps, w, h, rate = probe(raw)
     if min(w, h) < 1080:
         sys.exit(f"source is {w}x{h}, under 1080p: stopping before any edit.")
-    for spec in [plan["full"]] + plan.get("mids", []):
+    for spec in ([plan["full"]] if "full" in plan else []) + plan.get("mids", []):
         if not want or spec["name"] in want:
             render_landscape(spec, plan, raw, fps, (w, h), rate)
     shorts = [s for s in plan.get("shorts", []) if not want or s["name"] in want]

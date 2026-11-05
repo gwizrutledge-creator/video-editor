@@ -47,3 +47,10 @@ Layout: raw/ (raw clip), transcript/ (words.json, cuts.json), scripts/, vendor/ 
 - Big files reach the user with SendUserFile, capped at 400 MiB per file (a 932 MiB full edit was refused); split
   with ffmpeg -c copy -f segment (lossless) and send the parts. The Drive connector only takes inline base64.
 - tools venv needs opencv-python-headless<5 (OpenCV 5 dropped CascadeClassifier).
+- EP 14 Brock Valentine: Drive file 1JliIGzPCnm_X0zKnlRvazFPwIFtzlUiJ ("TGJ EP 14 Brock Valentine YouTube Final.mp4", 56:18),
+  raw/EP14_Brock_Valentine.mp4. New layout: tiles over a studio-background image (no black band), so scripts/layout.py
+  can't classify it; edit/ep14/layout.json is hand-written (one two-up run, verified by a static background).
+  Tiles match EP 12 (Greg x 38-939, Brock x 978-1880, y 286-793). The user asked only for cuts and Shorts (no full edit).
+- Plans may omit "full"; mids can carry "desc" and "removed" ([a, b, reason]) for the edit list. Shorts take
+  geometry "video_y" per episode to keep eyes at y 600-800 (EP 13: 375, EP 14: 315).
+- Disk is ~25 GB free at best: delete delivered renders and old raw files before downloading a new episode.

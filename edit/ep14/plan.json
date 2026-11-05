@@ -1,0 +1,388 @@
+{
+ "source": "raw/EP14_Brock_Valentine.mp4",
+ "transcript": "transcript/ep14/words.json",
+ "layout": "edit/ep14/layout.json",
+ "guest": "Brock Valentine",
+ "people": {
+  "greg": "Gregory Rutledge",
+  "brock": "Brock Valentine"
+ },
+ "geometry": {
+  "tiles": {
+   "greg": [
+    38,
+    939
+   ],
+   "brock": [
+    978,
+    1880
+   ]
+  },
+  "tile_top": 286,
+  "crop_bottom": {
+   "greg": 730,
+   "brock": 730
+  },
+  "full_side": 900,
+  "video_y": 315
+ },
+ "caption_fixes": {
+  "i": "I",
+  "god": "God",
+  "adam": "Adam",
+  "dc": "DC",
+  "virginia": "Virginia",
+  "myron": "Myron",
+  "conference": "conquering"
+ },
+ "mids": [
+  {
+   "name": "mid1",
+   "file": "out/ep14/mid/Cut1_The_Other_Side_of_the_River.mp4",
+   "title": "What Do They Know on the Other Side of the River?",
+   "tighten": true,
+   "hook": [
+    [
+     59.25,
+     67.85
+    ]
+   ],
+   "card": "From The Greater Journey, EP 14 with Brock Valentine",
+   "keep": [
+    [
+     45.1,
+     702.95
+    ]
+   ],
+   "lower_thirds": [
+    {
+     "at": 45.2,
+     "index": 0,
+     "label": "Grounded in your unique story"
+    },
+    {
+     "at": 133.2,
+     "index": 1,
+     "label": "Reframing limiting beliefs"
+    },
+    {
+     "at": 281.75,
+     "index": 2,
+     "label": "Embracing continuous learning"
+    }
+   ],
+   "end_screen": 10,
+   "desc": "Brock Valentine grew up in the DC projects with a stutter, a 10-minute drive from multimillion-dollar homes in Virginia that nobody in his neighborhood would visit. He wanted to know what they knew over there. Here's what a cable job, a stranger's blunt advice and years of failure taught him."
+  },
+  {
+   "name": "mid2",
+   "file": "out/ep14/mid/Cut2_Quit_Before_We_Conquer.mp4",
+   "title": "Most of Us Quit Before We Conquer the Season",
+   "tighten": true,
+   "hook": [
+    [
+     1421.35,
+     1429.95
+    ]
+   ],
+   "card": "From The Greater Journey, EP 14 with Brock Valentine",
+   "keep": [
+    [
+     706.45,
+     812.4
+    ],
+    [
+     822.25,
+     1035.6
+    ],
+    [
+     1072.95,
+     1191.8
+    ],
+    [
+     1217.55,
+     1645.8
+    ],
+    [
+     1712.6,
+     1850.95
+    ]
+   ],
+   "lower_thirds": [
+    {
+     "at": 725.9,
+     "index": 3,
+     "label": "Action-oriented goals"
+    },
+    {
+     "at": 1263.2,
+     "index": 4,
+     "label": "Transitioning with purpose"
+    }
+   ],
+   "end_screen": 10,
+   "desc": "Brock Valentine kept buying trainings until a speaker asked who had actually done a deal. He shares the advice that moved him from learning to doing, the routine that keeps him grounded (\"dominate the dirt\"), and the four stages of every goal: the call, the climb, the conquering and the crown. Most of us quit right before we conquer.",
+   "removed": [
+    [
+     812.4,
+     822.25,
+     "Greg's recap of \"how many of y'all have done a deal\" (keeps \"the conviction's missing\")"
+    ],
+    [
+     1035.6,
+     1072.95,
+     "The third \"dude, dominate the dirt\" and \"just as powerful as when we have conversations\" (keeps Greg rebuilding his habits)"
+    ],
+    [
+     1191.8,
+     1217.55,
+     "Sports coats, jeans and Cole Haan (keeps \"I don't overthink it\")"
+    ],
+    [
+     1645.8,
+     1712.6,
+     "Greg's praise: \"the nuggets just flow… who are you\" (keeps \"I don't trust a mentor that doesn't have a mentor\")"
+    ]
+   ]
+  },
+  {
+   "name": "mid3",
+   "file": "out/ep14/mid/Cut3_The_SCORE_Principle.mp4",
+   "title": "The SCORE Principle: Why You're Stuck Even With All the Skills",
+   "tighten": true,
+   "hook": [
+    [
+     2146.4,
+     2152.3
+    ]
+   ],
+   "card": "From The Greater Journey, EP 14 with Brock Valentine",
+   "keep": [
+    [
+     1909.7,
+     2556.0
+    ],
+    [
+     2568.65,
+     2654.4
+    ]
+   ],
+   "lower_thirds": [
+    {
+     "at": 1926.4,
+     "index": 5,
+     "label": "Empower your network"
+    }
+   ],
+   "end_screen": 10,
+   "desc": "Have all the skills and still stuck? Brock Valentine's SCORE principle (skills, consistency, observation, resourcefulness, enthusiasm) shows where you're falling short. Then Greg finds his own gift, and why enthusiasm plus consistency is enough to grow a business.",
+   "removed": [
+    [
+     2556.0,
+     2568.65,
+     "Greg repeating the enthusiasm-and-consistency point (keeps \"my natural gift is encouragement… Romans 12\")"
+    ]
+   ]
+  },
+  {
+   "name": "mid4",
+   "file": "out/ep14/mid/Cut4_The_Stutter_and_the_New_Normal.mp4",
+   "title": "He Stuttered Until 27. Then He Learned to Serve Instead.",
+   "tighten": true,
+   "hook": [
+    [
+     2882.35,
+     2888.95
+    ]
+   ],
+   "card": "From The Greater Journey, EP 14 with Brock Valentine",
+   "keep": [
+    [
+     2670.95,
+     3121.1
+    ],
+    [
+     3130.9,
+     3135.8
+    ],
+    [
+     3160.95,
+     3239.7
+    ]
+   ],
+   "lower_thirds": [
+    {
+     "at": 2738.8,
+     "index": 6,
+     "label": "Resilience"
+    }
+   ],
+   "end_screen": 10,
+   "desc": "Speech therapy never fixed Brock Valentine's stutter. Speaking to a church of about 2,000 did, once he stopped focusing on himself. He shares why he left a job that wanted to keep him, the new normal he wanted for his family, and the one step to take today if you feel stuck.",
+   "removed": [
+    [
+     3121.1,
+     3130.9,
+     "\"I'm sorry, y'all, and we're over time\""
+    ],
+    [
+     3135.8,
+     3160.95,
+     "Greg re-listing the GREATER letters (the lower-thirds already show them)"
+    ]
+   ]
+  }
+ ],
+ "shorts": [
+  {
+   "name": "S1",
+   "file": "out/ep14/shorts/S01_Stuttered_Until_27.mp4",
+   "title": "He Stuttered Until He Was 27",
+   "in": 51.15,
+   "out": 67.85,
+   "speaker": "brock",
+   "links": "Full episode",
+   "desc": "Brock Valentine had a stutter that speech therapy couldn't fix until he was 27. Today he helps clients earn millions.",
+   "keyword": "reinvent yourself",
+   "hashtags": "#ChristianEntrepreneur #SuccessStory #Shorts",
+   "faces": {
+    "2up": 1428
+   }
+  },
+  {
+   "name": "S2",
+   "file": "out/ep14/shorts/S02_The_10_Minute_Drive.mp4",
+   "title": "A 10-Minute Drive He Was Told Never to Make",
+   "in": 197.68,
+   "out": 211.38,
+   "speaker": "brock",
+   "links": "Cut 1",
+   "desc": "Growing up in DC, Brock Valentine was told never to cross the bridge into Virginia. It was a 10-minute drive.",
+   "keyword": "christian entrepreneur",
+   "hashtags": "#ChristianEntrepreneur #Mindset #Shorts",
+   "faces": {
+    "2up": 1430
+   }
+  },
+  {
+   "name": "S3",
+   "file": "out/ep14/shorts/S03_Get_in_the_Room.mp4",
+   "title": "It Doesn't Matter What You Offer If You Can't Get in the Room",
+   "in": 357.52,
+   "out": 373.5,
+   "speaker": "brock",
+   "links": "Full episode",
+   "desc": "Brock Valentine on what nobody tells talented people: it doesn't matter how much you have to offer if you can't get in the room.",
+   "keyword": "christian entrepreneur",
+   "hashtags": "#ChristianEntrepreneur #Mindset #Shorts",
+   "faces": {
+    "2up": 1433
+   }
+  },
+  {
+   "name": "S4",
+   "file": "out/ep14/shorts/S04_Learn_a_Skill_Do_a_Deal.mp4",
+   "title": "Learn a Skill, Do a Deal",
+   "in": 754.45,
+   "out": 770.6,
+   "speaker": "brock",
+   "links": "Cut 2",
+   "desc": "Stop stacking knowledge on knowledge. Brock Valentine's rule for getting unstuck: learn a skill, do a deal.",
+   "keyword": "entrepreneur advice",
+   "hashtags": "#ChristianEntrepreneur #Discipline #Shorts",
+   "faces": {
+    "2up": 1423
+   }
+  },
+  {
+   "name": "S5",
+   "file": "out/ep14/shorts/S05_Dominate_the_Dirt.mp4",
+   "title": "Don't Let the Dirt Dictate Your Day",
+   "in": 928.65,
+   "out": 945.15,
+   "speaker": "brock",
+   "links": "Cut 2",
+   "desc": "Brock Valentine on flesh, spirit and dominion, and why the dirt doesn't get to set the direction of your day.",
+   "keyword": "christian motivation",
+   "hashtags": "#Faith #ChristianEntrepreneur #Shorts",
+   "faces": {
+    "2up": 1434
+   }
+  },
+  {
+   "name": "S6",
+   "file": "out/ep14/shorts/S06_Quit_Before_We_Conquer.mp4",
+   "title": "Most of Us Quit Right Before We Conquer",
+   "in": 1421.35,
+   "out": 1437.1,
+   "speaker": "brock",
+   "links": "Cut 2",
+   "desc": "Disruption often shows up right when your intention is about to pay off. Brock Valentine on why most of us quit one season too early.",
+   "keyword": "how to stay consistent with goals",
+   "hashtags": "#Consistency #ChristianEntrepreneur #Shorts",
+   "faces": {
+    "2up": 1414
+   }
+  },
+  {
+   "name": "S7",
+   "file": "out/ep14/shorts/S07_Behold_Believe_Become.mp4",
+   "title": "Behold, Believe, Become",
+   "in": 1577.85,
+   "out": 1591.3,
+   "speaker": "brock",
+   "links": "Full episode",
+   "desc": "Three words Brock Valentine lives by: behold, believe, become.",
+   "keyword": "christian motivation",
+   "hashtags": "#ChristianEntrepreneur #Mindset #Shorts",
+   "faces": {
+    "2up": 1426
+   }
+  },
+  {
+   "name": "S8",
+   "file": "out/ep14/shorts/S08_You_Dont_Need_Another_Course.mp4",
+   "title": "You Don't Need Another Course",
+   "in": 2146.4,
+   "out": 2161.8,
+   "speaker": "brock",
+   "links": "Cut 3",
+   "desc": "More webinars, more books, more courses. Brock Valentine on why so many of us stay stuck learning instead of doing.",
+   "keyword": "how to build consistency",
+   "hashtags": "#Consistency #ChristianEntrepreneur #Shorts",
+   "faces": {
+    "2up": 1406
+   }
+  },
+  {
+   "name": "S9",
+   "file": "out/ep14/shorts/S09_Stop_Focusing_on_You.mp4",
+   "title": "Stop Focusing on You and You'll Serve Better",
+   "in": 2871.95,
+   "out": 2888.9,
+   "speaker": "brock",
+   "links": "Full episode",
+   "desc": "The moment Brock Valentine stopped focusing on himself, he started serving better, and everything changed.",
+   "keyword": "christian entrepreneur",
+   "hashtags": "#ChristianEntrepreneur #SuccessStory #Shorts",
+   "faces": {
+    "2up": 1398
+   }
+  },
+  {
+   "name": "S10",
+   "file": "out/ep14/shorts/S10_Meet_the_Me_I_See.mp4",
+   "title": "\"I Wanna Meet the Me I See\"",
+   "in": 3087.4,
+   "out": 3099.4,
+   "speaker": "brock",
+   "links": "Cut 4",
+   "desc": "As a kid, Brock Valentine made himself a promise: when I get older, I wanna meet the me I see.",
+   "keyword": "reinvent yourself",
+   "hashtags": "#ChristianEntrepreneur #ReinventYourself #Shorts",
+   "faces": {
+    "2up": 1424
+   }
+  }
+ ]
+}

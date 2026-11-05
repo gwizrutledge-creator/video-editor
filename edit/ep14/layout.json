@@ -1,0 +1,5 @@
+{
+ "fps": 30,
+ "note": "Two-up over a studio background for the whole episode (background checked twice a second: no other shot). Written by hand; scripts/layout.py expects a black band.",
+ "runs": [{"start_frame": 0, "end_frame": 1000000000, "layout": "2up"}]
+}

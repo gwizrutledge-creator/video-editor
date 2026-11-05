@@ -1,9 +1,9 @@
 """Write the human edit list for an episode: edit/<ep>/EDIT_LIST.md.
 
 Usage: python3 scripts/edit_list.py edit/<ep>/plan.json
-Reads the plan and edit/<ep>/reasons.json ({"<source start s>": [action, one-line reason]},
-one entry per row of the full edit, covering the whole source in order). Applies the same
-tightening as package.py, so every timecode matches the rendered files.
+Reads the plan and, when the plan has a full edit, edit/<ep>/reasons.json ({"<source start s>":
+[action, one-line reason]}, one entry per row, covering the whole source in order). Applies the
+same tightening as package.py, so every timecode matches the rendered files.
 """
 import json
 import sys
@@ -44,8 +44,6 @@ def build(spec: dict, plan: dict, fps: Fraction):
 def main() -> None:
     plan_path = Path(sys.argv[1]).resolve()
     plan = json.loads(plan_path.read_text())
-    reasons = {float(k): v for k, v in
-               json.loads((plan_path.parent / "reasons.json").read_text()).items()}
     fps, w, h, _ = probe(ROOT / plan["source"])
     F = round(fps)
     fr = lambda t: round(Fraction(t) * fps)  # noqa: E731
@@ -54,13 +52,24 @@ def main() -> None:
         ["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "json",
          str(ROOT / plan["source"])], capture_output=True, text=True).stdout)["format"]["duration"])
 
-    full = plan["full"]
-    tl, trims = build(full, plan, fps)
     L = [f"# {Path(plan['source']).stem.replace('_', ' ')} · Edit list\n",
          f"Source: `{plan['source']}` ({w}×{h}, {F} fps, {length(fr(duration), F)}). Timecodes are "
          f"HH:MM:SS:FF at {F} fps (non-drop). **Source** = position in that file; **Edit** = "
-         "position in the finished video. Every file also has a CMX3600 `.edl` next to it.\n",
-         "## 1 · Full episode\n",
+         "position in the finished video. Every file also has a CMX3600 `.edl` next to it.\n"]
+    if "full" in plan:
+        full_section(L, plan, plan_path, fps, fr, out_fr, duration)
+    mids_and_shorts(L, plan, fps, fr)
+    (plan_path.parent / "EDIT_LIST.md").write_text("\n".join(L) + "\n")
+    print(f"wrote {(plan_path.parent / 'EDIT_LIST.md').relative_to(ROOT)}")
+
+
+def full_section(L: list, plan: dict, plan_path: Path, fps: Fraction, fr, out_fr, duration) -> None:
+    F = round(fps)
+    reasons = {float(k): v for k, v in
+               json.loads((plan_path.parent / "reasons.json").read_text()).items()}
+    full = plan["full"]
+    tl, trims = build(full, plan, fps)
+    L += ["## 1 · Full episode\n",
          f"**Title:** {full['title']}  \n**Length:** {length(tl.frames, F)}  \n"
          f"**File:** `{full['file']}`\n",
          "| # | Source in | Source out | Action | Edit in | Reason |", "|---|---|---|---|---|---|"]
@@ -90,23 +99,37 @@ def main() -> None:
         L += ["", f"**CTA card:** \"{c['title']}: {c['line']}\" at edit "
               f"{tc(out_fr(tl, c['at']), F)} for {c.get('dur', 8)} s."]
 
+
+def mids_and_shorts(L: list, plan: dict, fps: Fraction, fr) -> None:
+    F = round(fps)
     card = next((m["card"] for m in plan.get("mids", []) if m.get("card")), "")
     L += ["", "## 2 · Mid-length cuts (16:9)\n",
           f"Each one: strongest line (under 15 s) → text card \"{card}\" (3 s, over the start of the "
           "body) → the story → ends on the guest's line → 10 s end screen with a framed slot for "
           "YouTube's \"full episode\" end-screen element.\n"]
     for m in plan.get("mids", []):
-        mtl, _ = build(m, plan, fps)
-        L += [f"### {m['title']}\n", f"`{m['file']}` · {length(mtl.frames, F)}\n",
+        mtl, mtrims = build(m, plan, fps)
+        L += [f"### {m['title']}\n", f"`{m['file']}` · {length(mtl.frames, F)}\n"]
+        if m.get("desc"):
+            L.append(f"*Description:* {m['desc']}\n")
+        L += [
               "| Part | Source in | Source out | Edit in |", "|---|---|---|---|",
               f"| Opener | {tc(fr(m['hook'][0][0]), F)} | {tc(fr(m['hook'][0][1]), F)} | 00:00:00:00 |"]
         for a, b in m["keep"]:
             first = next(it for it in mtl.items if it["kind"] == "src" and it["tag"] == "body"
                          and it["a"] >= fr(a) - 1)
             L.append(f"| Body | {tc(fr(a), F)} | {tc(fr(b), F)} | {tc(first['rec'], F)} |")
-        L += [f"| End screen | | | {tc(mtl.frames - m['end_screen'] * F, F)} (10 s) |", "",
-              "Lower-thirds: " + ", ".join(f"{GREATER[x['index']]} · {x['label']}"
-                                           for x in m.get("lower_thirds", [])) + "\n"]
+        L += [f"| End screen | | | {tc(mtl.frames - m['end_screen'] * F, F)} (10 s) |", ""]
+        for a, b, why in m.get("removed", []):
+            L.append(f"- Removed {tc(fr(a), F)}–{tc(fr(b), F)}: {why}")
+        if m.get("removed"):
+            L.append("")
+        if mtrims:
+            L += [f"Small trims inside the body ({len(mtrims)}, "
+                  f"{sum(b - a for a, b, _ in mtrims):.1f} s): " +
+                  "; ".join(f"{tc(fr(a), F)}–{tc(fr(b), F)} {why}" for a, b, why in mtrims) + "\n"]
+        L.append("Lower-thirds: " + ", ".join(f"{GREATER[x['index']]} · {x['label']}"
+                                              for x in m.get("lower_thirds", [])) + "\n")
 
     L += ["## 3 · Shorts (9:16, 1080×1920, burned-in captions)\n",
           "One master file for YouTube Shorts, TikTok and Reels: captions and branding inside the "
@@ -122,8 +145,6 @@ def main() -> None:
         L += ["", "**Captions for posting** (description · search keyword · hashtags):\n"]
         L += [f"- **{s['name']}** · {s['desc']} · *{s['keyword']}* · {s['hashtags']}"
               for s in plan["shorts"] if "desc" in s]
-    (plan_path.parent / "EDIT_LIST.md").write_text("\n".join(L) + "\n")
-    print(f"wrote {(plan_path.parent / 'EDIT_LIST.md').relative_to(ROOT)}")
 
 
 if __name__ == "__main__":
